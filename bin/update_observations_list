@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+. ~/env.sh
+thisdir=$PWD
+ISOC5="/data/int/isoc5/gbelange/isocArchive"
+. $ISOC5/bin/db_compile_pod_files.sh
+. $ISOC5/bin/db_process_master_pod_file.sh
+cp $ISOC5/pod_info/observations.dat $HOME/integral/esasky/
+scp $ISOC5/pod_info/observations.dat intuser@ammiext.n1data.lan:observations_list/
+cd $thisdir

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+revs_back=100
+if [[ $# -ne 0 ]] ; then
+ revs_back=$1
+fi
+
+thisdir=$PWD
+cd $HOME/integral/radiation
+$HOME/anaconda3/bin/python compute_radiation_file.py -r $revs_back
+lastrev=$(head -2 radiation_600.txt  | tail -1 | awk '{print  $1}')
+date=$(date '+%d %b %Y')
+#mail -a radiation_600.txt -s "Info: radiation_600.txt computed up to rev $lastrev ($date) [EOM]" timothy.finn@esa.int,gbelanger@sciops.esa.int,lionel.metrailler@unige.ch < /dev/null
+cd $thisdir

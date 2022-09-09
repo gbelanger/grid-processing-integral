@@ -1,0 +1,9 @@
+
+priority classification description (that Herschel uses)
+0 	critical	really need them now
+-200 	urgent		jobs that should go in as soon as possible, but still allowing the so-called critical jobs
+-400 	high		for these we expect them to be processed within 18H
+-500 	default    	proposed (not yet default) to CSG  (aka: grid for dummies if '-p' not specified) ... not implemented yet
+-600 	medium		integration tests
+-800 	low		operational bulk reprocessing
+-1000 	back-burner	any time would do

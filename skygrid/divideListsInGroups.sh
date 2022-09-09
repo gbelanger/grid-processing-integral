@@ -1,0 +1,1 @@
+rm scwLists_30deg_* ; i=0; end=0; while [[ $end -lt 270 ]] ; do start=`calc.pl 1+$i*$n` ; end=`calc.pl $start+$n-1` ; echo "$start $end" ; head -$end scwLists_30deg.txt | tail -$n > scwLists_30deg_grp$i.txt ; i=$((i+1)) ; done

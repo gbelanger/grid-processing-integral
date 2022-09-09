@@ -1,0 +1,54 @@
+#! /bin/sh
+
+HOST=`hostname`
+thisdir=$PWD
+
+progName="getscwidx"
+log(){
+date=`date +"%d-%m-%Y %H:%M:%S"`
+log="[INFO] - $date - ($progName) : "
+echo $log
+}
+
+warn(){
+date=`date +"%d-%m-%Y %H:%M:%S"`
+warn="[WARN] - $date - ($progName) : "
+echo $warn
+}
+
+##  Check machine
+if [ "$HOST" = "intggw6.n1grid.lan" ]
+then
+    idxDir=$HOME/integral/osa_support
+else
+    idxDir=.
+fi
+LFTP=`which lftp`
+
+echo "`log` Using $LFTP"
+echo "`log` idxDir = $idxDir"
+echo "`log` cd $idxDir"
+cd $idxDir
+
+echo "`log` lftp -c 'open ftp://isdcarc.unige.ch/arc/rev_3/idx/scw/ && get GNRL-SCWG-GRP-IDX.fits'"
+echo "`log` Fetching general index file from the ISDC ..."
+$LFTP -c "open ftp://isdcarc.unige.ch/arc/rev_3/idx/scw/ && get GNRL-SCWG-GRP-IDX.fits"
+
+if [ -f GNRL-SCWG-GRP-IDX.fits ] && [ -s GNRL-SCWG-GRP-IDX.fits ]
+then
+  echo "`log` Download complete"
+  echo "`log` Deleting old index file"
+  /bin/rm GNRL-SCWG-GRP-IDX.fits.gz
+  echo "`log` Gzipping new GNRL-SCWG-GRP-IDX.fits"
+  /usr/bin/gzip GNRL-SCWG-GRP-IDX.fits
+  echo "`log` Time stamped new file"
+  touch GNRL-SCWG-GRP-IDX.fits.gz
+  echo "`log` Updating point.lis"
+  $HOME/jdk/bin/java -jar $HOME/integral/bin/GenIdx2PointList.jar GNRL-SCWG-GRP-IDX.fits.gz
+  echo "`log` Done"
+else
+  echo "`warn` Problem downloading file"
+  exit 1
+fi
+
+cd $thisdir

@@ -1,0 +1,17 @@
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_1236.1/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_1236.1/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_1315.2/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_2335/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_2335/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_2590/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_2590/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_429/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_429/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_447/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_447/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_829.2/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_829.2/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_829.3/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_829.3/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_851/obs/myobs
+/data/int/isoc5/gbelange/isocArchive/skygrid_154-224/mosaics/field_851/obs/myobs

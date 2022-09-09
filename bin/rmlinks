@@ -1,0 +1,7 @@
+
+rm aux
+rm idx
+rm ic
+rm scw
+rm cat
+rm -r pfiles

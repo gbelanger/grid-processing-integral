@@ -1,0 +1,8 @@
+EXECUTABLE=run_integ_analysis.sh
+REQUIREMENTS=(HOSTNAME="ce02.esac.esa.int") & QUEUE_NAME="dca"
+ENVIRONMENT="EXTRA_MAX_MEMORY=2048"
+ARGUMENTS= ibis_science_analysis_COR-IMA 0441 ISGRI
+INPUT_FILES= ibis_science_analysis_COR-IMA.sh , GenIdx2Pointlis.jar , makeListForRev.sh , mask.fits
+OUTPUT_FILES= log.0441.ibis_science_analysis_COR-IMA log.0441.ibis_science_analysis_COR-IMA.${JOB_ID} , 0441.ISGRI.tar.gz gsiftp://se01.esac.esa.int/dpm/esac.esa.int/home/dca.euro-vo.org/integral/images/0441.ISGRI.tar.gz
+STDOUT_FILE=out.0441.ISGRI.${JOB_ID}
+STDERR_FILE=err.0441.ISGRI.${JOB_ID}

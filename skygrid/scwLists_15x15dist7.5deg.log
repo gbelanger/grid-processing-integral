@@ -1,0 +1,1825 @@
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 276) :   RA, Dec = 86.405, 28.9362
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 277) :   L, B = 180.00, 0.00
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 280) :   [lMin, lMax] = [172.50, 187.50]
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:49:46 - (MakeScwList: 339) : File last modified 0.82 seconds ago
+[INFO] - 09-08-2022 13:49:47 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:49:47 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:49:47 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:49:47 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:49:47 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:49:48 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:49:48 - (ScwListMaker: 110) :   4263 scw selected
+[INFO] - 09-08-2022 13:49:48 - (ScwListMaker: 111) :   Total TELAPSE = 10960.93 ks
+[INFO] - 09-08-2022 13:49:48 - (ScwListMaker: 112) :   Off-axis corrected = 6639.01 ks
+[INFO] - 09-08-2022 13:49:48 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5443.99 ks
+[INFO] - 09-08-2022 13:49:48 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:49:48 - (ScwList: 282) :   Pointings = 4263
+[INFO] - 09-08-2022 13:49:48 - (ScwList: 283) :   Revolutions = 206
+[INFO] - 09-08-2022 13:49:48 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:49:49 - (coords2scwLists.sh) : scw.lis has 4263 lines
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 276) :   RA, Dec = 94.4655, 15.9034
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 277) :   L, B = 195.00, -0.00
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 280) :   [lMin, lMax] = [187.50, 202.50]
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:49:49 - (MakeScwList: 339) : File last modified 3.87 seconds ago
+[INFO] - 09-08-2022 13:49:49 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:49:49 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:49:49 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:49:49 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:49:49 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:49:50 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:49:51 - (ScwListMaker: 110) :   1703 scw selected
+[INFO] - 09-08-2022 13:49:51 - (ScwListMaker: 111) :   Total TELAPSE = 4125.25 ks
+[INFO] - 09-08-2022 13:49:51 - (ScwListMaker: 112) :   Off-axis corrected = 1945.26 ks
+[INFO] - 09-08-2022 13:49:51 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1595.11 ks
+[INFO] - 09-08-2022 13:49:51 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:49:51 - (ScwList: 282) :   Pointings = 1703
+[INFO] - 09-08-2022 13:49:51 - (ScwList: 283) :   Revolutions = 183
+[INFO] - 09-08-2022 13:49:51 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:49:51 - (coords2scwLists.sh) : scw.lis has 1703 lines
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 276) :   RA, Dec = 101.5216, 2.6091
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 277) :   L, B = 210.00, -0.00
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 280) :   [lMin, lMax] = [202.50, 217.50]
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:49:51 - (MakeScwList: 339) : File last modified 6.39 seconds ago
+[INFO] - 09-08-2022 13:49:52 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:49:52 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:49:52 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:49:52 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:49:52 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:49:53 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:49:53 - (ScwListMaker: 110) :   332 scw selected
+[INFO] - 09-08-2022 13:49:53 - (ScwListMaker: 111) :   Total TELAPSE = 684.29 ks
+[INFO] - 09-08-2022 13:49:53 - (ScwListMaker: 112) :   Off-axis corrected = 383.20 ks
+[INFO] - 09-08-2022 13:49:53 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 314.23 ks
+[INFO] - 09-08-2022 13:49:53 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:49:53 - (ScwList: 282) :   Pointings = 332
+[INFO] - 09-08-2022 13:49:53 - (ScwList: 283) :   Revolutions = 57
+[INFO] - 09-08-2022 13:49:53 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:49:53 - (coords2scwLists.sh) : scw.lis has 332 lines
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 276) :   RA, Dec = 108.4276, -10.7237
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 277) :   L, B = 225.00, 0.00
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 280) :   [lMin, lMax] = [217.50, 232.50]
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:49:53 - (MakeScwList: 339) : File last modified 8.46 seconds ago
+[INFO] - 09-08-2022 13:49:54 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:49:54 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:49:54 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:49:54 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:49:54 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:49:55 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:49:55 - (ScwListMaker: 110) :   1098 scw selected
+[INFO] - 09-08-2022 13:49:55 - (ScwListMaker: 111) :   Total TELAPSE = 2721.96 ks
+[INFO] - 09-08-2022 13:49:55 - (ScwListMaker: 112) :   Off-axis corrected = 1956.34 ks
+[INFO] - 09-08-2022 13:49:55 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1604.20 ks
+[INFO] - 09-08-2022 13:49:55 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:49:55 - (ScwList: 282) :   Pointings = 1098
+[INFO] - 09-08-2022 13:49:55 - (ScwList: 283) :   Revolutions = 81
+[INFO] - 09-08-2022 13:49:55 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:49:56 - (coords2scwLists.sh) : scw.lis has 1098 lines
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 276) :   RA, Dec = 115.9764, -23.8904
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 277) :   L, B = 240.00, 0.00
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 280) :   [lMin, lMax] = [232.50, 247.50]
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:49:56 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:49:57 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:49:57 - (MakeScwList: 339) : File last modified 11.53 seconds ago
+[INFO] - 09-08-2022 13:49:57 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:49:57 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:49:57 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:49:57 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:49:57 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:49:59 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:49:59 - (ScwListMaker: 110) :   1469 scw selected
+[INFO] - 09-08-2022 13:49:59 - (ScwListMaker: 111) :   Total TELAPSE = 2997.40 ks
+[INFO] - 09-08-2022 13:49:59 - (ScwListMaker: 112) :   Off-axis corrected = 2122.65 ks
+[INFO] - 09-08-2022 13:49:59 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1740.57 ks
+[INFO] - 09-08-2022 13:49:59 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:49:59 - (ScwList: 282) :   Pointings = 1469
+[INFO] - 09-08-2022 13:49:59 - (ScwList: 283) :   Revolutions = 155
+[INFO] - 09-08-2022 13:49:59 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:49:59 - (coords2scwLists.sh) : scw.lis has 1469 lines
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 276) :   RA, Dec = 125.2292, -36.6056
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 277) :   L, B = 255.00, 0.00
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 280) :   [lMin, lMax] = [247.50, 262.50]
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:00 - (MakeScwList: 339) : File last modified 14.93 seconds ago
+[INFO] - 09-08-2022 13:50:01 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:01 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:01 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:01 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:01 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:02 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:02 - (ScwListMaker: 110) :   1527 scw selected
+[INFO] - 09-08-2022 13:50:02 - (ScwListMaker: 111) :   Total TELAPSE = 3810.51 ks
+[INFO] - 09-08-2022 13:50:02 - (ScwListMaker: 112) :   Off-axis corrected = 2147.47 ks
+[INFO] - 09-08-2022 13:50:02 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1760.93 ks
+[INFO] - 09-08-2022 13:50:02 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:02 - (ScwList: 282) :   Pointings = 1527
+[INFO] - 09-08-2022 13:50:02 - (ScwList: 283) :   Revolutions = 221
+[INFO] - 09-08-2022 13:50:02 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:02 - (coords2scwLists.sh) : scw.lis has 1527 lines
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 276) :   RA, Dec = 138.0044, -48.3296
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 277) :   L, B = 270.00, 0.00
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 280) :   [lMin, lMax] = [262.50, 277.50]
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:03 - (MakeScwList: 339) : File last modified 17.74 seconds ago
+[INFO] - 09-08-2022 13:50:03 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:03 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:03 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:03 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:03 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:04 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:04 - (ScwListMaker: 110) :   2806 scw selected
+[INFO] - 09-08-2022 13:50:04 - (ScwListMaker: 111) :   Total TELAPSE = 7935.60 ks
+[INFO] - 09-08-2022 13:50:04 - (ScwListMaker: 112) :   Off-axis corrected = 5187.95 ks
+[INFO] - 09-08-2022 13:50:04 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 4254.12 ks
+[INFO] - 09-08-2022 13:50:04 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:04 - (ScwList: 282) :   Pointings = 2806
+[INFO] - 09-08-2022 13:50:04 - (ScwList: 283) :   Revolutions = 219
+[INFO] - 09-08-2022 13:50:04 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:04 - (coords2scwLists.sh) : scw.lis has 2806 lines
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 276) :   RA, Dec = 157.4966, -57.8605
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 277) :   L, B = 285.00, -0.00
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 280) :   [lMin, lMax] = [277.50, 292.50]
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:05 - (MakeScwList: 339) : File last modified 19.81 seconds ago
+[INFO] - 09-08-2022 13:50:06 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:06 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:06 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:06 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:06 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:07 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:07 - (ScwListMaker: 110) :   4911 scw selected
+[INFO] - 09-08-2022 13:50:07 - (ScwListMaker: 111) :   Total TELAPSE = 14110.89 ks
+[INFO] - 09-08-2022 13:50:07 - (ScwListMaker: 112) :   Off-axis corrected = 10354.37 ks
+[INFO] - 09-08-2022 13:50:07 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 8490.58 ks
+[INFO] - 09-08-2022 13:50:07 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:07 - (ScwList: 282) :   Pointings = 4911
+[INFO] - 09-08-2022 13:50:07 - (ScwList: 283) :   Revolutions = 313
+[INFO] - 09-08-2022 13:50:07 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:07 - (coords2scwLists.sh) : scw.lis has 4911 lines
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 276) :   RA, Dec = 186.4508, -62.7257
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 277) :   L, B = 300.00, 0.00
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 280) :   [lMin, lMax] = [292.50, 307.50]
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:08 - (MakeScwList: 339) : File last modified 22.80 seconds ago
+[INFO] - 09-08-2022 13:50:08 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:08 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:08 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:08 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:08 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:09 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:10 - (ScwListMaker: 110) :   3338 scw selected
+[INFO] - 09-08-2022 13:50:10 - (ScwListMaker: 111) :   Total TELAPSE = 8731.99 ks
+[INFO] - 09-08-2022 13:50:10 - (ScwListMaker: 112) :   Off-axis corrected = 5955.25 ks
+[INFO] - 09-08-2022 13:50:10 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 4883.31 ks
+[INFO] - 09-08-2022 13:50:10 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:10 - (ScwList: 282) :   Pointings = 3338
+[INFO] - 09-08-2022 13:50:10 - (ScwList: 283) :   Revolutions = 300
+[INFO] - 09-08-2022 13:50:10 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:10 - (coords2scwLists.sh) : scw.lis has 3338 lines
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 276) :   RA, Dec = 217.9801, -60.4958
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 277) :   L, B = 315.00, -0.00
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 280) :   [lMin, lMax] = [307.50, 322.50]
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:11 - (MakeScwList: 339) : File last modified 25.87 seconds ago
+[INFO] - 09-08-2022 13:50:12 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:12 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:12 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:12 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:12 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:13 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:13 - (ScwListMaker: 110) :   4293 scw selected
+[INFO] - 09-08-2022 13:50:13 - (ScwListMaker: 111) :   Total TELAPSE = 9965.87 ks
+[INFO] - 09-08-2022 13:50:13 - (ScwListMaker: 112) :   Off-axis corrected = 6849.32 ks
+[INFO] - 09-08-2022 13:50:13 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5616.45 ks
+[INFO] - 09-08-2022 13:50:13 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:13 - (ScwList: 282) :   Pointings = 4293
+[INFO] - 09-08-2022 13:50:13 - (ScwList: 283) :   Revolutions = 264
+[INFO] - 09-08-2022 13:50:13 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:14 - (coords2scwLists.sh) : scw.lis has 4293 lines
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 276) :   RA, Dec = 241.1171, -52.4202
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 277) :   L, B = 330.00, -0.00
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 280) :   [lMin, lMax] = [322.50, 337.50]
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:14 - (MakeScwList: 339) : File last modified 29.31 seconds ago
+[INFO] - 09-08-2022 13:50:15 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:15 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:15 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:15 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:15 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:16 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:16 - (ScwListMaker: 110) :   4486 scw selected
+[INFO] - 09-08-2022 13:50:16 - (ScwListMaker: 111) :   Total TELAPSE = 10865.88 ks
+[INFO] - 09-08-2022 13:50:16 - (ScwListMaker: 112) :   Off-axis corrected = 7257.53 ks
+[INFO] - 09-08-2022 13:50:16 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5951.18 ks
+[INFO] - 09-08-2022 13:50:16 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:16 - (ScwList: 282) :   Pointings = 4486
+[INFO] - 09-08-2022 13:50:16 - (ScwList: 283) :   Revolutions = 267
+[INFO] - 09-08-2022 13:50:16 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:16 - (coords2scwLists.sh) : scw.lis has 4486 lines
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 276) :   RA, Dec = 256.056, -41.3519
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 277) :   L, B = 345.00, -0.00
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 280) :   [lMin, lMax] = [337.50, 352.50]
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:16 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:17 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:17 - (MakeScwList: 339) : File last modified 31.60 seconds ago
+[INFO] - 09-08-2022 13:50:17 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:17 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:17 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:17 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:17 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:19 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:19 - (ScwListMaker: 110) :   5633 scw selected
+[INFO] - 09-08-2022 13:50:19 - (ScwListMaker: 111) :   Total TELAPSE = 12861.31 ks
+[INFO] - 09-08-2022 13:50:19 - (ScwListMaker: 112) :   Off-axis corrected = 8717.51 ks
+[INFO] - 09-08-2022 13:50:19 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 7148.36 ks
+[INFO] - 09-08-2022 13:50:19 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:19 - (ScwList: 282) :   Pointings = 5633
+[INFO] - 09-08-2022 13:50:19 - (ScwList: 283) :   Revolutions = 381
+[INFO] - 09-08-2022 13:50:19 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:19 - (coords2scwLists.sh) : scw.lis has 5633 lines
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 276) :   RA, Dec = 266.405, -28.9362
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 277) :   L, B = 360.00, -0.00
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 280) :   [lMin, lMax] = [352.50, 7.50]
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:20 - (MakeScwList: 339) : File last modified 34.98 seconds ago
+[INFO] - 09-08-2022 13:50:20 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:20 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:20 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:20 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:20 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:21 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:22 - (ScwListMaker: 110) :   20921 scw selected
+[INFO] - 09-08-2022 13:50:22 - (ScwListMaker: 111) :   Total TELAPSE = 50027.28 ks
+[INFO] - 09-08-2022 13:50:22 - (ScwListMaker: 112) :   Off-axis corrected = 40291.21 ks
+[INFO] - 09-08-2022 13:50:22 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 33038.79 ks
+[INFO] - 09-08-2022 13:50:22 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:22 - (ScwList: 282) :   Pointings = 20921
+[INFO] - 09-08-2022 13:50:22 - (ScwList: 283) :   Revolutions = 736
+[INFO] - 09-08-2022 13:50:22 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:22 - (coords2scwLists.sh) : scw.lis has 20921 lines
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 276) :   RA, Dec = 274.4655, -15.9034
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 277) :   L, B = 15.00, 0.00
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 280) :   [lMin, lMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:22 - (MakeScwList: 339) : File last modified 37.01 seconds ago
+[INFO] - 09-08-2022 13:50:23 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:23 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:23 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:23 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:23 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:24 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:24 - (ScwListMaker: 110) :   4544 scw selected
+[INFO] - 09-08-2022 13:50:24 - (ScwListMaker: 111) :   Total TELAPSE = 10134.04 ks
+[INFO] - 09-08-2022 13:50:24 - (ScwListMaker: 112) :   Off-axis corrected = 6502.46 ks
+[INFO] - 09-08-2022 13:50:24 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5332.02 ks
+[INFO] - 09-08-2022 13:50:24 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:24 - (ScwList: 282) :   Pointings = 4544
+[INFO] - 09-08-2022 13:50:24 - (ScwList: 283) :   Revolutions = 344
+[INFO] - 09-08-2022 13:50:25 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:25 - (coords2scwLists.sh) : scw.lis has 4544 lines
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 276) :   RA, Dec = 281.5216, -2.6091
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 277) :   L, B = 30.00, 0.00
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 280) :   [lMin, lMax] = [22.50, 37.50]
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:25 - (MakeScwList: 339) : File last modified 40.19 seconds ago
+[INFO] - 09-08-2022 13:50:26 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:26 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:26 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:26 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:26 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:27 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:28 - (ScwListMaker: 110) :   3578 scw selected
+[INFO] - 09-08-2022 13:50:28 - (ScwListMaker: 111) :   Total TELAPSE = 7845.54 ks
+[INFO] - 09-08-2022 13:50:28 - (ScwListMaker: 112) :   Off-axis corrected = 4724.89 ks
+[INFO] - 09-08-2022 13:50:28 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 3874.41 ks
+[INFO] - 09-08-2022 13:50:28 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:28 - (ScwList: 282) :   Pointings = 3578
+[INFO] - 09-08-2022 13:50:28 - (ScwList: 283) :   Revolutions = 270
+[INFO] - 09-08-2022 13:50:28 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:28 - (coords2scwLists.sh) : scw.lis has 3578 lines
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 276) :   RA, Dec = 288.4276, 10.7237
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 277) :   L, B = 45.00, -0.00
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 280) :   [lMin, lMax] = [37.50, 52.50]
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:28 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:29 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:29 - (MakeScwList: 339) : File last modified 43.59 seconds ago
+[INFO] - 09-08-2022 13:50:29 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:29 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:29 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:29 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:29 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:30 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:30 - (ScwListMaker: 110) :   6787 scw selected
+[INFO] - 09-08-2022 13:50:30 - (ScwListMaker: 111) :   Total TELAPSE = 17514.83 ks
+[INFO] - 09-08-2022 13:50:30 - (ScwListMaker: 112) :   Off-axis corrected = 13488.74 ks
+[INFO] - 09-08-2022 13:50:30 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 11060.76 ks
+[INFO] - 09-08-2022 13:50:30 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:30 - (ScwList: 282) :   Pointings = 6787
+[INFO] - 09-08-2022 13:50:30 - (ScwList: 283) :   Revolutions = 379
+[INFO] - 09-08-2022 13:50:31 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:31 - (coords2scwLists.sh) : scw.lis has 6787 lines
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 276) :   RA, Dec = 295.9764, 23.8904
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 277) :   L, B = 60.00, -0.00
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 280) :   [lMin, lMax] = [52.50, 67.50]
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:31 - (MakeScwList: 339) : File last modified 46.40 seconds ago
+[INFO] - 09-08-2022 13:50:32 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:32 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:32 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:32 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:32 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:33 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:33 - (ScwListMaker: 110) :   2304 scw selected
+[INFO] - 09-08-2022 13:50:33 - (ScwListMaker: 111) :   Total TELAPSE = 6328.98 ks
+[INFO] - 09-08-2022 13:50:33 - (ScwListMaker: 112) :   Off-axis corrected = 3963.67 ks
+[INFO] - 09-08-2022 13:50:33 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 3250.21 ks
+[INFO] - 09-08-2022 13:50:33 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:33 - (ScwList: 282) :   Pointings = 2304
+[INFO] - 09-08-2022 13:50:33 - (ScwList: 283) :   Revolutions = 277
+[INFO] - 09-08-2022 13:50:33 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:33 - (coords2scwLists.sh) : scw.lis has 2304 lines
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 276) :   RA, Dec = 305.2292, 36.6056
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 277) :   L, B = 75.00, -0.00
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 280) :   [lMin, lMax] = [67.50, 82.50]
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:33 - (MakeScwList: 339) : File last modified 48.39 seconds ago
+[INFO] - 09-08-2022 13:50:34 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:34 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:34 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:34 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:34 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:34 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:35 - (ScwListMaker: 110) :   7910 scw selected
+[INFO] - 09-08-2022 13:50:35 - (ScwListMaker: 111) :   Total TELAPSE = 21106.64 ks
+[INFO] - 09-08-2022 13:50:35 - (ScwListMaker: 112) :   Off-axis corrected = 14715.06 ks
+[INFO] - 09-08-2022 13:50:35 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 12066.35 ks
+[INFO] - 09-08-2022 13:50:35 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:35 - (ScwList: 282) :   Pointings = 7910
+[INFO] - 09-08-2022 13:50:35 - (ScwList: 283) :   Revolutions = 364
+[INFO] - 09-08-2022 13:50:35 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:35 - (coords2scwLists.sh) : scw.lis has 7910 lines
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 276) :   RA, Dec = 318.0044, 48.3296
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 277) :   L, B = 90.00, -0.00
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 280) :   [lMin, lMax] = [82.50, 97.50]
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:36 - (MakeScwList: 339) : File last modified 50.67 seconds ago
+[INFO] - 09-08-2022 13:50:36 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:36 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:36 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:36 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:36 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:38 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:38 - (ScwListMaker: 110) :   3005 scw selected
+[INFO] - 09-08-2022 13:50:38 - (ScwListMaker: 111) :   Total TELAPSE = 7151.71 ks
+[INFO] - 09-08-2022 13:50:38 - (ScwListMaker: 112) :   Off-axis corrected = 4571.28 ks
+[INFO] - 09-08-2022 13:50:38 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 3748.45 ks
+[INFO] - 09-08-2022 13:50:38 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:38 - (ScwList: 282) :   Pointings = 3005
+[INFO] - 09-08-2022 13:50:38 - (ScwList: 283) :   Revolutions = 288
+[INFO] - 09-08-2022 13:50:38 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:38 - (coords2scwLists.sh) : scw.lis has 3005 lines
+[INFO] - 09-08-2022 13:50:38 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:38 - (MakeScwList: 276) :   RA, Dec = 337.4966, 57.8605
+[INFO] - 09-08-2022 13:50:38 - (MakeScwList: 277) :   L, B = 105.00, 0.00
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 280) :   [lMin, lMax] = [97.50, 112.50]
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:39 - (MakeScwList: 339) : File last modified 53.58 seconds ago
+[INFO] - 09-08-2022 13:50:39 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:39 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:39 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:39 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:39 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:40 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:41 - (ScwListMaker: 110) :   2378 scw selected
+[INFO] - 09-08-2022 13:50:41 - (ScwListMaker: 111) :   Total TELAPSE = 6472.63 ks
+[INFO] - 09-08-2022 13:50:41 - (ScwListMaker: 112) :   Off-axis corrected = 3554.51 ks
+[INFO] - 09-08-2022 13:50:41 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 2914.70 ks
+[INFO] - 09-08-2022 13:50:41 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:41 - (ScwList: 282) :   Pointings = 2378
+[INFO] - 09-08-2022 13:50:41 - (ScwList: 283) :   Revolutions = 308
+[INFO] - 09-08-2022 13:50:41 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:41 - (coords2scwLists.sh) : scw.lis has 2378 lines
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 276) :   RA, Dec = 6.4508, 62.7257
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 277) :   L, B = 120.00, -0.00
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 280) :   [lMin, lMax] = [112.50, 127.50]
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:42 - (MakeScwList: 339) : File last modified 56.62 seconds ago
+[INFO] - 09-08-2022 13:50:42 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:42 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:42 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:42 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:42 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:43 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:44 - (ScwListMaker: 110) :   6068 scw selected
+[INFO] - 09-08-2022 13:50:44 - (ScwListMaker: 111) :   Total TELAPSE = 18507.01 ks
+[INFO] - 09-08-2022 13:50:44 - (ScwListMaker: 112) :   Off-axis corrected = 12872.24 ks
+[INFO] - 09-08-2022 13:50:44 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 10555.24 ks
+[INFO] - 09-08-2022 13:50:44 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:44 - (ScwList: 282) :   Pointings = 6068
+[INFO] - 09-08-2022 13:50:44 - (ScwList: 283) :   Revolutions = 307
+[INFO] - 09-08-2022 13:50:44 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:44 - (coords2scwLists.sh) : scw.lis has 6068 lines
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 276) :   RA, Dec = 37.9801, 60.4958
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 277) :   L, B = 135.00, 0.00
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 280) :   [lMin, lMax] = [127.50, 142.50]
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:45 - (MakeScwList: 339) : File last modified 59.65 seconds ago
+[INFO] - 09-08-2022 13:50:46 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:46 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:46 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:46 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:46 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:47 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:47 - (ScwListMaker: 110) :   1128 scw selected
+[INFO] - 09-08-2022 13:50:47 - (ScwListMaker: 111) :   Total TELAPSE = 3253.67 ks
+[INFO] - 09-08-2022 13:50:47 - (ScwListMaker: 112) :   Off-axis corrected = 2012.07 ks
+[INFO] - 09-08-2022 13:50:47 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1649.90 ks
+[INFO] - 09-08-2022 13:50:47 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:47 - (ScwList: 282) :   Pointings = 1128
+[INFO] - 09-08-2022 13:50:47 - (ScwList: 283) :   Revolutions = 138
+[INFO] - 09-08-2022 13:50:47 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:48 - (coords2scwLists.sh) : scw.lis has 1128 lines
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 276) :   RA, Dec = 61.1171, 52.4202
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 277) :   L, B = 150.00, 0.00
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 280) :   [lMin, lMax] = [142.50, 157.50]
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:48 - (MakeScwList: 339) : File last modified 1.06 minutes ago
+[INFO] - 09-08-2022 13:50:49 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:49 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:49 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:49 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:49 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:50 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:50 - (ScwListMaker: 110) :   1598 scw selected
+[INFO] - 09-08-2022 13:50:50 - (ScwListMaker: 111) :   Total TELAPSE = 3870.89 ks
+[INFO] - 09-08-2022 13:50:50 - (ScwListMaker: 112) :   Off-axis corrected = 2511.50 ks
+[INFO] - 09-08-2022 13:50:50 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 2059.43 ks
+[INFO] - 09-08-2022 13:50:50 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:50 - (ScwList: 282) :   Pointings = 1598
+[INFO] - 09-08-2022 13:50:50 - (ScwList: 283) :   Revolutions = 100
+[INFO] - 09-08-2022 13:50:50 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:50 - (coords2scwLists.sh) : scw.lis has 1598 lines
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 276) :   RA, Dec = 76.056, 41.3519
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 277) :   L, B = 165.00, 0.00
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 280) :   [lMin, lMax] = [157.50, 172.50]
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:50 - (MakeScwList: 339) : File last modified 1.09 minutes ago
+[INFO] - 09-08-2022 13:50:51 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:51 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:51 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:51 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:51 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:52 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:52 - (ScwListMaker: 110) :   1189 scw selected
+[INFO] - 09-08-2022 13:50:52 - (ScwListMaker: 111) :   Total TELAPSE = 2924.69 ks
+[INFO] - 09-08-2022 13:50:52 - (ScwListMaker: 112) :   Off-axis corrected = 1800.42 ks
+[INFO] - 09-08-2022 13:50:52 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1476.35 ks
+[INFO] - 09-08-2022 13:50:52 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:52 - (ScwList: 282) :   Pointings = 1189
+[INFO] - 09-08-2022 13:50:52 - (ScwList: 283) :   Revolutions = 76
+[INFO] - 09-08-2022 13:50:52 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:52 - (coords2scwLists.sh) : scw.lis has 1189 lines
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 276) :   RA, Dec = 86.405, 28.9362
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 277) :   L, B = 180.00, 0.00
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 280) :   [lMin, lMax] = [172.50, 187.50]
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 281) :   [bMin, bMax] = [-7.50, 7.50]
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:52 - (MakeScwList: 339) : File last modified 1.12 minutes ago
+[INFO] - 09-08-2022 13:50:53 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:53 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:53 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:53 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:53 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:54 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:54 - (ScwListMaker: 110) :   4263 scw selected
+[INFO] - 09-08-2022 13:50:54 - (ScwListMaker: 111) :   Total TELAPSE = 10960.93 ks
+[INFO] - 09-08-2022 13:50:54 - (ScwListMaker: 112) :   Off-axis corrected = 6639.01 ks
+[INFO] - 09-08-2022 13:50:54 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5443.99 ks
+[INFO] - 09-08-2022 13:50:54 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:54 - (ScwList: 282) :   Pointings = 4263
+[INFO] - 09-08-2022 13:50:54 - (ScwList: 283) :   Revolutions = 206
+[INFO] - 09-08-2022 13:50:55 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:55 - (coords2scwLists.sh) : scw.lis has 4263 lines
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 276) :   RA, Dec = 105.5636, 29.156
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 277) :   L, B = 187.50, 15.00
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 280) :   [lMin, lMax] = [180.00, 195.00]
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:55 - (MakeScwList: 339) : File last modified 1.17 minutes ago
+[INFO] - 09-08-2022 13:50:56 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:56 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:56 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:56 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:56 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:57 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:57 - (ScwListMaker: 110) :   80 scw selected
+[INFO] - 09-08-2022 13:50:57 - (ScwListMaker: 111) :   Total TELAPSE = 275.05 ks
+[INFO] - 09-08-2022 13:50:57 - (ScwListMaker: 112) :   Off-axis corrected = 73.33 ks
+[INFO] - 09-08-2022 13:50:57 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 60.13 ks
+[INFO] - 09-08-2022 13:50:57 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:57 - (ScwList: 282) :   Pointings = 80
+[INFO] - 09-08-2022 13:50:57 - (ScwList: 283) :   Revolutions = 5
+[INFO] - 09-08-2022 13:50:57 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:57 - (coords2scwLists.sh) : scw.lis has 80 lines
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 276) :   RA, Dec = 111.8675, 15.883
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 277) :   L, B = 202.50, 15.00
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 280) :   [lMin, lMax] = [195.00, 210.00]
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:58 - (MakeScwList: 339) : File last modified 1.21 minutes ago
+[INFO] - 09-08-2022 13:50:58 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:50:58 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:50:58 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:50:58 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:50:58 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:50:59 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:50:59 - (ScwListMaker: 110) :   3 scw selected
+[INFO] - 09-08-2022 13:50:59 - (ScwListMaker: 111) :   Total TELAPSE = 3.67 ks
+[INFO] - 09-08-2022 13:50:59 - (ScwListMaker: 112) :   Off-axis corrected = 1.94 ks
+[INFO] - 09-08-2022 13:50:59 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1.59 ks
+[INFO] - 09-08-2022 13:50:59 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:50:59 - (ScwList: 282) :   Pointings = 3
+[INFO] - 09-08-2022 13:50:59 - (ScwList: 283) :   Revolutions = 3
+[INFO] - 09-08-2022 13:50:59 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:50:59 - (coords2scwLists.sh) : scw.lis has 3 lines
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 276) :   RA, Dec = 118.2711, 2.8402
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 277) :   L, B = 217.50, 15.00
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 280) :   [lMin, lMax] = [210.00, 225.00]
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:50:59 - (MakeScwList: 339) : File last modified 1.24 minutes ago
+[INFO] - 09-08-2022 13:51:00 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:00 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:00 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:00 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:00 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:01 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:02 - (ScwListMaker: 110) :   96 scw selected
+[INFO] - 09-08-2022 13:51:02 - (ScwListMaker: 111) :   Total TELAPSE = 194.22 ks
+[INFO] - 09-08-2022 13:51:02 - (ScwListMaker: 112) :   Off-axis corrected = 91.62 ks
+[INFO] - 09-08-2022 13:51:02 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 75.13 ks
+[INFO] - 09-08-2022 13:51:02 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:02 - (ScwList: 282) :   Pointings = 96
+[INFO] - 09-08-2022 13:51:02 - (ScwList: 283) :   Revolutions = 8
+[INFO] - 09-08-2022 13:51:02 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:02 - (coords2scwLists.sh) : scw.lis has 96 lines
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 276) :   RA, Dec = 125.4063, -9.7824
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 277) :   L, B = 232.50, 15.00
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 280) :   [lMin, lMax] = [225.00, 240.00]
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:02 - (MakeScwList: 339) : File last modified 1.28 minutes ago
+[INFO] - 09-08-2022 13:51:03 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:03 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:03 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:03 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:03 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:04 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:04 - (ScwListMaker: 110) :   1261 scw selected
+[INFO] - 09-08-2022 13:51:04 - (ScwListMaker: 111) :   Total TELAPSE = 2555.04 ks
+[INFO] - 09-08-2022 13:51:04 - (ScwListMaker: 112) :   Off-axis corrected = 1344.02 ks
+[INFO] - 09-08-2022 13:51:04 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1102.10 ks
+[INFO] - 09-08-2022 13:51:04 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:04 - (ScwList: 282) :   Pointings = 1261
+[INFO] - 09-08-2022 13:51:04 - (ScwList: 283) :   Revolutions = 36
+[INFO] - 09-08-2022 13:51:04 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:04 - (coords2scwLists.sh) : scw.lis has 1261 lines
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 276) :   RA, Dec = 133.9825, -21.6997
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 277) :   L, B = 247.50, 15.00
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 280) :   [lMin, lMax] = [240.00, 255.00]
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:04 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:05 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:05 - (MakeScwList: 339) : File last modified 1.33 minutes ago
+[INFO] - 09-08-2022 13:51:05 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:05 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:05 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:05 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:05 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:06 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:06 - (ScwListMaker: 110) :   19 scw selected
+[INFO] - 09-08-2022 13:51:06 - (ScwListMaker: 111) :   Total TELAPSE = 31.18 ks
+[INFO] - 09-08-2022 13:51:06 - (ScwListMaker: 112) :   Off-axis corrected = 14.61 ks
+[INFO] - 09-08-2022 13:51:06 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 11.98 ks
+[INFO] - 09-08-2022 13:51:06 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:06 - (ScwList: 282) :   Pointings = 19
+[INFO] - 09-08-2022 13:51:06 - (ScwList: 283) :   Revolutions = 11
+[INFO] - 09-08-2022 13:51:06 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:06 - (coords2scwLists.sh) : scw.lis has 19 lines
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 276) :   RA, Dec = 144.9377, -32.4347
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 277) :   L, B = 262.50, 15.00
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 280) :   [lMin, lMax] = [255.00, 270.00]
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:07 - (MakeScwList: 339) : File last modified 1.36 minutes ago
+[INFO] - 09-08-2022 13:51:07 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:07 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:07 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:07 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:07 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:08 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:08 - (ScwListMaker: 110) :   174 scw selected
+[INFO] - 09-08-2022 13:51:08 - (ScwListMaker: 111) :   Total TELAPSE = 600.06 ks
+[INFO] - 09-08-2022 13:51:08 - (ScwListMaker: 112) :   Off-axis corrected = 453.87 ks
+[INFO] - 09-08-2022 13:51:08 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 372.18 ks
+[INFO] - 09-08-2022 13:51:08 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:08 - (ScwList: 282) :   Pointings = 174
+[INFO] - 09-08-2022 13:51:08 - (ScwList: 283) :   Revolutions = 19
+[INFO] - 09-08-2022 13:51:08 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:08 - (coords2scwLists.sh) : scw.lis has 174 lines
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 276) :   RA, Dec = 159.4187, -41.1734
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 277) :   L, B = 277.50, 15.00
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 280) :   [lMin, lMax] = [270.00, 285.00]
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:08 - (MakeScwList: 339) : File last modified 1.39 minutes ago
+[INFO] - 09-08-2022 13:51:09 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:09 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:09 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:09 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:09 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:10 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:10 - (ScwListMaker: 110) :   467 scw selected
+[INFO] - 09-08-2022 13:51:10 - (ScwListMaker: 111) :   Total TELAPSE = 1014.32 ks
+[INFO] - 09-08-2022 13:51:10 - (ScwListMaker: 112) :   Off-axis corrected = 756.73 ks
+[INFO] - 09-08-2022 13:51:10 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 620.52 ks
+[INFO] - 09-08-2022 13:51:10 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:10 - (ScwList: 282) :   Pointings = 467
+[INFO] - 09-08-2022 13:51:10 - (ScwList: 283) :   Revolutions = 39
+[INFO] - 09-08-2022 13:51:10 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:10 - (coords2scwLists.sh) : scw.lis has 467 lines
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 276) :   RA, Dec = 178.0926, -46.6718
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 277) :   L, B = 292.50, 15.00
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 280) :   [lMin, lMax] = [285.00, 300.00]
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:10 - (MakeScwList: 339) : File last modified 1.42 minutes ago
+[INFO] - 09-08-2022 13:51:11 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:11 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:11 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:11 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:11 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:11 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:11 - (ScwListMaker: 110) :   56 scw selected
+[INFO] - 09-08-2022 13:51:11 - (ScwListMaker: 111) :   Total TELAPSE = 161.75 ks
+[INFO] - 09-08-2022 13:51:11 - (ScwListMaker: 112) :   Off-axis corrected = 55.32 ks
+[INFO] - 09-08-2022 13:51:11 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 45.36 ks
+[INFO] - 09-08-2022 13:51:11 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:11 - (ScwList: 282) :   Pointings = 56
+[INFO] - 09-08-2022 13:51:11 - (ScwList: 283) :   Revolutions = 21
+[INFO] - 09-08-2022 13:51:11 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:12 - (coords2scwLists.sh) : scw.lis has 56 lines
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 276) :   RA, Dec = 199.4154, -47.639
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 277) :   L, B = 307.50, 15.00
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 280) :   [lMin, lMax] = [300.00, 315.00]
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:12 - (MakeScwList: 339) : File last modified 1.45 minutes ago
+[INFO] - 09-08-2022 13:51:13 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:13 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:13 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:13 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:13 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:14 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:15 - (ScwListMaker: 110) :   1566 scw selected
+[INFO] - 09-08-2022 13:51:15 - (ScwListMaker: 111) :   Total TELAPSE = 4685.58 ks
+[INFO] - 09-08-2022 13:51:15 - (ScwListMaker: 112) :   Off-axis corrected = 3114.06 ks
+[INFO] - 09-08-2022 13:51:15 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 2553.53 ks
+[INFO] - 09-08-2022 13:51:15 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:15 - (ScwList: 282) :   Pointings = 1566
+[INFO] - 09-08-2022 13:51:15 - (ScwList: 283) :   Revolutions = 92
+[INFO] - 09-08-2022 13:51:15 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:15 - (coords2scwLists.sh) : scw.lis has 1566 lines
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 276) :   RA, Dec = 219.484, -43.7882
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 277) :   L, B = 322.50, 15.00
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 280) :   [lMin, lMax] = [315.00, 330.00]
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:15 - (MakeScwList: 339) : File last modified 1.50 minutes ago
+[INFO] - 09-08-2022 13:51:16 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:16 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:16 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:16 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:16 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:17 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:17 - (ScwListMaker: 110) :   1939 scw selected
+[INFO] - 09-08-2022 13:51:17 - (ScwListMaker: 111) :   Total TELAPSE = 4397.32 ks
+[INFO] - 09-08-2022 13:51:17 - (ScwListMaker: 112) :   Off-axis corrected = 2385.75 ks
+[INFO] - 09-08-2022 13:51:17 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1956.31 ks
+[INFO] - 09-08-2022 13:51:17 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:17 - (ScwList: 282) :   Pointings = 1939
+[INFO] - 09-08-2022 13:51:17 - (ScwList: 283) :   Revolutions = 110
+[INFO] - 09-08-2022 13:51:17 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:17 - (coords2scwLists.sh) : scw.lis has 1939 lines
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 276) :   RA, Dec = 235.6021, -36.1481
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 277) :   L, B = 337.50, 15.00
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 280) :   [lMin, lMax] = [330.00, 345.00]
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:18 - (MakeScwList: 339) : File last modified 1.55 minutes ago
+[INFO] - 09-08-2022 13:51:18 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:18 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:18 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:18 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:18 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:19 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:19 - (ScwListMaker: 110) :   1097 scw selected
+[INFO] - 09-08-2022 13:51:19 - (ScwListMaker: 111) :   Total TELAPSE = 2520.19 ks
+[INFO] - 09-08-2022 13:51:19 - (ScwListMaker: 112) :   Off-axis corrected = 1567.01 ks
+[INFO] - 09-08-2022 13:51:19 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1284.95 ks
+[INFO] - 09-08-2022 13:51:19 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:19 - (ScwList: 282) :   Pointings = 1097
+[INFO] - 09-08-2022 13:51:19 - (ScwList: 283) :   Revolutions = 92
+[INFO] - 09-08-2022 13:51:19 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:19 - (coords2scwLists.sh) : scw.lis has 1097 lines
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 276) :   RA, Dec = 247.7981, -26.0727
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 277) :   L, B = 352.50, 15.00
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 280) :   [lMin, lMax] = [345.00, 360.00]
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:20 - (MakeScwList: 339) : File last modified 1.58 minutes ago
+[INFO] - 09-08-2022 13:51:21 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:21 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:21 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:21 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:21 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:22 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:22 - (ScwListMaker: 110) :   743 scw selected
+[INFO] - 09-08-2022 13:51:22 - (ScwListMaker: 111) :   Total TELAPSE = 1887.60 ks
+[INFO] - 09-08-2022 13:51:22 - (ScwListMaker: 112) :   Off-axis corrected = 798.96 ks
+[INFO] - 09-08-2022 13:51:22 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 655.15 ks
+[INFO] - 09-08-2022 13:51:22 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:22 - (ScwList: 282) :   Pointings = 743
+[INFO] - 09-08-2022 13:51:22 - (ScwList: 283) :   Revolutions = 124
+[INFO] - 09-08-2022 13:51:22 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:22 - (coords2scwLists.sh) : scw.lis has 743 lines
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 276) :   RA, Dec = 257.1771, -14.5459
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 277) :   L, B = 7.50, 15.00
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 280) :   [lMin, lMax] = [360.00, 15.00]
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:22 - (MakeScwList: 339) : File last modified 1.62 minutes ago
+[INFO] - 09-08-2022 13:51:23 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:23 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:23 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:23 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:23 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:23 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:24 - (ScwListMaker: 110) :   866 scw selected
+[INFO] - 09-08-2022 13:51:24 - (ScwListMaker: 111) :   Total TELAPSE = 2035.69 ks
+[INFO] - 09-08-2022 13:51:24 - (ScwListMaker: 112) :   Off-axis corrected = 1031.20 ks
+[INFO] - 09-08-2022 13:51:24 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 845.58 ks
+[INFO] - 09-08-2022 13:51:24 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:24 - (ScwList: 282) :   Pointings = 866
+[INFO] - 09-08-2022 13:51:24 - (ScwList: 283) :   Revolutions = 115
+[INFO] - 09-08-2022 13:51:24 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:24 - (coords2scwLists.sh) : scw.lis has 866 lines
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 276) :   RA, Dec = 264.7812, -2.1571
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 277) :   L, B = 22.50, 15.00
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 280) :   [lMin, lMax] = [15.00, 30.00]
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:24 - (MakeScwList: 339) : File last modified 1.65 minutes ago
+[INFO] - 09-08-2022 13:51:25 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:25 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:25 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:25 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:25 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:26 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:26 - (ScwListMaker: 110) :   959 scw selected
+[INFO] - 09-08-2022 13:51:26 - (ScwListMaker: 111) :   Total TELAPSE = 2524.67 ks
+[INFO] - 09-08-2022 13:51:26 - (ScwListMaker: 112) :   Off-axis corrected = 1521.62 ks
+[INFO] - 09-08-2022 13:51:26 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1247.73 ks
+[INFO] - 09-08-2022 13:51:26 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:26 - (ScwList: 282) :   Pointings = 959
+[INFO] - 09-08-2022 13:51:26 - (ScwList: 283) :   Revolutions = 92
+[INFO] - 09-08-2022 13:51:26 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:26 - (coords2scwLists.sh) : scw.lis has 959 lines
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 276) :   RA, Dec = 271.3954, 10.7477
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 277) :   L, B = 37.50, 15.00
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 280) :   [lMin, lMax] = [30.00, 45.00]
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:27 - (MakeScwList: 339) : File last modified 1.70 minutes ago
+[INFO] - 09-08-2022 13:51:28 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:28 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:28 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:28 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:28 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:29 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:29 - (ScwListMaker: 110) :   1157 scw selected
+[INFO] - 09-08-2022 13:51:29 - (ScwListMaker: 111) :   Total TELAPSE = 3051.20 ks
+[INFO] - 09-08-2022 13:51:29 - (ScwListMaker: 112) :   Off-axis corrected = 2038.65 ks
+[INFO] - 09-08-2022 13:51:29 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 1671.69 ks
+[INFO] - 09-08-2022 13:51:29 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:29 - (ScwList: 282) :   Pointings = 1157
+[INFO] - 09-08-2022 13:51:29 - (ScwList: 283) :   Revolutions = 70
+[INFO] - 09-08-2022 13:51:29 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:29 - (coords2scwLists.sh) : scw.lis has 1157 lines
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 276) :   RA, Dec = 277.6595, 23.9501
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 277) :   L, B = 52.50, 15.00
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 280) :   [lMin, lMax] = [45.00, 60.00]
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:30 - (MakeScwList: 339) : File last modified 1.74 minutes ago
+[INFO] - 09-08-2022 13:51:30 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:30 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:30 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:30 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:30 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:31 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:32 - (ScwListMaker: 110) :   330 scw selected
+[INFO] - 09-08-2022 13:51:32 - (ScwListMaker: 111) :   Total TELAPSE = 644.35 ks
+[INFO] - 09-08-2022 13:51:32 - (ScwListMaker: 112) :   Off-axis corrected = 413.69 ks
+[INFO] - 09-08-2022 13:51:32 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 339.23 ks
+[INFO] - 09-08-2022 13:51:32 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:32 - (ScwList: 282) :   Pointings = 330
+[INFO] - 09-08-2022 13:51:32 - (ScwList: 283) :   Revolutions = 30
+[INFO] - 09-08-2022 13:51:32 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:32 - (coords2scwLists.sh) : scw.lis has 330 lines
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 276) :   RA, Dec = 284.268, 37.2848
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 277) :   L, B = 67.50, 15.00
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 280) :   [lMin, lMax] = [60.00, 75.00]
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:32 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:33 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:33 - (MakeScwList: 339) : File last modified 1.79 minutes ago
+[INFO] - 09-08-2022 13:51:33 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:33 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:33 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:33 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:33 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:33 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:34 - (ScwListMaker: 110) :   374 scw selected
+[INFO] - 09-08-2022 13:51:34 - (ScwListMaker: 111) :   Total TELAPSE = 1022.31 ks
+[INFO] - 09-08-2022 13:51:34 - (ScwListMaker: 112) :   Off-axis corrected = 342.74 ks
+[INFO] - 09-08-2022 13:51:34 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 281.05 ks
+[INFO] - 09-08-2022 13:51:34 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:34 - (ScwList: 282) :   Pointings = 374
+[INFO] - 09-08-2022 13:51:34 - (ScwList: 283) :   Revolutions = 107
+[INFO] - 09-08-2022 13:51:34 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:34 - (coords2scwLists.sh) : scw.lis has 374 lines
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 276) :   RA, Dec = 292.3667, 50.5674
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 277) :   L, B = 82.50, 15.00
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 280) :   [lMin, lMax] = [75.00, 90.00]
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:34 - (MakeScwList: 339) : File last modified 1.82 minutes ago
+[INFO] - 09-08-2022 13:51:35 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:35 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:35 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:35 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:35 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:37 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:37 - (ScwListMaker: 110) :   61 scw selected
+[INFO] - 09-08-2022 13:51:37 - (ScwListMaker: 111) :   Total TELAPSE = 158.19 ks
+[INFO] - 09-08-2022 13:51:37 - (ScwListMaker: 112) :   Off-axis corrected = 53.79 ks
+[INFO] - 09-08-2022 13:51:37 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 44.10 ks
+[INFO] - 09-08-2022 13:51:37 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:37 - (ScwList: 282) :   Pointings = 61
+[INFO] - 09-08-2022 13:51:37 - (ScwList: 283) :   Revolutions = 43
+[INFO] - 09-08-2022 13:51:37 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:37 - (coords2scwLists.sh) : scw.lis has 61 lines
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 276) :   RA, Dec = 304.839, 63.4283
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 277) :   L, B = 97.50, 15.00
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 280) :   [lMin, lMax] = [90.00, 105.00]
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:37 - (MakeScwList: 339) : File last modified 1.87 minutes ago
+[INFO] - 09-08-2022 13:51:38 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:38 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:38 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:38 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:38 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:39 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:39 - (ScwListMaker: 110) :   216 scw selected
+[INFO] - 09-08-2022 13:51:39 - (ScwListMaker: 111) :   Total TELAPSE = 645.43 ks
+[INFO] - 09-08-2022 13:51:39 - (ScwListMaker: 112) :   Off-axis corrected = 434.87 ks
+[INFO] - 09-08-2022 13:51:39 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 356.59 ks
+[INFO] - 09-08-2022 13:51:39 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:39 - (ScwList: 282) :   Pointings = 216
+[INFO] - 09-08-2022 13:51:39 - (ScwList: 283) :   Revolutions = 19
+[INFO] - 09-08-2022 13:51:39 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:39 - (coords2scwLists.sh) : scw.lis has 216 lines
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 276) :   RA, Dec = 332.0874, 74.4657
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 277) :   L, B = 112.50, 15.00
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 280) :   [lMin, lMax] = [105.00, 120.00]
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:39 - (MakeScwList: 339) : File last modified 1.90 minutes ago
+[INFO] - 09-08-2022 13:51:40 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:40 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:40 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:40 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:40 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:41 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:41 - (ScwListMaker: 110) :   12 scw selected
+[INFO] - 09-08-2022 13:51:41 - (ScwListMaker: 111) :   Total TELAPSE = 18.80 ks
+[INFO] - 09-08-2022 13:51:41 - (ScwListMaker: 112) :   Off-axis corrected = 11.20 ks
+[INFO] - 09-08-2022 13:51:41 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 9.18 ks
+[INFO] - 09-08-2022 13:51:41 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:41 - (ScwList: 282) :   Pointings = 12
+[INFO] - 09-08-2022 13:51:41 - (ScwList: 283) :   Revolutions = 8
+[INFO] - 09-08-2022 13:51:41 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:41 - (coords2scwLists.sh) : scw.lis has 12 lines
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 276) :   RA, Dec = 33.094, 77.1483
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 277) :   L, B = 127.50, 15.00
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 280) :   [lMin, lMax] = [120.00, 135.00]
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:41 - (MakeScwList: 339) : File last modified 1.94 minutes ago
+[INFO] - 09-08-2022 13:51:42 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:42 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:42 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:42 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:42 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:42 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:43 - (ScwListMaker: 110) :   31 scw selected
+[INFO] - 09-08-2022 13:51:43 - (ScwListMaker: 111) :   Total TELAPSE = 99.75 ks
+[INFO] - 09-08-2022 13:51:43 - (ScwListMaker: 112) :   Off-axis corrected = 47.13 ks
+[INFO] - 09-08-2022 13:51:43 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 38.64 ks
+[INFO] - 09-08-2022 13:51:43 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:43 - (ScwList: 282) :   Pointings = 31
+[INFO] - 09-08-2022 13:51:43 - (ScwList: 283) :   Revolutions = 7
+[INFO] - 09-08-2022 13:51:43 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:43 - (coords2scwLists.sh) : scw.lis has 31 lines
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 276) :   RA, Dec = 73.1417, 68.1297
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 277) :   L, B = 142.50, 15.00
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 280) :   [lMin, lMax] = [135.00, 150.00]
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:43 - (MakeScwList: 339) : File last modified 1.97 minutes ago
+[INFO] - 09-08-2022 13:51:43 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:43 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:43 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:43 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:43 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:44 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:44 - (ScwListMaker: 110) :   16 scw selected
+[INFO] - 09-08-2022 13:51:44 - (ScwListMaker: 111) :   Total TELAPSE = 27.96 ks
+[INFO] - 09-08-2022 13:51:44 - (ScwListMaker: 112) :   Off-axis corrected = 22.29 ks
+[INFO] - 09-08-2022 13:51:44 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 18.27 ks
+[INFO] - 09-08-2022 13:51:44 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:44 - (ScwList: 282) :   Pointings = 16
+[INFO] - 09-08-2022 13:51:44 - (ScwList: 283) :   Revolutions = 8
+[INFO] - 09-08-2022 13:51:44 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:45 - (coords2scwLists.sh) : scw.lis has 16 lines
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 276) :   RA, Dec = 89.2839, 55.6807
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 277) :   L, B = 157.50, 15.00
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 280) :   [lMin, lMax] = [150.00, 165.00]
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:45 - (MakeScwList: 339) : File last modified 2.00 minutes ago
+[INFO] - 09-08-2022 13:51:46 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:46 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:46 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:46 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:46 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:47 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:48 - (ScwListMaker: 110) :   216 scw selected
+[INFO] - 09-08-2022 13:51:48 - (ScwListMaker: 111) :   Total TELAPSE = 534.56 ks
+[INFO] - 09-08-2022 13:51:48 - (ScwListMaker: 112) :   Off-axis corrected = 286.76 ks
+[INFO] - 09-08-2022 13:51:48 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 235.14 ks
+[INFO] - 09-08-2022 13:51:48 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:48 - (ScwList: 282) :   Pointings = 216
+[INFO] - 09-08-2022 13:51:48 - (ScwList: 283) :   Revolutions = 20
+[INFO] - 09-08-2022 13:51:48 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:48 - (coords2scwLists.sh) : scw.lis has 216 lines
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 276) :   RA, Dec = 98.5579, 42.4966
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 277) :   L, B = 172.50, 15.00
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 280) :   [lMin, lMax] = [165.00, 180.00]
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 281) :   [bMin, bMax] = [7.50, 22.50]
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:49 - (MakeScwList: 339) : File last modified 2.06 minutes ago
+[INFO] - 09-08-2022 13:51:49 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:49 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:49 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:49 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:49 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:50 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:51 - (ScwListMaker: 110) :   58 scw selected
+[INFO] - 09-08-2022 13:51:51 - (ScwListMaker: 111) :   Total TELAPSE = 183.60 ks
+[INFO] - 09-08-2022 13:51:51 - (ScwListMaker: 112) :   Off-axis corrected = 101.46 ks
+[INFO] - 09-08-2022 13:51:51 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 83.20 ks
+[INFO] - 09-08-2022 13:51:51 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:51 - (ScwList: 282) :   Pointings = 58
+[INFO] - 09-08-2022 13:51:51 - (ScwList: 283) :   Revolutions = 7
+[INFO] - 09-08-2022 13:51:51 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:51 - (coords2scwLists.sh) : scw.lis has 58 lines
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 276) :   RA, Dec = 77.1771, 14.5459
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 277) :   L, B = 187.50, -15.00
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 280) :   [lMin, lMax] = [180.00, 195.00]
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:51 - (MakeScwList: 339) : File last modified 2.10 minutes ago
+[INFO] - 09-08-2022 13:51:52 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:52 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:52 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:52 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:52 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:52 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:53 - (ScwListMaker: 110) :   2085 scw selected
+[INFO] - 09-08-2022 13:51:53 - (ScwListMaker: 111) :   Total TELAPSE = 5112.04 ks
+[INFO] - 09-08-2022 13:51:53 - (ScwListMaker: 112) :   Off-axis corrected = 2612.75 ks
+[INFO] - 09-08-2022 13:51:53 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 2142.45 ks
+[INFO] - 09-08-2022 13:51:53 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:53 - (ScwList: 282) :   Pointings = 2085
+[INFO] - 09-08-2022 13:51:53 - (ScwList: 283) :   Revolutions = 207
+[INFO] - 09-08-2022 13:51:53 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:53 - (coords2scwLists.sh) : scw.lis has 2085 lines
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 276) :   RA, Dec = 84.7812, 2.1571
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 277) :   L, B = 202.50, -15.00
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 280) :   [lMin, lMax] = [195.00, 210.00]
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:53 - (MakeScwList: 339) : File last modified 2.14 minutes ago
+[INFO] - 09-08-2022 13:51:54 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:54 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:54 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:54 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:54 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:55 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:55 - (ScwListMaker: 110) :   2831 scw selected
+[INFO] - 09-08-2022 13:51:55 - (ScwListMaker: 111) :   Total TELAPSE = 9755.87 ks
+[INFO] - 09-08-2022 13:51:55 - (ScwListMaker: 112) :   Off-axis corrected = 6367.47 ks
+[INFO] - 09-08-2022 13:51:55 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 5221.33 ks
+[INFO] - 09-08-2022 13:51:55 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:55 - (ScwList: 282) :   Pointings = 2831
+[INFO] - 09-08-2022 13:51:55 - (ScwList: 283) :   Revolutions = 149
+[INFO] - 09-08-2022 13:51:55 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:56 - (coords2scwLists.sh) : scw.lis has 2831 lines
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 276) :   RA, Dec = 91.3954, -10.7477
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 277) :   L, B = 217.50, -15.00
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 280) :   [lMin, lMax] = [210.00, 225.00]
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:56 - (MakeScwList: 339) : File last modified 2.18 minutes ago
+[INFO] - 09-08-2022 13:51:57 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:51:57 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:51:57 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:51:57 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:51:57 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:51:58 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:51:58 - (ScwListMaker: 110) :   459 scw selected
+[INFO] - 09-08-2022 13:51:58 - (ScwListMaker: 111) :   Total TELAPSE = 1480.03 ks
+[INFO] - 09-08-2022 13:51:58 - (ScwListMaker: 112) :   Off-axis corrected = 930.53 ks
+[INFO] - 09-08-2022 13:51:58 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 763.03 ks
+[INFO] - 09-08-2022 13:51:58 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:51:58 - (ScwList: 282) :   Pointings = 459
+[INFO] - 09-08-2022 13:51:58 - (ScwList: 283) :   Revolutions = 39
+[INFO] - 09-08-2022 13:51:58 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:51:58 - (coords2scwLists.sh) : scw.lis has 459 lines
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 276) :   RA, Dec = 97.6595, -23.9501
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 277) :   L, B = 232.50, -15.00
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 280) :   [lMin, lMax] = [225.00, 240.00]
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:51:59 - (MakeScwList: 339) : File last modified 2.24 minutes ago
+[INFO] - 09-08-2022 13:52:00 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:00 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:00 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:00 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:00 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:01 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:01 - (ScwListMaker: 110) :   43 scw selected
+[INFO] - 09-08-2022 13:52:01 - (ScwListMaker: 111) :   Total TELAPSE = 114.83 ks
+[INFO] - 09-08-2022 13:52:01 - (ScwListMaker: 112) :   Off-axis corrected = 53.61 ks
+[INFO] - 09-08-2022 13:52:01 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 43.96 ks
+[INFO] - 09-08-2022 13:52:01 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:01 - (ScwList: 282) :   Pointings = 43
+[INFO] - 09-08-2022 13:52:01 - (ScwList: 283) :   Revolutions = 19
+[INFO] - 09-08-2022 13:52:01 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:01 - (coords2scwLists.sh) : scw.lis has 43 lines
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 276) :   RA, Dec = 104.268, -37.2848
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 277) :   L, B = 247.50, -15.00
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 280) :   [lMin, lMax] = [240.00, 255.00]
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:02 - (MakeScwList: 339) : File last modified 2.28 minutes ago
+[INFO] - 09-08-2022 13:52:02 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:02 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:02 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:02 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:02 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:03 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:03 - (ScwListMaker: 110) :   82 scw selected
+[INFO] - 09-08-2022 13:52:03 - (ScwListMaker: 111) :   Total TELAPSE = 183.84 ks
+[INFO] - 09-08-2022 13:52:03 - (ScwListMaker: 112) :   Off-axis corrected = 119.51 ks
+[INFO] - 09-08-2022 13:52:03 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 98.00 ks
+[INFO] - 09-08-2022 13:52:03 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:03 - (ScwList: 282) :   Pointings = 82
+[INFO] - 09-08-2022 13:52:03 - (ScwList: 283) :   Revolutions = 29
+[INFO] - 09-08-2022 13:52:03 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:04 - (coords2scwLists.sh) : scw.lis has 82 lines
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 276) :   RA, Dec = 112.3667, -50.5674
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 277) :   L, B = 262.50, -15.00
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 280) :   [lMin, lMax] = [255.00, 270.00]
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:04 - (MakeScwList: 339) : File last modified 2.31 minutes ago
+[INFO] - 09-08-2022 13:52:04 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:04 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:04 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:04 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:04 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:05 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:05 - (ScwListMaker: 110) :   144 scw selected
+[INFO] - 09-08-2022 13:52:05 - (ScwListMaker: 111) :   Total TELAPSE = 340.10 ks
+[INFO] - 09-08-2022 13:52:05 - (ScwListMaker: 112) :   Off-axis corrected = 151.03 ks
+[INFO] - 09-08-2022 13:52:05 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 123.84 ks
+[INFO] - 09-08-2022 13:52:05 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:05 - (ScwList: 282) :   Pointings = 144
+[INFO] - 09-08-2022 13:52:05 - (ScwList: 283) :   Revolutions = 45
+[INFO] - 09-08-2022 13:52:05 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:06 - (coords2scwLists.sh) : scw.lis has 144 lines
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 276) :   RA, Dec = 124.839, -63.4283
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 277) :   L, B = 277.50, -15.00
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 280) :   [lMin, lMax] = [270.00, 285.00]
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:06 - (MakeScwList: 339) : File last modified 2.36 minutes ago
+[INFO] - 09-08-2022 13:52:07 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:07 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:07 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:07 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:07 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:08 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:09 - (ScwListMaker: 110) :   262 scw selected
+[INFO] - 09-08-2022 13:52:09 - (ScwListMaker: 111) :   Total TELAPSE = 671.27 ks
+[INFO] - 09-08-2022 13:52:09 - (ScwListMaker: 112) :   Off-axis corrected = 407.30 ks
+[INFO] - 09-08-2022 13:52:09 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 333.99 ks
+[INFO] - 09-08-2022 13:52:09 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:09 - (ScwList: 282) :   Pointings = 262
+[INFO] - 09-08-2022 13:52:09 - (ScwList: 283) :   Revolutions = 37
+[INFO] - 09-08-2022 13:52:09 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:09 - (coords2scwLists.sh) : scw.lis has 262 lines
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 276) :   RA, Dec = 152.0874, -74.4657
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 277) :   L, B = 292.50, -15.00
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 280) :   [lMin, lMax] = [285.00, 300.00]
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:09 - (MakeScwList: 339) : File last modified 2.41 minutes ago
+[INFO] - 09-08-2022 13:52:10 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:10 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:10 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:10 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:10 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:11 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:12 - (ScwListMaker: 110) :   89 scw selected
+[INFO] - 09-08-2022 13:52:12 - (ScwListMaker: 111) :   Total TELAPSE = 187.52 ks
+[INFO] - 09-08-2022 13:52:12 - (ScwListMaker: 112) :   Off-axis corrected = 61.92 ks
+[INFO] - 09-08-2022 13:52:12 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 50.77 ks
+[INFO] - 09-08-2022 13:52:12 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:12 - (ScwList: 282) :   Pointings = 89
+[INFO] - 09-08-2022 13:52:12 - (ScwList: 283) :   Revolutions = 39
+[INFO] - 09-08-2022 13:52:12 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:12 - (coords2scwLists.sh) : scw.lis has 89 lines
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 276) :   RA, Dec = 213.094, -77.1483
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 277) :   L, B = 307.50, -15.00
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 280) :   [lMin, lMax] = [300.00, 315.00]
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:12 - (MakeScwList: 339) : File last modified 2.45 minutes ago
+[INFO] - 09-08-2022 13:52:13 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:13 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:13 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:13 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:13 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:14 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:14 - (ScwListMaker: 110) :   402 scw selected
+[INFO] - 09-08-2022 13:52:14 - (ScwListMaker: 111) :   Total TELAPSE = 856.36 ks
+[INFO] - 09-08-2022 13:52:14 - (ScwListMaker: 112) :   Off-axis corrected = 394.32 ks
+[INFO] - 09-08-2022 13:52:14 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 323.34 ks
+[INFO] - 09-08-2022 13:52:14 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:14 - (ScwList: 282) :   Pointings = 402
+[INFO] - 09-08-2022 13:52:14 - (ScwList: 283) :   Revolutions = 40
+[INFO] - 09-08-2022 13:52:14 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:15 - (coords2scwLists.sh) : scw.lis has 402 lines
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 276) :   RA, Dec = 253.1417, -68.1297
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 277) :   L, B = 322.50, -15.00
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 280) :   [lMin, lMax] = [315.00, 330.00]
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:15 - (MakeScwList: 339) : File last modified 2.51 minutes ago
+[INFO] - 09-08-2022 13:52:16 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:16 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:16 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:16 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:16 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:16 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:17 - (ScwListMaker: 110) :   425 scw selected
+[INFO] - 09-08-2022 13:52:17 - (ScwListMaker: 111) :   Total TELAPSE = 1041.08 ks
+[INFO] - 09-08-2022 13:52:17 - (ScwListMaker: 112) :   Off-axis corrected = 584.54 ks
+[INFO] - 09-08-2022 13:52:17 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 479.32 ks
+[INFO] - 09-08-2022 13:52:17 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:17 - (ScwList: 282) :   Pointings = 425
+[INFO] - 09-08-2022 13:52:17 - (ScwList: 283) :   Revolutions = 54
+[INFO] - 09-08-2022 13:52:17 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:17 - (coords2scwLists.sh) : scw.lis has 425 lines
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 276) :   RA, Dec = 269.2839, -55.6807
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 277) :   L, B = 337.50, -15.00
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 280) :   [lMin, lMax] = [330.00, 345.00]
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:17 - (MakeScwList: 339) : File last modified 2.54 minutes ago
+[INFO] - 09-08-2022 13:52:17 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:17 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:17 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:17 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:17 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:18 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:18 - (ScwListMaker: 110) :   567 scw selected
+[INFO] - 09-08-2022 13:52:18 - (ScwListMaker: 111) :   Total TELAPSE = 1427.95 ks
+[INFO] - 09-08-2022 13:52:18 - (ScwListMaker: 112) :   Off-axis corrected = 862.30 ks
+[INFO] - 09-08-2022 13:52:18 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 707.09 ks
+[INFO] - 09-08-2022 13:52:18 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:18 - (ScwList: 282) :   Pointings = 567
+[INFO] - 09-08-2022 13:52:18 - (ScwList: 283) :   Revolutions = 53
+[INFO] - 09-08-2022 13:52:18 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:18 - (coords2scwLists.sh) : scw.lis has 567 lines
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 276) :   RA, Dec = 278.5579, -42.4966
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 277) :   L, B = 352.50, -15.00
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 280) :   [lMin, lMax] = [345.00, 360.00]
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:19 - (MakeScwList: 339) : File last modified 2.57 minutes ago
+[INFO] - 09-08-2022 13:52:20 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:20 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:20 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:20 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:20 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:21 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:21 - (ScwListMaker: 110) :   1091 scw selected
+[INFO] - 09-08-2022 13:52:21 - (ScwListMaker: 111) :   Total TELAPSE = 2259.44 ks
+[INFO] - 09-08-2022 13:52:21 - (ScwListMaker: 112) :   Off-axis corrected = 866.98 ks
+[INFO] - 09-08-2022 13:52:21 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 710.93 ks
+[INFO] - 09-08-2022 13:52:21 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:21 - (ScwList: 282) :   Pointings = 1091
+[INFO] - 09-08-2022 13:52:21 - (ScwList: 283) :   Revolutions = 102
+[INFO] - 09-08-2022 13:52:21 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:21 - (coords2scwLists.sh) : scw.lis has 1091 lines
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 276) :   RA, Dec = 285.5636, -29.156
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 277) :   L, B = 7.50, -15.00
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 280) :   [lMin, lMax] = [360.00, 15.00]
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:22 - (MakeScwList: 339) : File last modified 2.62 minutes ago
+[INFO] - 09-08-2022 13:52:23 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:23 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:23 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:23 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:23 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:24 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:24 - (ScwListMaker: 110) :   1149 scw selected
+[INFO] - 09-08-2022 13:52:24 - (ScwListMaker: 111) :   Total TELAPSE = 2566.60 ks
+[INFO] - 09-08-2022 13:52:24 - (ScwListMaker: 112) :   Off-axis corrected = 1146.41 ks
+[INFO] - 09-08-2022 13:52:24 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 940.06 ks
+[INFO] - 09-08-2022 13:52:24 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:24 - (ScwList: 282) :   Pointings = 1149
+[INFO] - 09-08-2022 13:52:24 - (ScwList: 283) :   Revolutions = 91
+[INFO] - 09-08-2022 13:52:24 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:24 - (coords2scwLists.sh) : scw.lis has 1149 lines
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 276) :   RA, Dec = 291.8675, -15.883
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 277) :   L, B = 22.50, -15.00
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 280) :   [lMin, lMax] = [15.00, 30.00]
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:25 - (MakeScwList: 339) : File last modified 2.66 minutes ago
+[INFO] - 09-08-2022 13:52:25 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:25 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:25 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:25 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:25 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:27 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:27 - (ScwListMaker: 110) :   644 scw selected
+[INFO] - 09-08-2022 13:52:27 - (ScwListMaker: 111) :   Total TELAPSE = 1603.39 ks
+[INFO] - 09-08-2022 13:52:27 - (ScwListMaker: 112) :   Off-axis corrected = 1117.21 ks
+[INFO] - 09-08-2022 13:52:27 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 916.11 ks
+[INFO] - 09-08-2022 13:52:27 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:27 - (ScwList: 282) :   Pointings = 644
+[INFO] - 09-08-2022 13:52:27 - (ScwList: 283) :   Revolutions = 38
+[INFO] - 09-08-2022 13:52:27 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:27 - (coords2scwLists.sh) : scw.lis has 644 lines
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 276) :   RA, Dec = 298.2711, -2.8402
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 277) :   L, B = 37.50, -15.00
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 280) :   [lMin, lMax] = [30.00, 45.00]
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:27 - (MakeScwList: 339) : File last modified 2.71 minutes ago
+[INFO] - 09-08-2022 13:52:28 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:28 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:28 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:28 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:28 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:29 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:29 - (ScwListMaker: 110) :   496 scw selected
+[INFO] - 09-08-2022 13:52:29 - (ScwListMaker: 111) :   Total TELAPSE = 1216.39 ks
+[INFO] - 09-08-2022 13:52:29 - (ScwListMaker: 112) :   Off-axis corrected = 530.67 ks
+[INFO] - 09-08-2022 13:52:29 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 435.15 ks
+[INFO] - 09-08-2022 13:52:29 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:29 - (ScwList: 282) :   Pointings = 496
+[INFO] - 09-08-2022 13:52:29 - (ScwList: 283) :   Revolutions = 84
+[INFO] - 09-08-2022 13:52:29 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:29 - (coords2scwLists.sh) : scw.lis has 496 lines
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 276) :   RA, Dec = 305.4063, 9.7824
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 277) :   L, B = 52.50, -15.00
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 280) :   [lMin, lMax] = [45.00, 60.00]
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:29 - (MakeScwList: 339) : File last modified 2.74 minutes ago
+[INFO] - 09-08-2022 13:52:30 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:30 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:30 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:30 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:30 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:30 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:31 - (ScwListMaker: 110) :   389 scw selected
+[INFO] - 09-08-2022 13:52:31 - (ScwListMaker: 111) :   Total TELAPSE = 795.02 ks
+[INFO] - 09-08-2022 13:52:31 - (ScwListMaker: 112) :   Off-axis corrected = 446.04 ks
+[INFO] - 09-08-2022 13:52:31 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 365.75 ks
+[INFO] - 09-08-2022 13:52:31 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:31 - (ScwList: 282) :   Pointings = 389
+[INFO] - 09-08-2022 13:52:31 - (ScwList: 283) :   Revolutions = 36
+[INFO] - 09-08-2022 13:52:31 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:31 - (coords2scwLists.sh) : scw.lis has 389 lines
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 276) :   RA, Dec = 313.9825, 21.6997
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 277) :   L, B = 67.50, -15.00
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 280) :   [lMin, lMax] = [60.00, 75.00]
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:31 - (MakeScwList: 339) : File last modified 2.77 minutes ago
+[INFO] - 09-08-2022 13:52:32 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:32 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:32 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:32 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:32 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:33 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:33 - (ScwListMaker: 110) :   43 scw selected
+[INFO] - 09-08-2022 13:52:33 - (ScwListMaker: 111) :   Total TELAPSE = 98.86 ks
+[INFO] - 09-08-2022 13:52:33 - (ScwListMaker: 112) :   Off-axis corrected = 33.01 ks
+[INFO] - 09-08-2022 13:52:33 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 27.07 ks
+[INFO] - 09-08-2022 13:52:33 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:33 - (ScwList: 282) :   Pointings = 43
+[INFO] - 09-08-2022 13:52:33 - (ScwList: 283) :   Revolutions = 10
+[INFO] - 09-08-2022 13:52:33 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:33 - (coords2scwLists.sh) : scw.lis has 43 lines
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 276) :   RA, Dec = 324.9377, 32.4347
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 277) :   L, B = 82.50, -15.00
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 280) :   [lMin, lMax] = [75.00, 90.00]
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:34 - (MakeScwList: 339) : File last modified 2.82 minutes ago
+[INFO] - 09-08-2022 13:52:35 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:35 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:35 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:35 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:35 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:36 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:37 - (ScwListMaker: 110) :   130 scw selected
+[INFO] - 09-08-2022 13:52:37 - (ScwListMaker: 111) :   Total TELAPSE = 314.79 ks
+[INFO] - 09-08-2022 13:52:37 - (ScwListMaker: 112) :   Off-axis corrected = 136.01 ks
+[INFO] - 09-08-2022 13:52:37 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 111.52 ks
+[INFO] - 09-08-2022 13:52:37 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:37 - (ScwList: 282) :   Pointings = 130
+[INFO] - 09-08-2022 13:52:37 - (ScwList: 283) :   Revolutions = 19
+[INFO] - 09-08-2022 13:52:37 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:37 - (coords2scwLists.sh) : scw.lis has 130 lines
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 276) :   RA, Dec = 339.4187, 41.1734
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 277) :   L, B = 97.50, -15.00
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 280) :   [lMin, lMax] = [90.00, 105.00]
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:37 - (MakeScwList: 339) : File last modified 2.87 minutes ago
+[INFO] - 09-08-2022 13:52:37 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:37 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:37 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:37 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:37 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:38 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:39 - (ScwListMaker: 110) :   108 scw selected
+[INFO] - 09-08-2022 13:52:39 - (ScwListMaker: 111) :   Total TELAPSE = 249.25 ks
+[INFO] - 09-08-2022 13:52:39 - (ScwListMaker: 112) :   Off-axis corrected = 138.47 ks
+[INFO] - 09-08-2022 13:52:39 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 113.54 ks
+[INFO] - 09-08-2022 13:52:39 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:39 - (ScwList: 282) :   Pointings = 108
+[INFO] - 09-08-2022 13:52:39 - (ScwList: 283) :   Revolutions = 13
+[INFO] - 09-08-2022 13:52:39 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:39 - (coords2scwLists.sh) : scw.lis has 108 lines
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 276) :   RA, Dec = 358.0926, 46.6718
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 277) :   L, B = 112.50, -15.00
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 280) :   [lMin, lMax] = [105.00, 120.00]
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:39 - (MakeScwList: 339) : File last modified 2.91 minutes ago
+[INFO] - 09-08-2022 13:52:40 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:40 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:40 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:40 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:40 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:41 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:41 - (ScwListMaker: 110) :   45 scw selected
+[INFO] - 09-08-2022 13:52:41 - (ScwListMaker: 111) :   Total TELAPSE = 129.35 ks
+[INFO] - 09-08-2022 13:52:41 - (ScwListMaker: 112) :   Off-axis corrected = 57.84 ks
+[INFO] - 09-08-2022 13:52:41 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 47.43 ks
+[INFO] - 09-08-2022 13:52:41 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:41 - (ScwList: 282) :   Pointings = 45
+[INFO] - 09-08-2022 13:52:41 - (ScwList: 283) :   Revolutions = 12
+[INFO] - 09-08-2022 13:52:41 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:42 - (coords2scwLists.sh) : scw.lis has 45 lines
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 276) :   RA, Dec = 19.4154, 47.639
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 277) :   L, B = 127.50, -15.00
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 280) :   [lMin, lMax] = [120.00, 135.00]
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:42 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:43 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:43 - (MakeScwList: 339) : File last modified 2.96 minutes ago
+[INFO] - 09-08-2022 13:52:43 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:43 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:43 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:43 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:43 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:44 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:44 - (ScwListMaker: 110) :   79 scw selected
+[INFO] - 09-08-2022 13:52:44 - (ScwListMaker: 111) :   Total TELAPSE = 255.33 ks
+[INFO] - 09-08-2022 13:52:44 - (ScwListMaker: 112) :   Off-axis corrected = 145.13 ks
+[INFO] - 09-08-2022 13:52:44 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 119.01 ks
+[INFO] - 09-08-2022 13:52:44 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:44 - (ScwList: 282) :   Pointings = 79
+[INFO] - 09-08-2022 13:52:44 - (ScwList: 283) :   Revolutions = 8
+[INFO] - 09-08-2022 13:52:44 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:44 - (coords2scwLists.sh) : scw.lis has 79 lines
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 276) :   RA, Dec = 39.484, 43.7882
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 277) :   L, B = 142.50, -15.00
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 280) :   [lMin, lMax] = [135.00, 150.00]
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:45 - (MakeScwList: 339) : File last modified 2.99 minutes ago
+[INFO] - 09-08-2022 13:52:45 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:45 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:45 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:45 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:45 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:46 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:46 - (ScwListMaker: 110) :   336 scw selected
+[INFO] - 09-08-2022 13:52:46 - (ScwListMaker: 111) :   Total TELAPSE = 962.36 ks
+[INFO] - 09-08-2022 13:52:46 - (ScwListMaker: 112) :   Off-axis corrected = 519.39 ks
+[INFO] - 09-08-2022 13:52:46 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 425.90 ks
+[INFO] - 09-08-2022 13:52:46 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:46 - (ScwList: 282) :   Pointings = 336
+[INFO] - 09-08-2022 13:52:46 - (ScwList: 283) :   Revolutions = 19
+[INFO] - 09-08-2022 13:52:46 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:46 - (coords2scwLists.sh) : scw.lis has 336 lines
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 276) :   RA, Dec = 55.6021, 36.1481
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 277) :   L, B = 157.50, -15.00
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 280) :   [lMin, lMax] = [150.00, 165.00]
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:47 - (MakeScwList: 339) : File last modified 3.03 minutes ago
+[INFO] - 09-08-2022 13:52:48 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:48 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:48 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:48 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:48 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:49 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:49 - (ScwListMaker: 110) :   1386 scw selected
+[INFO] - 09-08-2022 13:52:49 - (ScwListMaker: 111) :   Total TELAPSE = 4023.25 ks
+[INFO] - 09-08-2022 13:52:49 - (ScwListMaker: 112) :   Off-axis corrected = 2578.93 ks
+[INFO] - 09-08-2022 13:52:49 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 2114.72 ks
+[INFO] - 09-08-2022 13:52:49 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:49 - (ScwList: 282) :   Pointings = 1386
+[INFO] - 09-08-2022 13:52:49 - (ScwList: 283) :   Revolutions = 48
+[INFO] - 09-08-2022 13:52:49 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:49 - (coords2scwLists.sh) : scw.lis has 1386 lines
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 275) : Running MakeScwList on host intggw6.n1grid.lan
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 276) :   RA, Dec = 67.7981, 26.0727
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 277) :   L, B = 172.50, -15.00
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 278) :   Dist in L = 7.5
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 279) :   Dist in B = 7.5
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 280) :   [lMin, lMax] = [165.00, 180.00]
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 281) :   [bMin, bMax] = [-22.50, -7.50]
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 284) :   Output filename = scw.lis
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 76) : point.lis found
+[INFO] - 09-08-2022 13:52:50 - (MakeScwList: 339) : File last modified 3.08 minutes ago
+[INFO] - 09-08-2022 13:52:50 - (AsciiDataFileReader: 165) : File point.lis has 184266 lines:
+[INFO] - 09-08-2022 13:52:50 - (AsciiDataFileReader: 166) :   0 header lines
+[INFO] - 09-08-2022 13:52:50 - (AsciiDataFileReader: 167) :   184266 data lines
+[INFO] - 09-08-2022 13:52:50 - (AsciiDataFileReader: 168) :   0 blank lines
+[INFO] - 09-08-2022 13:52:50 - (AsciiDataFileReader: 185) :   11 data columns
+[INFO] - 09-08-2022 13:52:51 - (ScwListMaker: 45) : Selecting science windows
+[INFO] - 09-08-2022 13:52:52 - (ScwListMaker: 110) :   546 scw selected
+[INFO] - 09-08-2022 13:52:52 - (ScwListMaker: 111) :   Total TELAPSE = 1400.26 ks
+[INFO] - 09-08-2022 13:52:52 - (ScwListMaker: 112) :   Off-axis corrected = 558.46 ks
+[INFO] - 09-08-2022 13:52:52 - (ScwListMaker: 113) :   Dead-time corrected (0.82) = 457.94 ks
+[INFO] - 09-08-2022 13:52:52 - (ScwList: 281) : Scw IDs are set:
+[INFO] - 09-08-2022 13:52:52 - (ScwList: 282) :   Pointings = 546
+[INFO] - 09-08-2022 13:52:52 - (ScwList: 283) :   Revolutions = 150
+[INFO] - 09-08-2022 13:52:52 - (ScwList: 277) : List written to /home/int/intportalowner/integral/skygrid/scw.lis
+[INFO] - 09-08-2022 13:52:52 - (coords2scwLists.sh) : scw.lis has 546 lines

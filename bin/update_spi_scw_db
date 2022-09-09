@@ -1,0 +1,26 @@
+#!/bin/bash
+
+##  Define current dir
+thisDir=$PWD
+
+##  Check hostname
+if [ "$(hostname)" = "intggw6.n1grid.lan" ]
+then
+    idxDir=${HOME}/integral/osa_support
+else
+    idxDir=.
+fi
+cd $idxDir
+
+##  Get the updated master filtered GTI FITS file - SPI-GTI-SCW-DB.fits.gz
+#  TODO
+
+##  Extract the filtered scw list into a text file
+# This requires the file SPI-GTI-SCW-DB.fits.gz to be present
+
+fdump SPI-GTI-SCW-DB.fits.gz[1] spi-tmp.txt prhead=no column=ScWID rows=- showcol=no showunit=no showrow=no clobber=yes
+grep '[^[:blank:]]' < spi-tmp.txt > spi-gti-scw-list.txt
+rm spi-tmp.txt
+
+##  Go back to starting dir
+cd $thisDir

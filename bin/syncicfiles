@@ -1,0 +1,32 @@
+#! /bin/sh
+
+log="Log: `/bin/date`"
+
+thisdir=$PWD
+
+HOST=`hostname`
+
+if [ "$HOST" = "intggw.n1grid.lan" ]
+then
+    osaDir=$HOME/osa
+else
+    echo "Not on intggw.n1grid.lan: Will not sync OSA ic files"
+    return -1
+fi
+
+RSYNC=`which rsync`
+
+echo "$log : Using $RSYNC"
+echo "$log : osaDir = $osaDir"
+echo "$log : cd $osaDir"
+cd $osaDir
+echo "$log : rsync -Lzrtv isdcarc.unige.ch::arc/FTP/arc_distr/ic_tree/prod/ ."
+echo "$log : Syncing IC files from the ISDC ..."
+rsync -Lzrtv isdcarc.unige.ch::arc/FTP/arc_distr/ic_tree/prod/ .
+touch ic
+touch idx
+rsync -Lzrtv isdcarc.unige.ch::arc/rev_3/cat/ ./cat/
+touch cat
+echo "$log : done"
+
+cd $thisdir
