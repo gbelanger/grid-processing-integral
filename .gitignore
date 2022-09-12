@@ -4,4 +4,4 @@ mosaics
 pipeline/logs
 skygrid/logs
 catalog/logs
-status.log
+pipeline/status.log
