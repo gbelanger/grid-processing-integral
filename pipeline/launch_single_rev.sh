@@ -176,8 +176,8 @@ qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/ba
 #  Define output and error log files
 INT_DIR="/home/int/intportalowner/integral"
 PIPELINE_DIR="${INT_DIR}/pipeline"
-o="${PIPELINE_DIR}/logs/output/run_integ_analysis.${instrument,,}.${rev}.out"
-e="${PIPELINE_DIR}/logs/error/run_integ_analysis.${instrument,,}.${rev}.err"
+o="${PIPELINE_DIR}/logs/output/run_integ_analysis.${instrument,,}.${band}.${rev}.out"
+e="${PIPELINE_DIR}/logs/error/run_integ_analysis.${instrument,,}.${band}.${rev}.err"
 
 
 #  Submit the job
