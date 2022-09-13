@@ -15,7 +15,7 @@ for inst in $instruments ; do
   echo " - Counting successfully completed ..."
   egrep "science_analysis terminating with status 0" *${inst}*.out > good
   echo " - Counting failed ..."
-  egrep "science_analysis terminating with status -" *${inst}.out > failed
+  egrep "science_analysis terminating with status -" *${inst}*.out > failed
   nFailed=$(wc -l < failed) 
   nGood=$(wc -l < good)
   nTot=$(expr $nGood + $nFailed)

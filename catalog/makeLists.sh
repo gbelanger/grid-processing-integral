@@ -87,10 +87,3 @@ logFilename=${outputDir}.log
 ### This is the workhorse
 . coords2scwLists.sh $gridFile_fk5 $dist $outputDir > $logFilename
 
-# Make a list of the scw list filenames
-listOfLists=${outputDir}.filenames
-ls -1 $outputDir/* > $listOfLists
-echo "`log` Scw lists are ready and listed in $listOfLists"
-n=`cat -n $outputDir/* | tail -1 | awk '{print $1}'`
-n2=`cat $outputDir/* |sort -u|cat -n | tail -1 | awk '{print $1}'`
-echo "`log` Set of lists contains $n pointings ($n2 are distinct)"

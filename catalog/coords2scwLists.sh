@@ -1,19 +1,40 @@
 #! /bin/bash
 
+set -o errexit # exit when a command fails
+set -o nounset # exit when your script tries to use undeclared variables
+#set -o pipefail # don't hide errors within pipes
+
+
+# Last modified by 
+#
+# G.Belanger (Sep 2022)
+# - Adapted for catalog production from skygrid/coords2scwLists.sh
+#
+
 
 ##  Set up loging functions
 log(){
-  progName="coords2scwLists.sh"
+  local progName="coords2scwLists.sh"
   date=`date +"%d-%m-%Y %H:%M:%S"`
   log="[INFO] - $date - ($progName) : "
   echo $log
+  unset progName
 }
 
 warn(){
-  progName="coords2scwLists.sh"
+  local progName="coords2scwLists.sh"
   date=`date +"%d-%m-%Y %H:%M:%S"`
   warn="[WARN] - $date - ($progName) : "
   echo $warn
+  unset progName
+}
+
+error(){
+  local progName="coords2scwLists.sh"
+  date=$(date +"%d-%m-%Y %H:%M:%S")
+  error="[ERROR] - $date - ($progName) : "
+  echo $error
+  unset progName
 }
 
 
@@ -34,10 +55,9 @@ fi
 cp -f $HOME/integral/osa_support/point.lis .
 
 
-##  Check output directory
-if [[ ! -d $outDir ]] ; then
-  mkdir $outDir
-fi
+##  Create output directory
+if [[ -d $outDir ]] ; then rm -r $outDir ; fi
+mkdir $outDir
 
 
 ##  Define executables and variables
@@ -58,6 +78,7 @@ cat $coordsFile | while read ra dec ; do
 
   ##  If list has size
   if [[ -s scw.lis ]] ; then
+
    nScw=$(wc -l < scw.lis)
    echo "$(log) scw.lis has $nScw lines"
 
@@ -67,9 +88,11 @@ cat $coordsFile | while read ra dec ; do
    nCats=2
    max=$(${CALC} nint\($nScw/$nCats\))
 
-   while [[ $max -ge 4 ]] ; do 
+   k=1
+   while [[ $max -ge 16 ]] ; do 
 
     if [[ $nScw -gt $max ]] ; then
+
       while [[ $nScwPerGrp -gt $max ]] ; do
 	nGrps=$((nGrps+1))
  	nScwPerGrp=$(${CALC} int\($nScw/$nGrps\))
@@ -78,41 +101,48 @@ cat $coordsFile | while read ra dec ; do
 
       j=1
       n=$(${CALC} $nScwPerGrp*$j)
-      head -$n scw.lis > $outDir/scw_pt${i}.${j}_${ra}_${dec}_${dist}deg.lis
+      head -$n scw.lis > $outDir/scw_pt${i}.${k}_${ra}_${dec}_${dist}deg.lis
+      k=$((k+1))
       r=$(${CALC} $nScw - $n)
-      echo "$(log)  Grp $j: $n (remainder=$r)"
+      echo "$(log)  Grp $j: $n scw (remainder $r)"
 
       while [[ $r -ge $nScwPerGrp ]] ; do
         j=$((j+1))
         n=$(${CALC} $nScwPerGrp*$j)
-        head -$n scw.lis | tail -$nScwPerGrp > $outDir/scw_pt${i}.${j}_${ra}_${dec}_${dist}deg.lis
+        head -$n scw.lis | tail -$nScwPerGrp > $outDir/scw_pt${i}.${k}_${ra}_${dec}_${dist}deg.lis
+        k=$((k+1))
         r=$(${CALC} $nScw - $n)
-        echo "$(log)  Grp $j: $nScwPerGrp (remainder=$r)"
+        echo "$(log)  Grp $j: $nScwPerGrp scw (remainder $r)"
       done
 
       if [[ "$r" -gt "0" ]] ; then
         j=$((j+1))
-        echo "$(log)  Grp $j: $r (last group)"
-        tail -$r scw.lis >> $outDir/scw_pt${i}.${j}_${ra}_${dec}_${dist}deg.lis
+        echo "$(log)  Grp $j: $r scw (last group)"
+        tail -$r scw.lis >> $outDir/scw_pt${i}.${k}_${ra}_${dec}_${dist}deg.lis
+        k=$((k+1))
       fi
 
-      # Check total number of lines match original scw.lis
-      sumOfLines=$(cat -n $outDir/scw_pt${i}.* | tail -1 | awk '{print $1}')
-      echo "$(log) scw.lis has $nScw line and the sum of subgroups has $sumOfLines lines"
-      if [ $nScw -eq $sumOfLines ] ; then
-	 echo "$(log) All scws have been used. Iterative to next level."
-      else
-	 echo "$(log) There is a discrepency: aborting process"
-   	 exit -1
-      fi
+#      # Check total number of lines match original scw.lis
+#      sumOfLines=$(cat -n $outDir/scw_pt${i}.* | tail -1 | awk '{print $1}')
+#      echo "$(log) Initial scw.lis had $nScw lines, and the sum of subgroups has $sumOfLines lines"
+#      if [ $nScw -eq $sumOfLines ] ; then
+#	 echo "$(log) All scws have been used."
+#      else
+#	 echo "$(error) There is a discrepency: aborting process"
+#   	 exit -1
+#      fi
 
-      # This will happen whenever there are more than $max but less them 2*$max
+      ##  This will happen whenever there are more than $max but less them 2*$max
       if [[ "$j" -eq "1" ]] ; then
-          mv $outDir/scw_pt${i}.${j}_${ra}_${dec}_${dist}deg.lis $outDir/scw_pt${i}_${ra}_${dec}_${dist}deg.lis
+        mv $outDir/scw_pt${i}.${k}_${ra}_${dec}_${dist}deg.lis $outDir/scw_pt${i}_${ra}_${dec}_${dist}deg.lis
+        k=$((k+1))
       fi      
 
     else
-      mv scw.lis $outDir/scw_pt${i}_${ra}_${dec}_${dist}deg.lis
+
+      mv scw.lis $outDir/scw_pt${k}_${ra}_${dec}_${dist}deg.lis
+      k=$((k+1))
+
     fi
 
     ##  Double the number of cats and update max
@@ -126,8 +156,22 @@ cat $coordsFile | while read ra dec ; do
     echo "$(log) No scw for grid point at (fk5) $ra, $dec"
   fi
 
-  ##  Continue to next ra dec
+  ##  Move to next ra dec in $coordsFile
   i=$((i+1))
 
 done
-/bin/rm point.lis
+
+echo "$(log) Production completed."
+
+
+##  Make a list of the scw list filenames
+listOfLists=${outDir}.filenames
+ls -1 $outDir/* > $listOfLists
+echo "$(log) Scw lists files are listed in $listOfLists"
+n=`cat -n $outDir/* | tail -1 | awk '{print $1}'`
+n2=`cat $outDir/* |sort -u|cat -n | tail -1 | awk '{print $1}'`
+echo "$(log) Set of lists contains $n pointings ($n2 are distinct)"
+
+
+##  Clean up
+/bin/rm point.lis scw.lis
