@@ -158,7 +158,9 @@ echo "$(log) Preparing list of swcIDs"
 
 
 ##  Define dir containing executables
-INT_DIR="/home/int/intportalowner/integral"
+HOME_DIR="/home/int/intportalowner"
+BIN_DIR="${HOME_DIR}/bin"
+INT_DIR="${HOME_DIR}/integral"
 PIPELINE_DIR="${INT_DIR}/pipeline"
 
 #  Step 1) Use point.lis (updated daily) to create a file called scwIDs.dat
@@ -326,15 +328,17 @@ case ${instrument} in
 esac
 cd ${PIPELINE_DIR}
 
+CALC=${BIN_DIR}/calc.pl
 
 ##  Conclude
 echo "$(log) Finished processing rev $rev"
 endTime=$(date +%s)
-time=$(($endTime-$startTime))
-processingTime=$(${HOME}/bin/calc.pl $time/3660)
+time=$(${CALC} $endTime - $startTime)
+processingTime=$(${CALC} $time/3660)
+roundedTime=$(${CALC} int\($processingTime\))
 
-if [[ ${processingTime} -lt 1 ]] ; then
-  processingTime=$($HOME/bin/calc.pl $time*60)
+if [[ ${roundedTime} -eq 0 ]] ; then
+  processingTime=$(${CALC} $time*60)
   echo "$(log) Processing time was $processingTime minutes"
 else
   echo "$(log) Processing time was $processingTime hours"

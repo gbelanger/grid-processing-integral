@@ -32,11 +32,9 @@ if [[ ! -s $list ]] ; then
 fi
 
 ##  Check instrument
-if [[ $instrument != ISGRI ]]
-then
+if [[ $instrument == ISGRI ]] ; then
   inst=ibis;
-elif [[ $instrument != JMX* ]]
-then
+elif [[ $instrument == JMX1 ]] || [[ $instrument == JMX2 ]] ; then
   inst=jmx;
 else
   echo "Error: $instrument : Unknown instrument. Options are ISGRI|JMX1|JMX2.";

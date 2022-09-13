@@ -15,7 +15,10 @@
 
 # Modification history:
 #
-# G.Belanger (Aug-Sep 2022)
+# G.Belanger (Sep 2022)
+# - added AGNDIST column to final time series
+#
+# G.Belanger (Aug 2022)
 # - created script
 # 
 
@@ -105,6 +108,7 @@ ISOC5="/data/int/isoc5/gbelange/isocArchive"
 TS_DIR="${ISOC5}/timeseries_cat_0043"
 INT_DIR="/home/int/intportalowner/integral"
 BIN_DIR="/home/int/intportalowner/bin"
+SKYGRID_DIR="${INT_DIR}/skygrid"
 
 ##  Set HEADAS env
 echo "$(log) Setting HEADAS env"
@@ -253,6 +257,10 @@ fparkey ${instrument} ${og_file} INSTRUME
 
 ##  Run lc_pick  IMP: must leave emin and emax empty to use all source data
 lc_pick ${og_file} lc="$output" source="$srcid" emin="" emax="" ra_obj="${ra}" dec_obj="${dec}" instrument="${inst_idx}"
+
+
+##  Add ANGDIST column to time series
+#${SKYGRID_DIR}/jmx_add_angdist_col.sh 
 
 
 ##  Clean up
