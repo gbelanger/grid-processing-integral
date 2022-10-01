@@ -84,11 +84,19 @@ Overwriting:
 ./launch_many_revs.sh revs-26-2500.lis jmx2_analysis_IMA.sh JMX2 83-153 y ;
 ./launch_many_revs.sh revs-26-2500.lis jmx2_analysis_IMA.sh JMX2 154-224 y ;
 
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 46-82 y ;
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 83-153 y ;
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 154-224 y ;
+
 Not overwriting:
 
 ./launch_many_revs.sh revs-26-2500.lis jmx2_analysis_IMA.sh JMX2 46-82 n ;
 ./launch_many_revs.sh revs-26-2500.lis jmx2_analysis_IMA.sh JMX2 83-153 n ;
 ./launch_many_revs.sh revs-26-2500.lis jmx2_analysis_IMA.sh JMX2 154-224 n ;
+
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 46-82 n ;
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 83-153 n ;
+./launch_many_revs.sh revs-26-2500.lis jmx1_analysis_IMA.sh JMX1 154-224 n ;
 
 
 #### SPI
