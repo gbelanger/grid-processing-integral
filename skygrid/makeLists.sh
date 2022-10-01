@@ -1,40 +1,21 @@
 #!/bin/bash
 
-if [ $# -lt 3 ]
+if [ $# -lt 2 ]
 then
-  echo "Usage: . makeLists.sh xStep yStep dist"
-  return 1
+  echo "Usage: ./makeLists.sh step radius"
+  exit 0
 fi
 
 # This script:
 #
 # 1) Creates a list of grid point coordinates distributed 
 #    over the whole sky in a grid defined according to the 
-#    grid steps, xStep and yStep (arguments 1 and 2), that 
-#    are passed to the script getGridPoints.sh
+#    grid step (same in x and y) passed to get-grid-points.py
 #
 # 2) Generates a scw.lis for each grid point coord in using 
-#    all the pointings available in the general index of scw
-#    and, for IBIS/ISGRI, within the degrees from the pointing 
-#    axis, dist (argument 3), that is passed to the script
-#    coords2scwLists.sh.
-#
-# These list of scw will be used to make mosaics centred on
-# each of the grid points (in order to maximise sensitivity on 
-# each field defined by these grid points and the off-axis
-# dist). 
-#
-# For IBIS/ISGRI, with a FCFOV of 8x8 and PCFOV of 29x29, we 
-# can take 11 degrees off-axis distance (dist), and 12 degrees 
-# b/w grid points (xStep=yStep=12) that makes for considerable 
-# overalp between the scws of adjacent grid points. Nonetheless, 
-# this ensures max sensitivity at the centre of each grid point,
-# and therefore for every source in the sky, no matter where
-# it is located.
-#
-# In the case for ISGRI, we gain in significance only
-# up to 11 degrees from the pointing axis. For JEM-X the 
-# grid step and off-axis distance would have to be smaller.
+#    the radius (argument 2) from the pointing axis passed to
+#    coords2scwLists.sh
+##
 
 #  Set up loging functions
 log(){
@@ -52,14 +33,13 @@ echo $warn
 }
 
 # Variables
-xStep=$1
-yStep=$2
-dist=$3
+step=$1
+dist=$2
 
 # Define the points on the grid in Galactic coordinates
 echo "`log` Defining grid points in Galactic coordinates"
-gridFile="gridPoints_${xStep}_${yStep}_gal.txt"
-. getGridPoints.sh $xStep $yStep > $gridFile
+gridFile="grid-${step}deg-gal.txt"
+python get-grid-points.py $step $gridFile
 nPts=`wc $gridFile | awk '{print $1}'`
 echo "`log` There are $nPts grid points"
 
@@ -75,7 +55,7 @@ mv tmp $gridFile_fk5
 rm fk5Coords.txt
 
 # Create output directory
-outputDir="scwLists_${xStep}x${yStep}dist${dist}deg"
+outputDir="scw-lists-step-${step}deg-radius-${dist}deg"
 if [[ -d $outputDir ]] ; then /bin/rm -r $outputDir ; fi
 mkdir $outputDir
 echo "`log` Output directory is $outputDir"
