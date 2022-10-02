@@ -1,0 +1,6 @@
+scw-lists-step*
+logs
+*.txt
+*.log
+*.filename
+
