@@ -39,7 +39,8 @@ dist=$2
 # Define the points on the grid in Galactic coordinates
 echo "`log` Defining grid points in Galactic coordinates"
 gridFile="grid-${step}deg-gal.txt"
-python get-grid-points.py $step $gridFile
+radius=$(~/bin/calc.pl $step/2 + 0.5)
+python get-grid-points.py $radius $gridFile
 nPts=`wc $gridFile | awk '{print $1}'`
 echo "`log` There are $nPts grid points"
 
