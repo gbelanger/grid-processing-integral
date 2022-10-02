@@ -4,4 +4,4 @@ logs
 *.txt
 *.log
 *.filename
-
+.*
