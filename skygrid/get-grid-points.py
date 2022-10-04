@@ -2,7 +2,7 @@
 """
 Created on Thu Sep 29 14:18:28 2022
 
-@author: Laurent
+@author: Philippe Laurent, CEA
 """
 
 import numpy as np
@@ -10,7 +10,7 @@ import sys
 
 if len(sys.argv)==1:
      angleref = 5. #degré
-     fichout  = 'c:/personnel/points.txt'
+     fichout  = 'points.txt'
 elif len(sys.argv)==3:
     angleref = float(sys.argv[1])
     fichout  = str(sys.argv[2])

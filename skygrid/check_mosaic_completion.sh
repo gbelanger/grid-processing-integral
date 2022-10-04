@@ -118,7 +118,7 @@ crashedCodes=""
 for file in $goodFiles
 do
   dir=$(dirname $file)
-  logFile="${dir}/log"
+  logFile="${dir}/osa.log"
   status=$(egrep "${executable} terminating with status" $logFile | tail -1 | awk '{print $10}')
   if [ "$status" = "0" ]
   then
@@ -146,7 +146,7 @@ then
     echo "$(log)     $file"
     dir=$(dirname $file)
     echo $dir >> mosaics_to_rerun_${band}.txt
-    field=$(echo $file | cut -d"/" -f9)
+    field=$(echo $dir | cut -d"/" -f10)
     echo $field >> fields_to_rerun_${band}.txt
     scwpt=$(echo $field | sed s/"field_"/"scw_pt"/g)
     echo $scwpt >> scwpt_to_rerun_${band}.txt

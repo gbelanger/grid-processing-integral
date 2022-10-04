@@ -7,14 +7,14 @@ set -o nounset # exit when your script tries to use undeclared variables
 
 # Last modified by 
 #
-# G.Belanger (Sep 2022)
+# G.Belanger (Oct 2022)
 # - Adapted for catalog production from skygrid/coords2scwLists.sh
 #
 
 
 ##  Set up loging functions
 log(){
-  local progName="coords2scwLists.sh"
+  local progName="coords2multiScaleLists.sh"
   date=`date +"%d-%m-%Y %H:%M:%S"`
   log="[INFO] - $date - ($progName) : "
   echo $log
@@ -22,7 +22,7 @@ log(){
 }
 
 warn(){
-  local progName="coords2scwLists.sh"
+  local progName="coords2multiScaleLists.sh"
   date=`date +"%d-%m-%Y %H:%M:%S"`
   warn="[WARN] - $date - ($progName) : "
   echo $warn
@@ -30,21 +30,32 @@ warn(){
 }
 
 error(){
-  local progName="coords2scwLists.sh"
+  local progName="coords2multiScaleLists.sh"
   date=$(date +"%d-%m-%Y %H:%M:%S")
   error="[ERROR] - $date - ($progName) : "
   echo $error
   unset progName
 }
 
+progName="coords2multiScaleLists.sh"
 
 if [[ $# -ne 3 ]] ; then
-  echo "Usage: . coords2scwLists.sh fk5Coords.txt offAxisDist outputDir"
-  return 1
+  echo "Usage: ./$progName fk5Coords.txt offAxisDist outputDir"
+  exit 0
 fi
 coordsFile=$1
 dist=$2
 outDir=$3
+
+
+##  Variables
+home="/home/int/intportalowner"
+INT_DIR="${home}/integral"
+BIN_DIR="${home}/bin"
+CALC=${BIN_DIR}/calc.pl
+CALCFORMAT=%.0f
+JAVA_HOME="${home}/jdk"
+JAVA="${JAVA_HOME}/bin/java -Xms256m -Xmx256m"
 
 
 ##  Check input file
@@ -52,7 +63,7 @@ if [[ ! -s $coordsFile ]] ; then
   echo "$(warn) Input file is empty: $file"
   return 1
 fi
-cp -f $HOME/integral/osa_support/point.lis .
+cp -f $INT_DIR/osa_support/point.lis .
 
 
 ##  Create output directory
@@ -60,21 +71,13 @@ if [[ -d $outDir ]] ; then rm -r $outDir ; fi
 mkdir $outDir
 
 
-##  Define executables and variables
-home="/home/int/intportalowner"
-BIN_DIR=${home}/bin
-CALC=${BIN_DIR}/calc.pl
-CALCFORMAT=%.0f
-JAVA_HOME="${home}/jdk"
-JAVA="${JAVA_HOME}/bin/java -Xms256m -Xmx256m"
-
 
 ##  Make the lists
 i=1
 cat $coordsFile | while read ra dec ; do
 
   ##  Make the list of scw
-  ${JAVA} -jar $HOME/integral/bin/MakeScwList.jar $ra $dec $dist scw.lis
+  ${JAVA} -jar ${INT_DIR}/bin/MakeScwList.jar $ra $dec $dist scw.lis
 
   ##  If list has size
   if [[ -s scw.lis ]] ; then
@@ -122,16 +125,6 @@ cat $coordsFile | while read ra dec ; do
         k=$((k+1))
       fi
 
-#      # Check total number of lines match original scw.lis
-#      sumOfLines=$(cat -n $outDir/scw_pt${i}.* | tail -1 | awk '{print $1}')
-#      echo "$(log) Initial scw.lis had $nScw lines, and the sum of subgroups has $sumOfLines lines"
-#      if [ $nScw -eq $sumOfLines ] ; then
-#	 echo "$(log) All scws have been used."
-#      else
-#	 echo "$(error) There is a discrepency: aborting process"
-#   	 exit -1
-#      fi
-
       ##  This will happen whenever there are more than $max but less them 2*$max
       if [[ "$j" -eq "1" ]] ; then
         mv $outDir/scw_pt${i}.${k}_${ra}_${dec}_${dist}deg.lis $outDir/scw_pt${i}_${ra}_${dec}_${dist}deg.lis
@@ -168,10 +161,11 @@ echo "$(log) Production completed."
 listOfLists=${outDir}.filenames
 ls -1 $outDir/* > $listOfLists
 echo "$(log) Scw lists files are listed in $listOfLists"
-n=`cat -n $outDir/* | tail -1 | awk '{print $1}'`
-n2=`cat $outDir/* |sort -u|cat -n | tail -1 | awk '{print $1}'`
+n=$(cat -n $outDir/* | tail -1 | awk '{print $1}')
+n2=$(cat $outDir/* |sort -u|cat -n | tail -1 | awk '{print $1}')
 echo "$(log) Set of lists contains $n pointings ($n2 are distinct)"
 
 
 ##  Clean up
-/bin/rm point.lis scw.lis
+if [[ -f point.lis ]] ; then /bin/rm point.lis ; fi
+if [[ -f scw.lis ]] ; then /bin/rm scw.lis ; fi
