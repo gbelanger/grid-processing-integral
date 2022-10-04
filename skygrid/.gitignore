@@ -1,7 +1,6 @@
 scw-lists-step*
-point.lis
+*.lis
 logs
 *.txt
 *.log
 *.filename
-.*
