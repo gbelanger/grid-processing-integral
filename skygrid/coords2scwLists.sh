@@ -95,4 +95,7 @@ cat $coordsFile | while read ra dec ; do
   fi
   i=$((i+1))
 done
-/bin/rm point.lis
+
+##  Clean up
+if [[ -f point.lis ]] ; then /bin/rm point.lis ; fi
+if [[ -f scw.lis ]] ; then /bin/rm scw.lis ; fi
