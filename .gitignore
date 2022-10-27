@@ -3,3 +3,4 @@ radiation
 mosaics
 **/logs
 pipeline/status.log
+**/*.lis
