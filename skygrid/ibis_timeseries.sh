@@ -101,9 +101,11 @@ export HEADASPROMPT=/dev/null
 
 
 ##  Define INTEGRAL directories
-TS_DIR="${ISOC5}/timeseries_cat_0043"
 INT_DIR="/home/int/intportalowner/integral"
 BIN_DIR="${ISOC5}/bin"
+
+##  Define output directory
+TS_DIR="${ISOC5}/${inst_idx}/timeseries_${band}"
 
 
 ##  Check that data dir exists

@@ -103,12 +103,6 @@ emax=$(echo $band | cut -d"-" -f2)
 
 START_DIR=${PWD}
 
-##  Define INTEGRAL directories
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-TS_DIR="${ISOC5}/timeseries_cat_0043"
-INT_DIR="/home/int/intportalowner/integral"
-BIN_DIR="/home/int/intportalowner/bin"
-SKYGRID_DIR="${INT_DIR}/skygrid"
 
 ##  Set HEADAS env
 echo "$(log) Setting HEADAS env"
@@ -119,6 +113,15 @@ export HEADAS
 export FTOOLS="${HEADAS}/bin"
 export HEADASNOQUERY=
 export HEADASPROMPT=/dev/null
+
+
+##  Define other INTEGRAL directories
+BIN_DIR="${ISOC5}/bin"
+INT_DIR="/home/int/intportalowner/integral"
+SKYGRID_DIR="${INT_DIR}/skygrid"
+
+##  Define output directory
+TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
 
 
 ##  Go to output directory
@@ -159,6 +162,7 @@ ra=$(${FTOOLS}/ftlist ${outfile}[1] columns="RA_OBJ" rows=1 T | tail -1 | awk '{
 dec=$(${FTOOLS}/ftlist ${outfile}[1] columns="DEC_OBJ" rows=1 T | tail -1 | awk '{print $2}')
 /bin/rm ${outfile} select.txt
 
+echo "$(log) - NAME = $name"
 echo "$(log) - SOURCE_ID = $srcid"
 echo "$(log) - RA_OBJ = $ra"
 echo "$(log) - DEC_OBJ = $dec"
@@ -174,8 +178,8 @@ echo "$(log) Compiling list of time series files. This can take a while ..."
 filetype="${inst_idx}_src_iros_lc.fits"
 cp ${list} ./${inst_idx}.lis
 
-found=0
-missing=0
+yes=0
+no=0
 echo $found > found.txt
 echo $missing > missing.txt
 if [[ -f files.txt ]] ; then rm files.txt ; fi
@@ -188,12 +192,12 @@ do
   file=${DATA_DIR}/${rev}/obs/${scwid}/scw/${scwdir}/${filetype}
   if [[ -f $file ]] ; then 
     echo $file >> files.txt ; 
-    found=$((found+1));
-    echo $found > found.txt
+    yes=$((yes+1));
+    echo $yes > found.txt
   else
     echo "$(warn) - File not found : $file";
-    missing=$((missing+1));
-    echo $missing > missing.txt
+    no=$((no+1));
+    echo $no > misssing.txt
   fi
 done
 echo "$(log) - $(cat found.txt) time series were found"
@@ -201,10 +205,14 @@ echo "$(warn) - $(cat missing.txt) are missing"
 rm found.txt missing.txt
 
 
+###  MUST FIND A NON-EMPTY FILE IN LIST
+
 ##  Get emin and emax from the first time series in the list
 file=$(head -1 files.txt)
-min=$(${FTOOLS}/fkeyprint ${file}[2] E_MIN | tail -1 | awk '{print $3}')
-max=$(${FTOOLS}/fkeyprint ${file}[2] E_MAX | tail -1 | awk '{print $3}')
+min=$(${FTOOLS}/ftkeypar ${file}[2] E_MIN chatter=3 | head -2 | tail -1 | awk '{print $2}')
+max=$(${FTOOLS}/ftkeypar ${file}[2] E_MAX chatter=3 | head -2 | tail -1 | awk '{print $2}')
+
+####  
 
 #  Round to nearest integer
 emin=$(${BIN_DIR}/calc.pl nint\($min\))

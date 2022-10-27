@@ -1,7 +1,6 @@
 osa_support
 radiation
 mosaics
-pipeline/logs
-skygrid/logs
-catalog/logs
+**/logs
 pipeline/status.log
+**/*.lis
