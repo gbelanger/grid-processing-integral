@@ -40,13 +40,30 @@ error(){
 ##  Check arguments
 if [[ $# -ne 3 ]]
 then
-    echo "$(error) Usage: launch_timeseries_fullmission.sh srcname.lst  band (e.g.,20-35|46-82) instrument (ISGRI|JMX1|JMX2)"
+    echo "$(error) Usage: launch_timeseries_fullmission.sh srcname.lst band (e.g.,20-35|46-82) instrument (ISGRI|JMX1|JMX2)"
     exit -1
 fi
 
+
+##  Assign args to variables
 names=$1
 band=$2
 instrument=$3
+
+
+##  Check instrument and define inst_dir
+case ${instrument} in
+  ISGRI)
+    inst_dir=ibis
+    ;;
+  JMX1|JMX2)
+    inst_dir=jmx
+    ;;
+  *)
+    echo "$(error) Unknown instrument $instrument. Can be ISGRI|JMX1|JMX2"
+    exit -1
+    ;;
+esac
 
 
 ##  Check source names file
@@ -56,16 +73,9 @@ if [[ ! -f ${names} ]] ; then
 else
   size=$(wc -c < ${names})
   if [[ ${size} -lt 1 ]] ; then
-    echo "$(error) $names : file is empty"
+    echo "$(error) $names : File is empty"
     exit -1
   fi
-fi
-
-
-##  Check instrument
-if [[ $instrument != ISGRI ]] && [[ $instrument != JMX1 ]] && [[  $instrument != JMX2 ]] ; then
-  echo "$(error) Unknown instrument $instrument. Can be ISGRI|JMX1|JMX2"
-  exit -1
 fi
 
 
@@ -73,13 +83,13 @@ fi
 START_DIR="${PWD}"
 
 
-## Define INTEGRAL directories
+##  Define INTEGRAL directories
 INT_DIR="/home/int/intportalowner/integral"
 SKYGRID_DIR="${INT_DIR}/skygrid"
-
-#  Time series directory
 ISOC5="/data/int/isoc5/gbelange/isocArchive"
-TS_DIR="${ISOC5}/timeseries_cat_0043"
+
+##  Define time series root output directory
+TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
 
 
 ##  Define executable and qsub command
@@ -97,6 +107,7 @@ cat ${names} | while read srcname ; do
     nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
   done
 
+
   ##  Define the SRC_DIR
   dir=$(echo $srcname | sed s/" "/"_"/g)
   if [[ ! -d ${TS_DIR}/${dir} ]] ; then
@@ -106,19 +117,20 @@ cat ${names} | while read srcname ; do
   fi
   SRC_DIR=${TS_DIR}/${dir}
 
-  ##  Submit
+
+  ##  Submit to grid
   date=$(date +%F)
   inst=${instrument,,}
   o="${SRC_DIR}/log.out.${inst}.${band}.${date}"
   e="${SRC_DIR}/log.err.${inst}.${band}.${date}"
-  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} $srcname $band $instrument
+#  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 
   ## Run locally
-#  ${SKYGRID_DIR}/${executable} $srcname $band $instrument
+  ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 done
 
 
-##  Go back to where we started
+##  Go back to where we started from
 cd ${START_DIR}

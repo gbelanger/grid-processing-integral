@@ -52,6 +52,21 @@ band=$2
 instrument=$3
 
 
+##  Check instrument and define inst_dir
+case ${instrument} in
+  ISGRI)
+    inst_dir=ibis
+    ;;
+  JMX1|JMX2)
+    inst_dir=jmx
+    ;;
+  *)
+    echo "$(error) Unknown instrument: $instrument."
+    exit -1
+    ;;
+esac
+
+
 ##  Define Java executable
 home="/home/int/intportalowner"
 JAVA_HOME="${home}/jdk"
@@ -75,14 +90,15 @@ SKYGRID_DIR="${INT_DIR}/skygrid"
 ISOC5="/data/int/isoc5/gbelange/isocArchive"
 BIN_DIR="${ISOC5}/bin"
 
-#  Time series root directory
-TS_DIR="${ISOC5}/timeseries_cat_0043"
+
+##  Define time series root output directory
+TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
 
 
 ##  Go to TS_DIR
 dir=$(echo $name | sed s/" "/"_"/g)
 if [[ ! -d ${TS_DIR}/${dir} ]] ; then
-  echo "$(warn) Output source time serie directory not found"
+  echo "$(warn) Output time serie directory not found"
   echo "$(log) mkdir -p ${TS_DIR}/${dir}"
   mkdir -p ${TS_DIR}/${dir}
 fi
@@ -125,7 +141,7 @@ echo "$(log) - DEC_OBJ = $dec"
 
 ##  Make new scw list using ra dec
 inst=${instrument,,}
-if [[ $inst == ibis ]] ; then
+if [[ $inst == isgri ]] ; then
   dist=12
 else
   dist=4
@@ -143,15 +159,11 @@ echo "$(log) Calling instrument-specific time series maker script"
 case $instrument in
 
   ISGRI)
-    ${SKYGRID_DIR}/ibis_timeseries.sh $name $band $PWD/$newlist
+    ${SKYGRID_DIR}/ibis_timeseries.sh "$name" $band $PWD/$newlist
     ;;
 
   JMX1|JMX2)
-    ${SKYGRID_DIR}/jmx_timeseries.sh $name $band $instrument $PWD/$newlist
-    ;;
-
-  *)
-    echo "$(error) Unknown instrument: $instrument."
+    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band $instrument $PWD/$newlist
     ;;
 
 esac
