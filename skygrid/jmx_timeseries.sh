@@ -180,8 +180,8 @@ cp ${list} ./${inst_idx}.lis
 
 yes=0
 no=0
-echo $found > found.txt
-echo $missing > missing.txt
+echo $yes > good.txt
+echo $no > missing.txt
 if [[ -f files.txt ]] ; then rm files.txt ; fi
 
 cat ${inst_idx}.lis | while read line
@@ -191,30 +191,36 @@ do
   scwid=$(echo $scwdir | cut -d"." -f1)
   file=${DATA_DIR}/${rev}/obs/${scwid}/scw/${scwdir}/${filetype}
   if [[ -f $file ]] ; then 
-    echo $file >> files.txt ; 
-    yes=$((yes+1));
-    echo $yes > found.txt
+    n=$(${FTOOLS}/ftkeypar ${file}[1] NAXIS2 chatter=3 | head -2 | tail -1 | awk '{print $2}')
+    if [[ $n -ne 0 ]] ; then
+      echo $file >> files.txt ; 
+      yes=$((yes+1));
+      echo $yes > good.txt
+    fi
   else
     echo "$(warn) - File not found : $file";
     no=$((no+1));
-    echo $no > misssing.txt
+    echo $no > missing.txt
   fi
 done
-echo "$(log) - $(cat found.txt) time series were found"
+echo "$(log) - $(cat good.txt) good input files found"
 echo "$(warn) - $(cat missing.txt) are missing"
-rm found.txt missing.txt
+#rm good.txt missing.txt
 
 
-###  MUST FIND A NON-EMPTY FILE IN LIST
+##  Check if there are files
+if [[ $(cat good.txt) -eq 0 ]] ; then
+  echo $(warn) No available input time series files. Cannot proceed.
+  exit -1
+fi
 
-##  Get emin and emax from the first time series in the list
+
+##  Get emin and emax
 file=$(head -1 files.txt)
 min=$(${FTOOLS}/ftkeypar ${file}[2] E_MIN chatter=3 | head -2 | tail -1 | awk '{print $2}')
 max=$(${FTOOLS}/ftkeypar ${file}[2] E_MAX chatter=3 | head -2 | tail -1 | awk '{print $2}')
 
-####  
-
-#  Round to nearest integer
+##  Round to nearest integer
 emin=$(${BIN_DIR}/calc.pl nint\($min\))
 emax=$(${BIN_DIR}/calc.pl nint\($max\))
 
@@ -263,6 +269,10 @@ dal_attach ${og_file} swg_idx_${inst_idx}.fits "" "" "" ""
 fparkey ${instrument} ${og_file} INSTRUME
 
 
+## Set correct file permissions
+chmod 644 *.*
+
+
 ##  Run lc_pick  IMP: must leave emin and emax empty to use all source data
 lc_pick ${og_file} lc="$output" source="$srcid" emin="" emax="" ra_obj="${ra}" dec_obj="${dec}" instrument="${inst_idx}"
 
@@ -272,11 +282,7 @@ lc_pick ${og_file} lc="$output" source="$srcid" emin="" emax="" ra_obj="${ra}" d
 
 
 ##  Clean up
-cleanup
-
-
-## Set correct file permissions
-chmod 644 *.*
+#cleanup
 
 
 ##  Go back to where we started
