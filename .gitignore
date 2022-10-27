@@ -4,3 +4,8 @@ mosaics
 **/logs
 pipeline/status.log
 **/*.lis
+**/*.lst
+**/*.txt
+**/*.log
+**/*.filenames
+**/*~
