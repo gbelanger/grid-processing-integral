@@ -138,8 +138,8 @@ ${JAVA} -jar ${INTBIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
 
 
 ### FOR TESTING
-  head -200 $newlist > tmp
-  mv tmp $newlist
+#  head -200 $newlist > tmp
+#  mv tmp $newlist
 ####
 
 
