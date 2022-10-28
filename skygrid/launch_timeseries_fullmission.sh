@@ -83,10 +83,9 @@ fi
 START_DIR="${PWD}"
 
 
-##  Define INTEGRAL directories
-INT_DIR="/home/int/intportalowner/integral"
-SKYGRID_DIR="${INT_DIR}/skygrid"
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
+##  Define common variables
+source /home/int/intportalowner/config/grid.setenv.sh
+
 
 ##  Define time series root output directory
 TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
