@@ -211,6 +211,7 @@ max=$(${FTOOLS}/ftkeypar ${file}[2] E_MAX chatter=3 | head -2 | tail -1 | awk '{
 ##  Round to nearest integer
 emin=$(${CALC} nint\($min\))
 emax=$(${CALC} nint\($max\))
+echo "$(log) Using [emin, emax] = [$emin, $emax]"
 
 
 ##  Check if time series already exists

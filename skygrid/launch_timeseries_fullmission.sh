@@ -84,7 +84,7 @@ START_DIR="${PWD}"
 
 
 ##  Define common variables
-source /home/int/intportalowner/config/grid.setenv.sh
+source /home/int/intportalowner/integral/config/grid.setenv.sh
 
 
 ##  Define time series root output directory
@@ -122,11 +122,11 @@ cat ${names} | while read srcname ; do
   inst=${instrument,,}
   o="${SRC_DIR}/log.out.${inst}.${band}.${date}"
   e="${SRC_DIR}/log.err.${inst}.${band}.${date}"
-#  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
+  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 
   ## Run locally
-  ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
+#  ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 done
 

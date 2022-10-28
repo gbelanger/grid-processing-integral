@@ -253,7 +253,7 @@ case $instrument in
     ##  Set OSA environment variables
     touch ${output_mosa_dir}
     cd ${output_mosa_dir}
-    . ${PIPELINE_DIR}/osa.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
 
 
     ##  Move into final output mosaic dir
@@ -283,7 +283,7 @@ case $instrument in
 
 
     ##  Set OSA environment variables
-    . ${PIPELINE_DIR}/osa.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
 
 
     ##  Create final mosaic output directory
@@ -387,7 +387,7 @@ case $instrument in
 
     ##  Set OSA environment variables
     echo "$(log) Setting OSA env"
-    . ${PIPELINE_DIR}/osa.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
 
 
     ##  Create and move into final mosaic output directory
