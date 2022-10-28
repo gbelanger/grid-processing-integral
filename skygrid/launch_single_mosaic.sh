@@ -25,36 +25,40 @@ list=$1
 instrument=$2
 band=$3
 
+
 ##  Check list
 if [[ ! -s $list ]] ; then
   echo "Error: $list : File not found or empty";
   return 1;
 fi
 
+
 ##  Check instrument
 if [[ $instrument == ISGRI ]] ; then
-  inst=ibis;
+  inst_dir=ibis;
 elif [[ $instrument == JMX1 ]] || [[ $instrument == JMX2 ]] ; then
-  inst=jmx;
+  inst_dir=jmx;
 else
   echo "Error: $instrument : Unknown instrument. Options are ISGRI|JMX1|JMX2.";
   return 1;
 fi
 
+
 ##  Check band
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-DATA_DIR="$ISOC5/${inst}/scw_${band}"
+ISOC5="/data/int/isoc5/intportalowner/isocArchive"
+DATA_DIR="$ISOC5/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
-  echo "Error: $DATA_DIR : Directory not found.";
-  return 1;
+  echo "Error: $DATA_DIR : Input data directory not found. Cannot proceed";
+  exit -1
 fi
 
+
 ## Create directories for output logs
-if [[ ! -d logs ]]
-then 
-    mkdir -p logs/error ; 
-    mkdir -p logs/output ; 
+if [[ ! -d logs ]] ; then 
+  mkdir -p logs/error ; 
+  mkdir -p logs/output ; 
 fi
+
 
 ## Wait until less than 2000 jobs
 nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
@@ -63,9 +67,12 @@ while [[ $nJobs -gt 1999 ]] ; do
   nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
 done
 
-## Run on grid IMPORTANT: option -l h_vmem=5G is necessary
+
+## Run on grid 
+## IMPORTANT: option -l h_vmem=10G is necessary to ensure enough memory
 qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q int.q"
 ${qsub} -e logs/error -o logs/output run_integ_mosa.sh $list $instrument $band
+
 
 ## Run locally
 #. run_integ_mosa.sh $list $instrument $band

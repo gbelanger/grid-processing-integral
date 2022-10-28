@@ -9,10 +9,9 @@
 # D.Tapiador (April 2007)
 #
 
-if [[ $# -lt 3 ]]
-then
-   echo "Usage: . launch_many_mosaics.sh scwFileList instrument (ISGRI|JMX1|JMX2) band (e.g., 20-35|46-82)"
-   return 1
+if [[ $# -lt 3 ]] ; then
+  echo "Usage: ./launch_many_mosaics.sh scwFileList instrument (ISGRI|JMX1|JMX2) band (e.g., 20-35|46-82)"
+  exit -1
 fi
 
 scwfilelist=$1
@@ -30,7 +29,6 @@ band=$3
 
 echo "Submitting jobs..."
 command=". launch_single_mosaic.sh"
-for scwfile in $(cat $scwfilelist)
-do
+for scwfile in $(cat $scwfilelist) ; do
   bash -c "$command ${scwfile} ${instrument} ${band}"
 done

@@ -2,22 +2,31 @@
 
 # Last modified
 #
+# G.Belanger (Oct 2022)
+# - moved common variables to ~/config/grid.setenv.sh
+#
 # G.Belanger (Aug 2022)
 #  - Added support for spi
+#
 # G.Belanger (May 2022)
 #  - Added support for jemx
 #  - Generalised logic to work for skygrid and normal mosaics
 #  - Improved syntax
+#
 # G.Belanger (October 2015)
 #  - Modifed from version used in skygrid for less specific file/dir name formats
+#
 # G.Belanger (September 2015)
 #  - Added image selection before making the mosaic
+#
 # G.Belanger (September 2014)
 #  - changed the output directory structure
+#
 # G.Belanger (July 2014) 
 #  - removed 'instrument' argument that was not needed
 #  - added the band argument to define emin emax in the processing
 #  - process directly in final storage directory
+#
 # G.Belanger (September 2012)
 #  - wrote script
 
@@ -51,24 +60,11 @@ then
   exit -1
 fi
 
-START_DIR=${PWD}
-
-## We must specify how much java memory to allocate, otherwise java crahses
-JAVA_HOME="${HOME}/jdk"
-JAVA="${JAVA_HOME}/bin/java -Xms200m -Xmx200m"
-
-##  Define FTOOLS
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-
 # Read arguments
 list=$1
 instrument=$2
 band=$3
+
 
 ##  Check list
 if [[ ! -e $list ]] ; then 
@@ -79,26 +75,36 @@ elif [[ ! -s $list ]] ; then
   exit -1
 fi
 
+
+##  Begin
+START_DIR=${PWD}
+
+
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Sort the list and remove duplicate entries
 sort -u ${list} > /tmp/tmp.lis
 mv /tmp/tmp.lis ${list}
+
 
 ##  Check instrument and define inst_idx
 case $instrument in
   ISGRI)
     inst_idx="ibis";
-    inst=${inst_idx};
+    inst_dir=${inst_idx};
     processing=${inst_idx}_ima_mosaic.sh;
     ;;
   JMX1|JMX2)
     # lower case
     inst_idx=${instrument,,};
-    inst="jmx";
+    inst_dir="jmx";
     processing=${inst_idx}_ima_mosaic.sh;
     ;;
   SPI)
     inst_idx=${instrument,,};
-    inst=${inst_idx};
+    inst_dir=${inst_idx};
     processing=${inst_idx}_spe_mosaic.sh;
     ;;
   *)
@@ -109,19 +115,16 @@ esac
 
 
 ##  Check band and input data directory
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-DATA_DIR="${ISOC5}/${inst}/scw_${band}"
+DATA_DIR="${ISOC5}/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
   echo "$(error) $DATA_DIR : Directory not found"
   exit -1
 fi
 
-##  Define INTEGRAL directories
-BIN_DIR="/home/int/intportalowner/bin"
-INT_DIR="/home/int/intportalowner/integral"
-PIPELINE_DIR="${INT_DIR}/pipeline"
-MOSAICS_DIR="${ISOC5}/${inst}/mosaics_${band}"
-SKYGRID_DIR="${ISOC5}/${inst}/skygrid_${band}/mosaics"
+##  Define output directories
+MOSAICS="${ISOC5}/${inst_dir}/mosaics_${band}"
+SKYGRID="${ISOC5}/${inst_dir}/skygrid_${band}/mosaics"
+
 
 ##  Define output directory based on name/path of scw.lis
 
@@ -129,15 +132,16 @@ SKYGRID_DIR="${ISOC5}/${inst}/skygrid_${band}/mosaics"
 
 listname=$(echo $list | cut -d"/" -f2)
 
-#  Define variables based on launch directory: 
+
+##  Define variables based on launch directory: 
 if [[ $PWD == ${INT_DIR}/skygrid ]] ; then
 
-  MOSAICS_DIR=${SKYGRID_DIR}
+  MOSAICS=${SKYGRID}
 
   ### IMPORTANT : ${listname} must have the form:  scw_pt${num}_${ra}_${dec}_${dist}deg.lis
 
   field=$(echo ${listname} | cut -d"_" -f2 | sed s/"pt"/"field_"/g)
-  output_mosa_dir="${MOSAICS_DIR}/${field}"
+  output_mosa_dir="${MOSAICS}/${field}"
 
 elif [[ $PWD == ${INT_DIR}/mosaics ]] ; then
 
@@ -145,30 +149,36 @@ elif [[ $PWD == ${INT_DIR}/mosaics ]] ; then
 
   parentfield=$(echo $list | cut -d"/" -f1)
   field=$(echo $listname | cut -d"." -f1)
-  output_mosa_dir="${MOSAICS_DIR}/${parentfield}/${field}"
+  output_mosa_dir="${MOSAICS}/${parentfield}/${field}"
 
 else
+
   echo "$(error) Unknown launch dir: $PWD. Must launch from ${INT_DIR}/skygrid | ${INT_DIR}/mosaics"
   exit -1
 fi
 
+
 ##  Check/Create parent output directory
-if [[ ! -d ${MOSAICS_DIR} ]] ; then mkdir -p ${MOSAICS_DIR} ; fi
+if [[ ! -d ${MOSAICS} ]] ; then mkdir -p ${MOSAICS} ; fi
+
 
 ##  Move into parent output directory
-touch ${MOSAICS_DIR}
-cd ${MOSAICS_DIR}
+touch ${MOSAICS}
+cd ${MOSAICS}
+
 
 ##  Copy the input scw list here temporarily
 cp ${START_DIR}/${list} ./${listname}
 
+
 ##  Exit if only one scw
 n=$(wc -l ${listname} | awk '{print $1}') 
 if [[ $n -eq 1 ]] ; then
-  echo "Only one scw in ${listname}" >> ${MOSAICS_DIR}/no-mosaic/NO_MOSAIC.readme
+  echo "Only one scw in ${listname}" >> ${MOSAICS}/no-mosaic/NO_MOSAIC.readme
   rm ./${listname}
   exit 0
 fi
+
 
 ##  Construct list of input data directories needed for mosaic
 pathToData=""
@@ -185,7 +195,7 @@ done
 
 if [[ "${pathToData}" == "" ]] ; then
   echo "$(error) No data beyond rev 26. Cannot make mosaic"
-  echo "No data beyond rev 26 for ${listname}" >> ${MOSAICS_DIR}/no-mosaic/NO_MOSAIC.readme
+  echo "No data beyond rev 26 for ${listname}" >> ${MOSAICS}/no-mosaic/NO_MOSAIC.readme
   exit 0
 fi
 set +o noglob
@@ -203,21 +213,25 @@ case $instrument in
       /bin/rm -r ${output_mosa_dir}
     fi
 
+
     ##  Select images 
     ${JAVA} -jar ${INT_DIR}/bin/SelectSkyIma.jar $listname signif 1 1.9 $pathToData
 
-    if [[ ${MOSAICS_DIR} != ${SKYGRID_DIR} ]] ; then
-      if [[ ! -e ${MOSAICS_DIR}/${parentfield} ]] ; then mkdir -p ${MOSAICS_DIR}/${parentfield} ; fi
-      mv ${listname}* ${MOSAICS_DIR}/${parentfield}/
-      touch ${MOSAICS_DIR}/${parentfield}
-      cd ${MOSAICS_DIR}/${parentfield}
+    if [[ ${MOSAICS} != ${SKYGRID} ]] ; then
+      if [[ ! -e ${MOSAICS}/${parentfield} ]] ; then mkdir -p ${MOSAICS}/${parentfield} ; fi
+      mv ${listname}* ${MOSAICS}/${parentfield}/
+      touch ${MOSAICS}/${parentfield}
+      cd ${MOSAICS}/${parentfield}
     fi
+
 
     ##  Make og for ibis analysis (this creates $output_mosa_dir here named $field)
     ${JAVA} -jar ${INT_DIR}/bin/OG_merge.jar ${listname}.selected $field $pathToData
 
+
     ##  Move all the lists into the final output mosa dir
     mv ${listname}* $field/
+
 
     ##  Check if OG_merge.jar worked
     if [ ! -d $field/obs/myobs ] ; then
@@ -225,18 +239,22 @@ case $instrument in
       exit -1
     fi
 
+
     ##  Copy support files needed for imaging analysis (to not recreate them for each scw)
-    cp ${INT_DIR}/osa_support/rebinned_back_ima_${band}.fits ${field}/obs/myobs/rebinned_back_ima.fits
-    cp ${INT_DIR}/osa_support/rebinned_corr_ima_${band}.fits ${field}/obs/myobs/rebinned_corr_ima.fits
-    cp ${INT_DIR}/osa_support/rebinned_unif_ima_${band}.fits ${field}/obs/myobs/rebinned_unif_ima.fits
+    cp ${OSA_DIR}/rebinned_back_ima_${band}.fits ${field}/obs/myobs/rebinned_back_ima.fits
+    cp ${OSA_DIR}/rebinned_corr_ima_${band}.fits ${field}/obs/myobs/rebinned_corr_ima.fits
+    cp ${OSA_DIR}/rebinned_unif_ima_${band}.fits ${field}/obs/myobs/rebinned_unif_ima.fits
+
 
     ##  This hidden option makes a residual map where both sources and ghosts are removed
     #echo "8" > ${field}/obs/myobs/ii_skyimage.hidden
 
+
     ##  Set OSA environment variables
     touch ${output_mosa_dir}
     cd ${output_mosa_dir}
-    . ${PIPELINE_DIR}/osa11.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
+
 
     ##  Move into final output mosaic dir
     cd obs/myobs
@@ -248,6 +266,7 @@ case $instrument in
     if [[ ! -e ${output_mosa_dir} ]] ; then mkdir -p ${output_mosa_dir} ; fi
     touch ${output_mosa_dir}
 
+
     ##  Check/Update the scw list
     if [[ -e ${output_mosa_dir}/${listname} ]] ; then
       diff ./${listname} ${output_mosa_dir}/${listname} > ${output_mosa_dir}/diffs.txt
@@ -258,22 +277,28 @@ case $instrument in
     fi
     mv ./${listname} ${output_mosa_dir}/
 
+
     ##  Go into the mosaic directory
     cd ${output_mosa_dir}
 
+
     ##  Set OSA environment variables
-    . ${INT_DIR}/pipeline/osa11.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
+
 
     ##  Create final mosaic output directory
     if [[ ! -e obs/myobs ]] ; then mkdir -p obs/myobs ; fi
 
+
     ##  Go into this directory
     cd obs/myobs/
+
 
     ##  Remove files from previous run
     inst_idx="${instrument,,}"
     if [[ -e swg_idx_${inst_idx}.fits ]] ; then /bin/rm swg_idx_${inst_idx}.fits ; fi
     if [[ -e list_swg_${inst_idx}.txt ]] ; then /bin/rm list_swg_${inst_idx}.txt ; fi
+
 
     ##  Compile list of images to mosaic
     filetype=${inst_idx}_sky_ima.fits
@@ -286,15 +311,19 @@ case $instrument in
       ls ${DATA_DIR}/${rev}/obs/${scwid}/scw/${scwdir}/${filetype} | sed s/${filetype}/swg_${inst_idx}.fits/g >> $idxlist
     done
 
+
     ##  Convert the text file to a fits file of the swg index for all images
     txt2idx ${idxlist} swg_idx_${inst_idx}.fits
+
 
     ##  Remove old observation group file
     if [[ -e og_${inst_idx}.fits ]] ; then /bin/rm og_${inst_idx}.fits ; fi
 
+
     ##  Create new observation group file
     dal_create og_${inst_idx}.fits GNRL-OBSG-GRP.tpl
     dal_attach og_${inst_idx}.fits swg_idx_${inst_idx}.fits '' '' '' ''
+
 
     ##  Add instrument name in the new observation group file  
     ${FTOOLS}/fparkey ${instrument} og_${inst_idx}.fits INSTRUME
@@ -358,7 +387,7 @@ case $instrument in
 
     ##  Set OSA environment variables
     echo "$(log) Setting OSA env"
-    . ${INT_DIR}/pipeline/osa11.setenv.sh
+    source ${PIPELINE_DIR}/osa.setenv.sh
 
 
     ##  Create and move into final mosaic output directory
@@ -562,7 +591,7 @@ exit 0
 
 
     ##  Prepare the catalog
-    cp ${INT_DIR}/osa_support/spi_cat_all_sources.fits .
+    cp ${OSA_DIR}/spi_cat_all_sources.fits .
 #    ${INT_DIR}/skygrid/select_spi_sources.sh
 
     echo "$(log) Preparation complete"
@@ -589,8 +618,7 @@ case ${instrument} in
 
   JMX1|JMX2)
 
-    if [[ ! -e ../../diffs.txt || -s ../../diffs.txt ]]
-    then
+    if [[ ! -e ../../diffs.txt || -s ../../diffs.txt ]] ; then
       ${INT_DIR}/mosaics/${processing} ${band}
     fi
     ;;
@@ -601,6 +629,7 @@ case ${instrument} in
     ;;
 
 esac
+
 
 ##  Cleanup 
 case ${instrument} in
@@ -615,11 +644,14 @@ case ${instrument} in
     ;;
 esac
 
+
 ##  Move back two levels into $output_mosa_dir
 cd ../../
 
+
 ##  Remove the OSA links and pfiles
 #/bin/rm -r ic idx cat aux scw pfiles
+
 
 ##  Go back to where we started from
 cd $START_DIR

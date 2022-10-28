@@ -15,8 +15,8 @@
 
 # Modification history:
 #
-# G.Belanger (Sep 2022)
-# - added AGNDIST column to final time series
+# G.Belanger (Oct 2022)
+# - moved common variables to config/grid.setenv.sh
 #
 # G.Belanger (Aug 2022)
 # - created script
@@ -89,9 +89,15 @@ else
   inst_idx=${instrument,,}
 fi
 
+START_DIR=${PWD}
+
+
+##  Define common variables
+echo "$(log) Setting common variables"
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
 
 ##  Check band and input data directory
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
 inst_dir=jmx
 DATA_DIR="${ISOC5}/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
@@ -101,24 +107,6 @@ fi
 emin=$(echo $band | cut -d"-" -f1)
 emax=$(echo $band | cut -d"-" -f2)
 
-START_DIR=${PWD}
-
-
-##  Set HEADAS env
-echo "$(log) Setting HEADAS env"
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-export HEADASNOQUERY=
-export HEADASPROMPT=/dev/null
-
-
-##  Define other INTEGRAL directories
-BIN_DIR="${ISOC5}/bin"
-INT_DIR="/home/int/intportalowner/integral"
-SKYGRID_DIR="${INT_DIR}/skygrid"
 
 ##  Define output directory
 TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
@@ -221,8 +209,9 @@ min=$(${FTOOLS}/ftkeypar ${file}[2] E_MIN chatter=3 | head -2 | tail -1 | awk '{
 max=$(${FTOOLS}/ftkeypar ${file}[2] E_MAX chatter=3 | head -2 | tail -1 | awk '{print $2}')
 
 ##  Round to nearest integer
-emin=$(${BIN_DIR}/calc.pl nint\($min\))
-emax=$(${BIN_DIR}/calc.pl nint\($max\))
+emin=$(${CALC} nint\($min\))
+emax=$(${CALC} nint\($max\))
+echo "$(log) Using [emin, emax] = [$emin, $emax]"
 
 
 ##  Check if time series already exists

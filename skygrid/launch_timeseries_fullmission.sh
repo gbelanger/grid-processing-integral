@@ -83,10 +83,9 @@ fi
 START_DIR="${PWD}"
 
 
-##  Define INTEGRAL directories
-INT_DIR="/home/int/intportalowner/integral"
-SKYGRID_DIR="${INT_DIR}/skygrid"
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
 
 ##  Define time series root output directory
 TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
@@ -123,11 +122,11 @@ cat ${names} | while read srcname ; do
   inst=${instrument,,}
   o="${SRC_DIR}/log.out.${inst}.${band}.${date}"
   e="${SRC_DIR}/log.err.${inst}.${band}.${date}"
-#  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
+  ${qsub} -o ${o} -e ${e} ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 
   ## Run locally
-  ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
+#  ${SKYGRID_DIR}/${executable} "$srcname" $band $instrument
 
 done
 
