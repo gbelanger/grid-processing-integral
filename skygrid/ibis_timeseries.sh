@@ -6,6 +6,9 @@
 
 # Modification history:
 #
+# G.Belanger (Oct 2022)
+# - moved common variables to config/grid.setenv.sh
+#
 # G.Belanger (Aug-Sep 2022)
 # - created script from previous version of timeseries_make.sh
 
@@ -68,11 +71,15 @@ sort -u ${list} > /tmp/tmp.lis
 mv /tmp/tmp.lis ${list}
 
 
+##  Define common variables
+echo "$(log) Setting common variables"
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Check band and input data directory
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
 DATA_DIR="${ISOC5}/${inst_idx}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
-  echo "$(error) $DATA_DIR : Input data directory not found"
+  echo "$(error) $DATA_DIR : Input data directory not found. Cannot proceed."
   exit -1
 fi
 emin=$(echo $band | cut -d"-" -f1)
@@ -83,36 +90,8 @@ emax=$(echo $band | cut -d"-" -f2)
 START_DIR=${PWD}
 
 
-##  Define Java executable
-home="/home/int/intportalowner"
-JAVA_HOME="${home}/jdk"
-java="${JAVA_HOME}/bin/java -Xms500m -Xmx500m"
-
-
-##  Set HEADAS env
-echo "$(log) Setting HEADAS env"
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-export HEADASNOQUERY=
-export HEADASPROMPT=/dev/null
-
-
-##  Define INTEGRAL directories
-INT_DIR="/home/int/intportalowner/integral"
-BIN_DIR="${ISOC5}/bin"
-
 ##  Define output directory
 TS_DIR="${ISOC5}/${inst_idx}/timeseries_${band}"
-
-
-##  Check that data dir exists
-if [ ! -d ${DATA_DIR} ] ; then
-  echo "$(error) Source data directory ${DATA_DIR} not found. Cannot proceed."
-  exit -1
-fi
 
 
 ##  Go to output directory
@@ -215,7 +194,7 @@ set +o noglob
 
 ##  Make time series
 band_no=1
-${java} -jar ${BIN_DIR}/MakeIsgriTimeSeries.jar ${ra} ${dec} ${band_no} ${list} ${pathToData}
+${JAVA} -jar ${INTBIN_DIR}/MakeIsgriTimeSeries.jar ${ra} ${dec} ${band_no} ${list} ${pathToData}
 
 
 ##  Add the target name in the QDP output file

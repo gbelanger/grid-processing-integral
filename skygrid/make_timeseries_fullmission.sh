@@ -7,6 +7,9 @@ set -o nounset # exit when your script tries to use undeclared variables
 
 # Modification history:
 #
+# G.Belanger (Oct 2022)
+# - moved common variables to config/grid.setenv.sh
+#
 # G.Belanger (Aug-Sep 2022)
 # - created script 
 
@@ -67,28 +70,9 @@ case ${instrument} in
 esac
 
 
-##  Define Java executable
-home="/home/int/intportalowner"
-JAVA_HOME="${home}/jdk"
-JAVA="${JAVA_HOME}/bin/java -Xms500m -Xmx500m"
-
-
-##  Set HEADAS env
-echo "$(log) Setting HEADAS env"
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-export HEADASNOQUERY=
-export HEADASPROMPT=/dev/null
-
-
-##  Define INTEGRAL directories
-INT_DIR="/home/int/intportalowner/integral"
-SKYGRID_DIR="${INT_DIR}/skygrid"
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-BIN_DIR="${ISOC5}/bin"
+##  Define common variables
+echo "$(log) Setting common variables"
+source /home/int/intportalowner/integral/config/grid.setenv.sh
 
 
 ##  Define time series root output directory
@@ -108,16 +92,16 @@ cd ${TS_DIR}/${dir}
 
 ##  Set OSA env
 echo "$(log) Setting OSA env"
-. ${INT_DIR}/pipeline/osa.setenv.sh
+source ${INT_DIR}/pipeline/osa.setenv.sh
 
 
 ##  Extract row of catalog for source name
 echo "$(log) Extracting source information for ..."
 echo "$(log) - NAME = ${name}"
-infile="cat/hec/gnrl_refr_cat.fits"
+infile="${ISDC_REF_CAT}"
 outfile=out.fits
 echo NAME==\"${name}\" > select.txt
-${FTOOLS}/ftselect ${infile}[1] ${outfile} @select.txt clobber=yes
+${FTOOLS}/ftselect ${infile} ${outfile} @select.txt clobber=yes
 
 
 ##  Check extraction
@@ -150,7 +134,13 @@ echo "$(log) Making time series with radius of $dist degrees"
 
 stamp=$(date +%N)
 newlist="${inst}_${stamp}.lis"
-${JAVA} -jar ${BIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
+${JAVA} -jar ${INTBIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
+
+
+### FOR TESTING
+  head -200 $newlist > tmp
+  mv tmp $newlist
+####
 
 
 ##  Make time series
