@@ -1,0 +1,9 @@
+# Region file format: DS9 version 4.1
+global color=cyan width=1 font="helvetica 14 normal"
+fk5;point(253.467569,39.760167) # point=cross text={}
+fk5;point(299.999386,65.148514) # point=cross text={}
+fk5;point(276.562734,-14.848403) # point=cross text={}
+fk5;point(53.401908,-36.140658) # point=cross text={}
+fk5;point(329.716938,-30.225589) # point=cross text={}
+fk5;point(356.770157,51.704965) # point=cross text={}
+fk5;point(77.358186,5.693148) # point=cross text={}
