@@ -1,1 +1,0 @@
-/home/int/intportalowner/integral/pipeline/osa.setenv.sh

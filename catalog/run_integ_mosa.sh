@@ -40,25 +40,8 @@ then
   exit -1
 fi
 
-START_DIR=${PWD}
 
-
-## Specify java memory: otherwise java crahses
-JAVA_HOME="${HOME}/jdk"
-JAVA="${JAVA_HOME}/bin/java -Xms200m -Xmx200m"
-
-
-##  Define FTOOLS
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-export HEADASNOQUERY=
-export HEADASPROMPT=/dev/null
-
-
-# Read arguments
+## Read arguments
 list=$1
 instrument=$2
 band=$3
@@ -74,6 +57,14 @@ elif [[ ! -s $list ]] ; then
 fi
 
 
+##  Begin
+START_DIR=${PWD}
+
+
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Sort the list and remove duplicate entries
 sort -u ${list} > /tmp/tmp.lis
 mv /tmp/tmp.lis ${list}
@@ -83,13 +74,13 @@ mv /tmp/tmp.lis ${list}
 case $instrument in
   ISGRI)
     inst_idx="ibis";
-    inst=${inst_idx};
+    inst_dir=${inst_idx};
     processing=${inst_idx}_ima_mosaic.sh;
     ;;
   JMX1|JMX2)
     # lower case
     inst_idx=${instrument,,};
-    inst="jmx";
+    inst_dir="jmx";
     processing=${inst_idx}_ima_mosaic.sh;
     ;;
   *)
@@ -100,20 +91,17 @@ esac
 
 
 ##  Check band and input data directory
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-DATA_DIR="${ISOC5}/${inst}/scw_${band}"
+DATA_DIR="${ISOC5}/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
   echo "$(error) $DATA_DIR : Directory not found"
   exit -1
 fi
 
 
-##  Define INTEGRAL directories
-BIN_DIR="/home/int/intportalowner/bin"
-INT_DIR="/home/int/intportalowner/integral"
-PIPELINE_DIR="${INT_DIR}/pipeline"
-CAT_DIR="${ISOC5}/${inst}/catalog/mosaics"
-MOSAICS_DIR=${CAT_DIR}
+##  Check/Create parent output directory
+OUT_CAT_DIR="${ISOC5}/${inst_dir}/catalog"
+OUT_MOSAICS_DIR=${OUT_CAT_DIR}/mosaics
+if [[ ! -d ${OUT_MOSAICS_DIR} ]] ; then mkdir -p ${OUT_MOSAICS_DIR} ; fi
 
 
 ##  Define output directory based on name/path of scw.lis
@@ -125,16 +113,12 @@ listname=$(echo $list | cut -d"/" -f2)
 ### IMPORTANT : ${listname} must have the form:  scw_pt${field}.${sub}_${ra}_${dec}_${dist}deg.lis
 
 field=$(echo ${listname} | cut -d"_" -f2 | sed s/"pt"/"field_"/g)
-output_mosa_dir="${MOSAICS_DIR}/${field}"
-
-
-##  Check/Create parent output directory
-if [[ ! -d ${MOSAICS_DIR} ]] ; then mkdir -p ${MOSAICS_DIR} ; fi
+output_mosa_dir="${OUT_MOSAICS_DIR}/${field}"
 
 
 ##  Move into parent output directory
-touch ${MOSAICS_DIR}
-cd ${MOSAICS_DIR}
+touch ${OUT_MOSAICS_DIR}
+cd ${OUT_MOSAICS_DIR}
 
 
 ##  Copy the input scw list here temporarily (filenames are unique)
@@ -144,7 +128,7 @@ cp ${START_DIR}/${list} ./${listname}
 ##  Exit if only one scw
 n=$(wc -l ${listname} | awk '{print $1}') 
 if [[ $n -le 1 ]] ; then
-  echo "Only one scw in ${listname}" >> ${MOSAICS_DIR}/NO_MOSAICS.readme
+  echo "Only one scw in ${listname}" >> ${OUT_MOSAICS_DIR}/NO_MOSAICS.readme
   rm ./${listname}
   exit 0
 fi
@@ -165,7 +149,7 @@ done
 
 if [[ "${pathToData}" == "" ]] ; then
   echo "$(error) No data beyond rev 26. Cannot make mosaic"
-  echo "No data beyond rev 26 for ${listname}" >> ${MOSAICS_DIR}/NO_MOSAICS.readme
+  echo "No data beyond rev 26 for ${listname}" >> ${OUT_MOSAICS_DIR}/NO_MOSAICS.readme
   exit 0
 fi
 set +o noglob
@@ -208,9 +192,9 @@ case $instrument in
 
 
     ##  Copy support files needed for imaging analysis (to not recreate them for each scw)
-    cp ${INT_DIR}/osa_support/rebinned_back_ima_${band}.fits ${field}/obs/myobs/rebinned_back_ima.fits
-    cp ${INT_DIR}/osa_support/rebinned_corr_ima_${band}.fits ${field}/obs/myobs/rebinned_corr_ima.fits
-    cp ${INT_DIR}/osa_support/rebinned_unif_ima_${band}.fits ${field}/obs/myobs/rebinned_unif_ima.fits
+    cp ${OSA_DIR}/rebinned_back_ima_${band}.fits ${field}/obs/myobs/rebinned_back_ima.fits
+    cp ${OSA_DIR}/rebinned_corr_ima_${band}.fits ${field}/obs/myobs/rebinned_corr_ima.fits
+    cp ${OSA_DIR}/rebinned_unif_ima_${band}.fits ${field}/obs/myobs/rebinned_unif_ima.fits
 
 
     ##  This hidden option makes a residual map where both sources and ghosts are removed
@@ -220,7 +204,7 @@ case $instrument in
     ##  Set OSA environment variables
     touch ${output_mosa_dir}
     cd ${output_mosa_dir}
-    . ${PIPELINE_DIR}/osa11.setenv.sh
+    . ${PIPELINE_DIR}/osa.setenv.sh
 
 
     ##  Move into final output mosaic dir
@@ -250,7 +234,7 @@ case $instrument in
 
 
     ##  Set OSA environment variables
-    . ${INT_DIR}/pipeline/osa11.setenv.sh
+    . ${INT_DIR}/pipeline/osa.setenv.sh
 
 
     ##  Create final mosaic output directory
@@ -320,15 +304,8 @@ esac
 
 
 ##  Cleanup 
-case ${instrument} in
-  ISGRI)
-    /bin/rm rebinned*;
-    gzip *mosa_ima.fits
-    ;;
-  JMX1|JMX2)
-    gzip *mosa_ima.fits
-    ;;
-esac
+if [[ ${instrument} == "ISGRI" ]] ; then /bin/rm rebinned*; fi
+gzip *mosa_ima.fits
 
 
 ##  Move back two levels into $output_mosa_dir

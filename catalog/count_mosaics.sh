@@ -35,12 +35,12 @@ case ${band} in
   20-35|35-60|60-100)
     prefix=isgri;
     executable="ibis_science_analysis"
-    inst="ibis";
+    inst_dir="ibis";
     ;;
   46-82|83-153|154-224)
     prefix=jmx;
     executable="j_ima_mosaic"
-    inst="jmx";
+    inst_dir="jmx";
     ;;
   *)
     echo "$(log) Unknown band"
@@ -53,8 +53,8 @@ echo "$(log) Instrument is ${prefix}"
 echo "$(log) Counting mosaics ..."
 
 ##  Define variables
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-SKYGRID_MOSA_DIR="${ISOC5}/${inst}/skygrid_${band}/mosaics"
+ISOC5="/data/int/isoc5/intportalowner/isocArchive"
+SKYGRID_MOSA_DIR="${ISOC5}/${inst_dir}/skygrid_${band}/mosaics"
 
 n=$(ls -1 ${SKYGRID_MOSA_DIR}/field*/obs/myobs/*_mosa_ima.fits* | cat -n | tail -1 | awk '{print $1}')
 echo "$(log) There are currently  $n  mosaics in ${SKYGRID_MOSA_DIR}"

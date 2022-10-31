@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#set -o errexit # exit when a command fails
-#set -o nounset # exit when your script tries to use undeclared variables
+set -o errexit # exit when a command fails
+set -o nounset # exit when your script tries to use undeclared variables
 #set -o pipefail # don't hide errors within pipes
 
 #set -o xtrace # trace what gets executed (uncomment for debugging)
@@ -63,14 +63,11 @@ error(){
     unset progName
 }
 
-# Define my standard environment variables
-#. /home/int/intportalowner/env.sh
-
 
 ## Check arguments
 if [[ $# != 4 ]] ; then
   echo "Usage: . run_integ_analysis.sh processing (e.g., ibis_analysis_IMA.sh) rev (e.g., 0046) instrument (ISGRI|JMX1|JMX2|SPI) band (e.g., 20-35|46-82|25-400)"
-  return 1
+  exit 0
 fi
 
 
@@ -94,11 +91,11 @@ fi
 case $instrument in
   ISGRI | IBIS)
     inst_idx="IBIS";
-    inst="ibis";
+    inst_dir="ibis";
     ;;
   JMX1 | JMX2) 
     inst_idx="$instrument";
-    inst="jmx";
+    inst_dir="jmx";
     if [[ "$4" != "46-82" && "$4" != "83-153" && "$4" != "154-224" ]] ; then
       echo "$(error) ${instrument} band must be 46-82|83-153|154-224"
       return 1
@@ -106,7 +103,7 @@ case $instrument in
     ;;
   SPI)
     inst_idx="$instrument";
-    inst="spi";
+    inst_dir="spi";
     processing="spi_analysis_BIN.sh";
     ;;
   *)
@@ -116,11 +113,13 @@ case $instrument in
 esac
 
 
+##  Define common varibales
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ## Check/Create output directory
-ISOC5="/data/int/isoc5"
-ISOC_DIR="${ISOC5}/gbelange/isocArchive"
-storageDir="${ISOC_DIR}/${inst}/scw_${band}/"
-if [ ! -d $storageDir ] ; then mkdir -p $storageDir ; fi
+OUTPUT_DIR="${ISOC5}/${inst_dir}/scw_${band}/"
+if [ ! -d $OUTPUT_DIR ] ; then mkdir -p $OUTPUT_DIR ; fi
 
 
 ## Start the analysis
@@ -129,42 +128,29 @@ echo "$(log) Starting processing of rev $rev"
 startTime=$(date +%s)
 
 
-##  Set HEADAS env
-echo "$(log) Setting HEADAS env"
-HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
-# HEADAS="/opt/sw/heasoft-6.30.1/x86_64-pc-linux-gnu-libc2.28"
-export HEADAS
-. $HEADAS/headas-init.sh
-export FTOOLS="${HEADAS}/bin"
-export HEADASNOQUERY=
-export HEADASPROMPT=/dev/null
-
-
 ## Do not overwrite if $rev directory exists
-#if [[ -d $storageDir/$rev ]] ; then
-#  echo "$(warn) Cannot process rev $rev: Directory $storageDir/$rev exists"
+#if [[ -d $OUTPUT_DIR/$rev ]] ; then
+#  echo "$(warn) Cannot process rev $rev: Directory $OUTPUT_DIR/$rev exists"
 #  echo "$(warn) To run the analysis on this rev, delete existing directory"
 #  exit 1
 #fi
 
 
 ##  Create and/or go into output directory
-if [[ ! -d $storageDir/$rev ]] ; then mkdir -p $storageDir/$rev ; fi
-cd $storageDir/$rev
+if [[ ! -d $OUTPUT_DIR/$rev ]] ; then mkdir -p $OUTPUT_DIR/$rev ; fi
+cd $OUTPUT_DIR/$rev
 
 
 ##  Make scw list for the revolution
 echo "$(log) Preparing list of swcIDs"
 
-
-##  Define dir containing executables
-HOME_DIR="/home/int/intportalowner"
-BIN_DIR="${HOME_DIR}/bin"
-INT_DIR="${HOME_DIR}/integral"
-PIPELINE_DIR="${INT_DIR}/pipeline"
-
 #  Step 1) Use point.lis (updated daily) to create a file called scwIDs.dat
-${PIPELINE_DIR}/makeListOfScwIDsForThisRev.sh $rev ${INT_DIR}/osa_support/point.lis
+${PIPELINE_DIR}/makeListOfScwIDsForThisRev.sh $rev ${OSA_DIR}/point.lis
+
+####  Testing
+  head -20 scwIDs.dat | tail -3 > tmp
+  mv tmp scwIDs.dat
+####  Testing END
 
 #  Step 2) Generate scw.lis from rev.lis (must specify Java heap size)
 $HOME/jdk/bin/java -Xms100m -Xmx100m -jar $HOME/integral/bin/MakeScwlisFromFile.jar scwIDs.dat
@@ -174,15 +160,7 @@ echo "$(log) Copied scw.lis to scw-all.lis"
 
 ##  Define OSA environment
 echo "$(log) Setting OSA environment variables"
-. ${PIPELINE_DIR}/osa11.setenv.sh
-
-
-####  Testing
-
-#head -20 scwIDs.dat | tail -5 > tmp
-#mv tmp scwIDs.dat
-
-####  Testing END
+. ${PIPELINE_DIR}/osa.setenv.sh
 
 
 ## Loop on all scw in scwIDs.dat
@@ -272,7 +250,7 @@ cat scwIDs.dat | while read scwID ; do
 
           SPI)
             ##  Copy the SPI master catalog here
-            cp ${INT_DIR}/osa_support/spi_cat_all_sources.fits .
+            cp ${OSA_DIR}/spi_cat_all_sources.fits .
 
             ##  Run the binning
             ${PIPELINE_DIR}/${processing} $band 
@@ -304,7 +282,7 @@ done
 
 
 ##  Delete links and pfiles in working dir
-#. $HOME/integral/bin/rmlinks
+. ${BIN_DIR}/rmlinks
 
 
 ## Update the image count in nImages.txt
@@ -328,7 +306,6 @@ case ${instrument} in
 esac
 cd ${PIPELINE_DIR}
 
-CALC=${BIN_DIR}/calc.pl
 
 ##  Conclude
 echo "$(log) Finished processing rev $rev"
