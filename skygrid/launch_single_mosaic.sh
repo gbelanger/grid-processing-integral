@@ -68,6 +68,7 @@ fi
 ##  Wait until less than 2000 jobs in queue
 USER=$(whoami)
 nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
+
 while [[ $nJobs -gt 1999 ]] ; do
   sleep 30
   nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')

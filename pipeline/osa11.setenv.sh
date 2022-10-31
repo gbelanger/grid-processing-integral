@@ -12,7 +12,6 @@ export ISDC_ENV
 REP_BASE_PROD=$PWD
 export REP_BASE_PROD
 
-
 ##  Data location (using new netapp volume)
 DATA_PATH="/integral/data/rev_3"
 export DATA_PATH

@@ -18,7 +18,6 @@ export FTOOLS="${HEADAS}/bin"
 export HEADASNOQUERY=
 export HEADASPROMPT=/dev/null
 
-
 ##  Output directory
 export USER=$(whoami)
 export ISOC5="/data/int/isoc5/${USER}/isocArchive"

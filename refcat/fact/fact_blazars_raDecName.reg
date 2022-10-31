@@ -1,0 +1,10 @@
+# Region file format: DS9 version 3.0
+global move=0
+global color=cyan
+fk5;point(253.467569,39.760167) # point=cross text={Mrk 501}
+fk5;point(299.999386,65.148514) # point=cross text={1E 1959+650}
+fk5;point(276.562734,-14.848403) # point=cross text={LS5039}
+fk5;point(53.401908,-36.140658) # point=cross text={NGC 1365}
+fk5;point(329.716938,-30.225589) # point=cross text={PKS 2155-304}
+fk5;point(356.770157,51.704965) # point=cross text={1ES 2344+51.4}
+fk5;point(77.358186,5.693148) # point=cross text={TXS 0506+056}
