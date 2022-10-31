@@ -4,9 +4,6 @@
 #set -o nounset # exit when your script tries to use undeclared variables
 #set -o xtrace # trace what gets executed (uncomment for debugging)
 
-export HOME="/home/int/intportalowner"
-export ISOC_DIR="/data/int/isoc5/gbelange/isocArchive"
-
 # Modification History:
 #
 # D.Tapiador (Apr 2007)
@@ -42,6 +39,10 @@ export ISOC_DIR="/data/int/isoc5/gbelange/isocArchive"
 #  - improved formatting/syntax
 # G.Belanger (Aug 2022)
 #  - added support for SPI binning analysis
+# G.Belanger (Oct 2022)
+#  - using common variables config
+#  - using USER variable for output directory
+#
 
 
 ##  Define logging functions
@@ -68,11 +69,6 @@ error(){
 }
 
 
-## Define my standard environment variables
-
-#/home/int/intportalowner/env.sh
-
-
 ## Check arguments
 if [[ $# -ne 5 ]] 
 then
@@ -83,7 +79,7 @@ fi
 
 ##  Time stamp
 time=$(date +%N)
-tmp=$HOME/integral/pipeline/tmp_${time}
+tmp=/tmp/tmp_${time}
 
 
 ## Read arguments
@@ -96,8 +92,12 @@ emax=$(echo $band | cut -d"-" -f2)
 overwrite=$5
 
 
+##  Define common varibales
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Check rev exclude list
-egrep $rev $HOME/integral/pipeline/revs_toExclude.dat > $tmp
+egrep $rev ${PIPELINE_DIR}/revs_toExclude.dat > $tmp
 if [ -s $tmp ] ; then
   echo "$(warn) Revolution $rev is in the excluded list: No processing necessary"
   /bin/rm $tmp
@@ -111,15 +111,10 @@ fi
 case $instrument in
   ISGRI | IBIS)
     inst_idx="IBIS";
-    inst="ibis";
-    #if [[ $band != "20-40" && $band != "20-80" && $band != "40-60" && $band != "20-35" && $band != "35-60" && $band != "60-100" ]]
-    #then
-    #  echo "$(error) Band can be 20-40, 20-80, 40-60, 20-35, 35-60, 60-100"
-    #  exit 1
-    #fi
+    inst_dir="ibis";
     ;;
   JMX1 | JMX2) 
-    inst="jmx";
+    inst_dir="jmx";
     inst_idx="$instrument";
     if [[ "$band" != "46-82" && "$band" != "83-153" && "$band" != "154-224" ]]
     then
@@ -128,7 +123,7 @@ case $instrument in
     fi
     ;;
   SPI)
-    inst="spi";
+    inst_dir="spi";
     inst_idx="$instrument"
     ;;
   *)
@@ -138,25 +133,20 @@ case $instrument in
 esac
 
 
-##  Define storage directory based on the band
-storageDir="${ISOC_DIR}/${inst}/scw_${band}"
-export storageDir
-if [ ! -d $storageDir ] ; then mkdir -p $storageDir ; fi
+##  Define root output directory
+export OUTPUT_DIR="${ISOC5}/${inst_dir}/scw_${band}"
+if [ ! -d $OUTPUT_DIR ] ; then mkdir -p $OUTPUT_DIR ; fi
 
 
 ##  Define the directory for the revolution
-dir="${storageDir}/${rev}"
-export dir
-if [[ "$overwrite" == "y" ]]
-then
-  if [ -d $dir ]
-  then
+export dir="${OUTPUT_DIR}/${rev}"
+if [[ "$overwrite" == "y" ]] ; then
+  if [ -d $dir ] ; then
     echo "$(warn) Deleting $dir ..."
     chmod -fR 755 $dir
     /bin/rm -fr $dir
   fi
-elif [[ "$overwrite" == "n" ]]
-then
+elif [[ "$overwrite" == "n" ]] ; then
   echo "$(log) Dir $dir will not be overwritten"
 else
   echo "$(log) Overwrite argument must be y or n"
@@ -168,16 +158,25 @@ fi
 echo "$(log) Submitting job to process revolution $rev ($instrument)"
 
 
+#  Define output and error log files
+LOG_DIR=${ISOC5}/logs
+if [[ ! -d $LOG_DIR ]] ; then 
+  mkdir -p $LOG_DIR/error
+  mkdir -p $LOG_DIR/output
+fi
+
+o="${LOG_DIR}/output/run_integ_analysis.${instrument,,}.${band}.${rev}.out"
+e="${LOG_DIR}/error/run_integ_analysis.${instrument,,}.${band}.${rev}.err"
+
+
 #  Define qsub command
 qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q int.q"
 #qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
 
 
-#  Define output and error log files
-INT_DIR="/home/int/intportalowner/integral"
-PIPELINE_DIR="${INT_DIR}/pipeline"
-o="${PIPELINE_DIR}/logs/output/run_integ_analysis.${instrument,,}.${band}.${rev}.out"
-e="${PIPELINE_DIR}/logs/error/run_integ_analysis.${instrument,,}.${band}.${rev}.err"
+#if [[ $USER = "dev01" ]] || [[ $USER = "dev02"]] ; then
+#  qsub="${qsub} -wd /data/int/isoc5/$USER/isocArchive"
+#fi
 
 
 #  Submit the job

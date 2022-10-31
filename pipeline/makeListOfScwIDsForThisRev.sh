@@ -38,17 +38,17 @@ then
     /bin/rm $output
 fi
 
+
 # Get all scwIDs that contain the rev number
 awk '{print $1}' $pointlis > temp1.lis
 egrep $rev temp1.lis | sort > temp2.lis
 
+
 # Refine to take scw IDs of only this rev 
-for scwid in `cat temp2.lis`
-do
+for scwid in `cat temp2.lis` ; do
   revNum=`echo $scwid | awk '{print substr($1,0,4)}'`
-  if [ "$revNum" == "$rev" ]
-  then
-      echo $scwid >> $output
+  if [ "$revNum" == "$rev" ] ; then
+    echo $scwid >> $output
   fi
 done
 sort -gu $output > tmp
