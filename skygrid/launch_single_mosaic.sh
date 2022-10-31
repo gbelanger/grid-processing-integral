@@ -17,8 +17,8 @@
 #
 
 if [ $# -lt 3 ]; then
-   echo "Usage: . launch_single_mosa.sh field/field_1.lis instrument (ISGRI|JMX1|JMX2) band (e.g., 20-35|46-82)"
-   return 1
+   echo "Usage: ./launch_single_mosa.sh field/field_1.lis instrument (ISGRI|JMX1|JMX2) band (e.g., 20-35|46-82)"
+   exit -1
 fi
 
 list=$1
