@@ -8,28 +8,31 @@ set -o nounset # exit when your script tries to use undeclared variables
 
 # Last modified by 
 #
-# G.Belanger (September 2012)
-# G.Belanger (July 2014) 
-#  - process/write directly in storage directory
-#  - added emin emax as arguments
+# G.Belanger (Oct 2022)
+#  - Removed catalog related stuff from IBIS analysis
+# G.Belanger (Sep 2022)
+#  - added essential HEADAS env variables (their bug)
+# G.Belanger (Aug 2022)
+#  - added support for SPI binning analysis
+# G.Belanger (Mar 2022)
+#  - added support for JEMX imaging analysis
+#  - improved formatting/syntax
+# G.Belanger (Mar 2019)
+#  - added condional to run osa 10.2 or 11 
+# G.Belanger (Jan 2016)
+#  - added properly time-stamped logging
+# G.Belanger (Aug 2015)
+#  - added conditionals for defining directory paths
+#    depending on host (intggw or intggw6)
 # G.Belanger (Sept 2014)
 #  - combined emin and emax into band (20-35)
 #  - removed the storageDir argument
 #  - removed all old code for moving data around
-# G.Belanger (Aug 2015)
-#  - added conditionals for defining directory paths
-#    depending on host (intggw or intggw6)
-# G.Belanger (Jan 2016)
-#  - added properly time-stamped logging
-# G.Belanger (Mar 2019)
-#  - added condional to run osa 10.2 or 11 
-# G.Belanger (Mar 2022)
-#  - added support for JEMX imaging analysis
-#  - improved formatting/syntax
-# G.Belanger (Aug 2022)
-#  - added support for SPI binning analysis
-# G.Belanger (Sep 2022)
-#  - added essential HEADAS env variables (their bug)
+# G.Belanger (July 2014) 
+#  - process/write directly in storage directory
+#  - added emin emax as arguments
+# G.Belanger (September 2012)
+#  - Wrote script
 #
 
 # General script for integral data analysis to be run on the Grid
@@ -212,21 +215,12 @@ cat scwIDs.dat | while read scwID ; do
         case $instrument in
 
           ISGRI)
+
             ##  This hidden option makes a residual map where both sources and ghosts are removed
             #echo "8" > ii_skyimage.hidden
 
             ##  Run OSA processing
             ${PIPELINE_DIR}/${processing} $band
-
-            ##  Make list of sources detected above 3 sigma
-            list="sources_detected_isgri.txt"
-            fcopy infile="scw/${scw}/isgri_sky_res.fits[2][DETSIG>3]" outfile=!"scw/${scw}/isgri_sky_res_detsig3.fits"
-            fdump scw/${scw}/isgri_sky_res_detsig3.fits[2] STDOUT "RA_OBJ DEC_OBJ SOURCE_ID NAME" - yes prhead=no | grep -v '^\s*$' | egrep -v "NAME|deg" | egrep -v "NEW_" > $list
-
-            ##  Get the detected rates of sources above 3 sigma
-            rates="source_rates_isgri.txt"
-            sky_res="scw/${scw}/isgri_sky_res_detsig3.fits"
-            fdump $sky_res\[2] STDOUT "FLUX NAME" - yes prhead=no | grep -v '^\s*$' | egrep -v "NAME|count" | egrep -v "NEW_" > $rates;
 
             ##  Make event lists from PIFs for sources detected above 3 sigma
             #${PIPELINE_DIR}/ii_pif.sh
@@ -234,21 +228,18 @@ cat scwIDs.dat | while read scwID ; do
             ##  Make high resolution time series
             #${PIPELINE_DIR}/ii_light.sh
 
-            ##  Make list of sources in the FOV
-            list="sources_in_fov_isgri.txt"
-            scw="${PWD##*/}.001"
-            fdump scw/${scw}/isgri_model.fits[1] STDOUT "RA_OBJ DEC_OBJ NAME" - yes prhead=no | grep -v '^\s*$' | egrep -v "NAME|deg" | egrep -v "NEW_" > $list
-
             ##  Remove the copy of the general catalog and compress the files
             /bin/rm GNRL-*.fits
             #gzip scw/*/*.fits
             ;;
 
           JMX1|JMX2)
+
             ${PIPELINE_DIR}/${processing} $band 
             ;;
 
           SPI)
+
             ##  Copy the SPI master catalog here
             cp ${OSA_DIR}/spi_cat_all_sources.fits .
 
