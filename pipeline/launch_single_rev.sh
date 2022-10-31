@@ -40,7 +40,7 @@
 # G.Belanger (Aug 2022)
 #  - added support for SPI binning analysis
 # G.Belanger (Oct 2022)
-#  - using common variables config
+#  - using common variables from config/grid.setenv.sh
 #  - using USER variable for output directory
 #
 
