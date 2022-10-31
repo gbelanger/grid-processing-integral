@@ -13,8 +13,8 @@ REP_BASE_PROD=$PWD
 export REP_BASE_PROD
 
 # Data location
-DATA_PATH="/data/int/isda004/rev_3"
-#DATA_PATH="/integral/data/rev_3"
+#DATA_PATH="/data/int/isda004/rev_3"
+DATA_PATH="/integral/data/rev_3"
 export DATA_PATH
 
 #  Create link to most recent catalogs
