@@ -6,7 +6,6 @@ export INTBIN_DIR="${INT_DIR}/bin"
 export SKYGRID_DIR="${INT_DIR}/skygrid"
 export OSA_DIR="${INT_DIR}/osa_support"
 export PIPELINE_DIR="${INT_DIR}/pipeline"
-export ISOC5="/data/int/isoc5/intportalowner/isocArchive"
 
 export JAVA_HOME="/home/int/intportalowner/jdk"
 export JAVA="${JAVA_HOME}/bin/java -Xms500m -Xmx500m"
@@ -18,4 +17,7 @@ export FTOOLS="${HEADAS}/bin"
 export HEADASNOQUERY=
 export HEADASPROMPT=/dev/null
 
-#export PFILES="${PFILES}:/home/int/intportalowner/pfiles"
+
+##  Output directory
+export USER=$(whoami)
+export ISOC5="/data/int/isoc5/${USER}/isocArchive"
