@@ -30,6 +30,9 @@
 # G.Belanger (Sep 2022)
 #  - Updated script to take argument of processing as required by updated launch_single_rev.sh
 #
+# G.Belanger (Oct 2022)
+#  - Removed deletion of log files to simplify script
+#
 
 
 ##  Define logging functions
@@ -88,4 +91,3 @@ for rev in $(cat $revList) ; do
 
 done
 echo $(log)
-
