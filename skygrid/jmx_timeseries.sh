@@ -46,7 +46,7 @@ error(){
     unset progName
 }
 cleanup(){
-  /bin/rm -f swg_idx_${inst_idx}.fits og_${inst_idx}.fits list_swg_${inst_idx}.txt files.txt
+  /bin/rm -f swg_idx_${inst_idx}.fits og_${inst_idx}.fits list_swg_${inst_idx}.txt 
 }
 
 
@@ -148,7 +148,7 @@ fi
 srcid=$(${FTOOLS}/ftlist ${outfile}[1] columns="SOURCE_ID" rows=1 T | tail -1 | awk '{print $2}')
 ra=$(${FTOOLS}/ftlist ${outfile}[1] columns="RA_OBJ" rows=1 T | tail -1 | awk '{print $2}')
 dec=$(${FTOOLS}/ftlist ${outfile}[1] columns="DEC_OBJ" rows=1 T | tail -1 | awk '{print $2}')
-/bin/rm ${outfile} select.txt
+#/bin/rm ${outfile} select.txt
 
 echo "$(log) - NAME = $name"
 echo "$(log) - SOURCE_ID = $srcid"
@@ -193,7 +193,6 @@ do
 done
 echo "$(log) - $(cat good.txt) good input files found"
 echo "$(warn) - $(cat missing.txt) are missing"
-#rm good.txt missing.txt
 
 
 ##  Check if there are files
@@ -201,6 +200,7 @@ if [[ $(cat good.txt) -eq 0 ]] ; then
   echo $(warn) No available input time series files. Cannot proceed.
   exit -1
 fi
+rm good.txt missing.txt
 
 
 ##  Get emin and emax
