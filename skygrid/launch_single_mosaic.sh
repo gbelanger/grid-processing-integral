@@ -2,6 +2,8 @@
 
 # Last modified
 #
+# G.Belanger (Oct 2022)
+#  - using common variables and USER variable
 # G.Belanger (April 2022)
 #  - add support for jemx
 # G.Belanger (March 2021)
@@ -44,8 +46,11 @@ else
 fi
 
 
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Check band
-ISOC5="/data/int/isoc5/intportalowner/isocArchive"
 DATA_DIR="$ISOC5/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
   echo "Error: $DATA_DIR : Input data directory not found. Cannot proceed";
@@ -53,23 +58,25 @@ if [[ ! -d $DATA_DIR ]] ; then
 fi
 
 
-## Create directories for output logs
-if [[ ! -d logs ]] ; then 
-  mkdir -p logs/error ; 
-  mkdir -p logs/output ; 
+##  Create directories for output logs
+if [[ ! -d ${SKYGRID_DIR}/logs/output ]] || [[ ! -d ${SKYGRID_DIR}/logs/error ]] ; then 
+  mkdir -p ${SKYGRID_DIR}/logs/error ; 
+  mkdir -p ${SKYGRID_DIR}/logs/output ; 
 fi
 
 
-## Wait until less than 2000 jobs
-nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+##  Wait until less than 2000 jobs in queue
+USER=$(whoami)
+nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
 while [[ $nJobs -gt 1999 ]] ; do
-  sleep 10
-  nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+  sleep 30
+  nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
 done
 
 
 ## Run on grid 
 ## IMPORTANT: option -l h_vmem=10G is necessary to ensure enough memory
+
 qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q int.q"
 ${qsub} -e logs/error -o logs/output run_integ_mosa.sh $list $instrument $band
 

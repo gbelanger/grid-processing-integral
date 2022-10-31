@@ -6,6 +6,7 @@ export INTBIN_DIR="${INT_DIR}/bin"
 export SKYGRID_DIR="${INT_DIR}/skygrid"
 export OSA_DIR="${INT_DIR}/osa_support"
 export PIPELINE_DIR="${INT_DIR}/pipeline"
+export CAT_DIR="${INT_DIR}/catalog"
 
 export JAVA_HOME="/home/int/intportalowner/jdk"
 export JAVA="${JAVA_HOME}/bin/java -Xms500m -Xmx500m"

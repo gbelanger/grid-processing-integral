@@ -45,12 +45,12 @@ case ${band} in
   20-35|35-60|60-100)
     prefix=isgri;
     executable="ibis_science_analysis"
-    inst="ibis";
+    inst_dir="ibis";
     ;;
   46-82|83-153|154-224)
     prefix=jmx;
     executable="j_ima_mosaic"
-    inst="jmx";
+    inst_dir="jmx";
     ;;
   *)
     echo "$(log) Unknown band"
@@ -59,20 +59,21 @@ case ${band} in
 esac
 
 ##  Define variables
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-SKYGRID_MOSA_DIR="${ISOC5}/${inst}/skygrid_${band}/mosaics"
+ISOC5="/data/int/isoc5/intportalowner/isocArchive"
+SKYGRID_MOSA_DIR="${ISOC5}/${inst_dir}/catalog/mosaics"
 
 echo "$(log) Executable is ${executable}"
-echo "$(log) Checking completion status in ${SKYGRID_MOSA_DIR}"
+echo "$(log) Checking completion status in ${CAT_MOSA_DIR}"
 
-nFields=$(ls -d -1 ${SKYGRID_MOSA_DIR}/field_* | cat -n | tail -1 | awk '{print $1}')
+nFields=$(ls -d -1 ${CAT_MOSA_DIR}/field_* | cat -n | tail -1 | awk '{print $1}')
 echo "$(log) There are $nFields directories"
 
-nMosaics=$(ls ${SKYGRID_MOSA_DIR}/field_*/obs/myobs/${prefix}*_mosa_ima.fits* | cat -n | tail -1 | awk '{print $1}')
+nMosaics=$(ls ${CAT_MOSA_DIR}/field_*/obs/myobs/${prefix}*_mosa_ima.fits* | cat -n | tail -1 | awk '{print $1}')
 echo "$(log)   There are $nMosaics ${prefix} mosaic files"
 
-noMosaic=$(ls ${SKYGRID_MOSA_DIR}/field_*/NO_MOSAIC.readme | cat -n | tail -1 | awk '{print $1}')
+noMosaic=$(ls ${CAT_MOSA_DIR}/field_*/NO_MOSAIC.readme | cat -n | tail -1 | awk '{print $1}')
 echo "$(log)   There are $noMosaic directories with a single scw"
+
 
 ## Check for empty files
 echo "$(log) Checking file size ..."
@@ -82,7 +83,7 @@ empty=0
 emptyFiles=""
 goodFiles=""
 
-for file in $(ls ${SKYGRID_MOSA_DIR}/field_*/obs/myobs/${prefix}*_mosa_ima.fits*)
+for file in $(ls ${CAT_MOSA_DIR}/field_*/obs/myobs/${prefix}*_mosa_ima.fits*)
 do
   size=$(wc -c <"$file")
   if [[ $size -gt 11520 ]]
@@ -107,6 +108,7 @@ then
   done
 fi
 
+
 ## Check for crashed or incomplete
 echo "$(log) Checking termination status ..."
 
@@ -118,7 +120,7 @@ crashedCodes=""
 for file in $goodFiles
 do
   dir=$(dirname $file)
-  logFile="${dir}/log"
+  logFile="${dir}/osa.log"
   status=$(egrep "${executable} terminating with status" $logFile | tail -1 | awk '{print $10}')
   if [ "$status" = "0" ]
   then
@@ -146,7 +148,7 @@ then
     echo "$(log)     $file"
     dir=$(dirname $file)
     echo $dir >> mosaics_to_rerun_${band}.txt
-    field=$(echo $file | cut -d"/" -f9)
+    field=$(echo $dir | cut -d"/" -f10)
     echo $field >> fields_to_rerun_${band}.txt
     scwpt=$(echo $field | sed s/"field_"/"scw_pt"/g)
     echo $scwpt >> scwpt_to_rerun_${band}.txt
