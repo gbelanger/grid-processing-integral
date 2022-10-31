@@ -151,8 +151,8 @@ echo "$(log) Preparing list of swcIDs"
 ${PIPELINE_DIR}/makeListOfScwIDsForThisRev.sh $rev ${OSA_DIR}/point.lis
 
 ####  Testing
-  head -20 scwIDs.dat | tail -3 > tmp
-  mv tmp scwIDs.dat
+#  head -20 scwIDs.dat | tail -3 > tmp
+#  mv tmp scwIDs.dat
 ####  Testing END
 
 #  Step 2) Generate scw.lis from rev.lis (must specify Java heap size)
