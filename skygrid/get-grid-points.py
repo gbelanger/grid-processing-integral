@@ -8,14 +8,11 @@ Created on Thu Sep 29 14:18:28 2022
 import numpy as np
 import sys
 
-if len(sys.argv)==1:
-     angleref = 5. #degré
-     fichout  = 'points.txt'
-elif len(sys.argv)==3:
+if len(sys.argv)==3:
     angleref = float(sys.argv[1])
     fichout  = str(sys.argv[2])
 else:
-    print("Il faut deux arguments, l'angle de référence et le fichier texte de destination")
+    print("Usage: python get-grid-points.py angle (10) outfile (points.txt)")
     sys.exit()
     
 angle1   = (2*angleref-1)*np.pi/180.
