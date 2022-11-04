@@ -40,7 +40,7 @@ error(){
 ##  Check arguments
 if [[ $# -ne 3 ]]
 then
-    echo "$(error) Usage: launch_timeseries_fullmission.sh srcname.lst band (e.g.,20-35|46-82) instrument (ISGRI|JMX1|JMX2)"
+    echo "Usage: ./launch_timeseries_fullmission.sh srcname.lst band (e.g.,20-35|46-82) instrument (ISGRI|JMX1|JMX2)"
     exit -1
 fi
 

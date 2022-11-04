@@ -97,7 +97,7 @@ cp ${OSA_DIR}/spi_cat_all_sources.fits .
 
 
 ##  Run spi_science_analysis for the  binning
-${SKYGRID_DIR}/spi_analysis_BIN.sh
+#${SKYGRID_DIR}/spi_analysis_BIN.sh
 
 
 ##  Select sources in the FOV
