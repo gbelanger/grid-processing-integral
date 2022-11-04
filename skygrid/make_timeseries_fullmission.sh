@@ -39,6 +39,10 @@ error(){
     unset progName
 }
 
+cleanup(){
+  /bin/rm -r *-?????????.lis tmp-????????? aux cat ic idx scw pfiles
+}
+
 
 ##  Check arguments
 progName="make_timeseries_fullmission.sh"
@@ -99,10 +103,11 @@ source ${INT_DIR}/pipeline/osa.setenv.sh
 echo "$(log) Extracting source information for ..."
 echo "$(log) - NAME = ${name}"
 infile="${ISDC_REF_CAT}"
-outfile=out.fits
-echo NAME==\"${name}\" > select.txt
-${FTOOLS}/ftselect ${infile} ${outfile} @select.txt clobber=yes
-
+outfile=target.fits
+if [[ ! -f $outfile ]] ; then
+  echo NAME==\"${name}\" > select.txt
+  ${FTOOLS}/ftselect ${infile} ${outfile} @select.txt clobber=yes
+fi
 
 ##  Check extraction
 nrows=$(${FTOOLS}/fkeyprint ${outfile}[1] NAXIS2 | tail -1 | awk '{print $3}')
@@ -133,13 +138,14 @@ fi
 echo "$(log) Making time series with radius of $dist degrees"
 
 stamp=$(date +%N)
-newlist="${inst}_${stamp}.lis"
+newlist="${inst}-${stamp}.lis"
 ${JAVA} -jar ${INTBIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
 
 
 ### FOR TESTING
-#  head -200 $newlist > tmp
-#  mv tmp $newlist
+#  stamp=$(date +%N)
+#  egrep "scw/1600/" $newlist > tmp-${stamp}
+#  sort -u tmp-${stamp} > $newlist
 ####
 
 
@@ -153,7 +159,11 @@ case $instrument in
     ;;
 
   JMX1|JMX2)
-    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band $instrument $PWD/$newlist
+    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band JMX1 $PWD/$newlist
+    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band JMX2 $PWD/$newlist
     ;;
 
 esac
+
+##  Clean up
+cleanup

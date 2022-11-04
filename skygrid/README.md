@@ -72,9 +72,9 @@ There is only one launching script
 ./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 154-224 JMX1
 
 #### JMX2
-./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 46-82 JMX2
-./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 83-153 JMX2
-./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 154-224 JMX2
+./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 46-82 JMX2 ;
+./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 83-153 JMX2 ;
+./launch_timeseries_fullmission.sh ../refcat/jmx/jmx_cat_0043_names.txt 154-224 JMX2 ;
 
 
 ## Analysis scripts for mosaics
