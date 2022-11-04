@@ -77,8 +77,9 @@ fi
 
 
 ##  Sort the list and remove duplicate entries
-sort -u ${list} > /tmp/tmp.lis
-mv /tmp/tmp.lis ${list}
+stamp=$(date +%N)
+sort -u ${list} > tmp-${stamp}.lis
+mv tmp-${stamp}.lis ${list}
 
 
 ##  Check instrument and define inst_idx
@@ -131,9 +132,9 @@ echo "$(log) Setting OSA env"
 ##  Extract row of catalog for source name
 echo "$(log) Extracting source information ..."
 infile="cat/hec/gnrl_refr_cat.fits"
-outfile=out.fits
-echo NAME==\"${name}\" > select.txt
-${FTOOLS}/ftselect ${infile}[1] ${outfile} @select.txt clobber=yes
+outfile=target.fits
+echo NAME==\"${name}\" > target.txt
+${FTOOLS}/ftselect ${infile}[1] ${outfile} @target.txt clobber=yes
 
 
 ##  Check extraction
@@ -170,7 +171,7 @@ yes=0
 no=0
 echo $yes > good.txt
 echo $no > missing.txt
-if [[ -f files.txt ]] ; then rm files.txt ; fi
+if [[ -f files-${inst_idx}.txt ]] ; then rm files-${inst_idx}.txt ; fi
 
 cat ${inst_idx}.lis | while read line
 do
@@ -181,7 +182,7 @@ do
   if [[ -f $file ]] ; then 
     n=$(${FTOOLS}/ftkeypar ${file}[1] NAXIS2 chatter=3 | head -2 | tail -1 | awk '{print $2}')
     if [[ $n -ne 0 ]] ; then
-      echo $file >> files.txt ; 
+      echo $file >> files-${inst_idx}.txt ; 
       yes=$((yes+1));
       echo $yes > good.txt
     fi
@@ -204,7 +205,7 @@ rm good.txt missing.txt
 
 
 ##  Get emin and emax
-file=$(head -1 files.txt)
+file=$(head -1 files-${inst_idx}.txt)
 min=$(${FTOOLS}/ftkeypar ${file}[2] E_MIN chatter=3 | head -2 | tail -1 | awk '{print $2}')
 max=$(${FTOOLS}/ftkeypar ${file}[2] E_MAX chatter=3 | head -2 | tail -1 | awk '{print $2}')
 
@@ -246,7 +247,7 @@ fi
 
 ##  Convert the text file to a fits file of the swg index
 idxlist=list_swg_${inst_idx}.txt
-sed s/${filetype}/swg_${inst_idx}.fits/g files.txt > $idxlist
+sed s/${filetype}/swg_${inst_idx}.fits/g files-${inst_idx}.txt > $idxlist
 txt2idx ${idxlist} swg_idx_${inst_idx}.fits
 
 
