@@ -30,6 +30,9 @@
 # G.Belanger (Sep 2022)
 #  - Updated script to take argument of processing as required by updated launch_single_rev.sh
 #
+# G.Belanger (Oct 2022)
+#  - Removed deletion of log files to simplify script
+#
 
 
 ##  Define logging functions
@@ -69,17 +72,17 @@ band="$4"
 overwrite="$5"
 
 
-##  Submit
 echo "$(log) Submitting jobs..."
-command=". $HOME/integral/pipeline/launch_single_rev.sh"
+command=". /home/int/intportalowner/integral/pipeline/launch_single_rev.sh"
 
+USER=$(whoami)
 for rev in $(cat $revList) ; do
 
   ##  Check number of running jobs: must be less than 2000
-  nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+  nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
   while [[ $nJobs -gt 1999 ]] ; do
     sleep 30
-    nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+    nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
   done
 
   ##  Submit job
@@ -88,16 +91,3 @@ for rev in $(cat $revList) ; do
 
 done
 echo $(log)
-
-
-## Clean up empty error log files
-launchDir="/home/int/intportalowner/integral/pipeline"
-cd ${launchDir}/logs/error/
-for file in run_integ_analysis.*.*.err
-do
-  if [ ! -s $file ]
-  then
-    rm $file
-  fi
-done
-cd ../../

@@ -27,42 +27,44 @@ fi
 
 ##  Check instrument
 if [[ $instrument == ISGRI ]] ; then
-  inst=ibis;
+  inst_dir=ibis;
 elif [[ $instrument == JMX* ]] ; then
-  inst=jmx;
+  inst_dir=jmx;
 else
   echo "Error: $instrument : Unknown instrument. Options are ISGRI|JMX1|JMX2.";
   return 1;
 fi
 
 
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
+
 ##  Check band
-ISOC5="/data/int/isoc5/gbelange/isocArchive"
-DATA_DIR="$ISOC5/${inst}/scw_${band}"
+DATA_DIR="$ISOC5/${inst_dir}/scw_${band}"
 if [[ ! -d $DATA_DIR ]] ; then
-  echo "Error: $DATA_DIR : Directory not found.";
-  return 1;
+  echo "Error: $DATA_DIR : Input data directory not found. Cannot proceed";
+  exit -1
 fi
 
 
-## Create directories for output logs
-INT_DIR="/home/int/intportalowner/integral"
-CAT_DIR="${INT_DIR}/catalog"
+##  Create directories for output logs
 if [[ ! -d ${CAT_DIR}/logs/output ]] || [[ ! -d ${CAT_DIR}/logs/error ]] ; then 
   mkdir -p ${CAT_DIR}/logs/error ; 
   mkdir -p ${CAT_DIR}/logs/output ; 
 fi
 
 
-## Wait until less than 2000 jobs in queue
-nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+##  Wait until less than 2000 jobs in queue
+USER=$(whoami)
+nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
 while [[ $nJobs -gt 1999 ]] ; do
   sleep 30
-  nJobs=$(qstat -u intportalowner | cat -n | tail -1 | awk '{print $1}')
+  nJobs=$(qstat -u $USER | cat -n | tail -1 | awk '{print $1}')
 done
 
 
-#  Define output and error log files
+##  Define output and error log files
 listname=$(echo $list | cut -d"/" -f2)
 field=$(echo ${listname} | cut -d"_" -f2 | sed s/"pt"/"field_"/g)
 
