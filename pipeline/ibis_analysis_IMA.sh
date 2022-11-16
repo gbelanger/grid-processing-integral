@@ -49,7 +49,6 @@ ibis_science_analysis \
   SCW1_GTI_BTI_Names="IBIS_CONFIGURATION ISGRI_RISE_TIME BELT_CROSSING SOLAR_FLARE VETO_PROBLEM IBIS_BOOT MISCELLANEOUS" \
   IBIS_II_ChanNum="1" \
   IBIS_II_E_band_min="${emin}" \
-  IBIS_II_E_band_max="${emax}" \
-  rebinned_corrDol_ima="$HOME/integral/osa_support/rebinned_corr_ima_${emin}-${emax}.fits" \
-  rebinned_backDol_ima="$HOME/integral/osa_support/rebinned_back_ima_${emin}-${emax}.fits" \
-  rebinned_unifDol_ima="$HOME/integral/osa_support/rebinned_unif_ima_${emin}-${emax}.fits"
+  IBIS_II_E_band_max="${emax}" 
+#  rebinned_corrDol_ima="$OSA_DIR/rebinned_corr_ima_${emin}-${emax}.fits" \
+#  rebinned_unifDol_ima="$OSA_DIR/rebinned_unif_ima_${emin}-${emax}.fits"
