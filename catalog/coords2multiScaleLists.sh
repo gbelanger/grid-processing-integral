@@ -47,23 +47,17 @@ coordsFile=$1
 dist=$2
 outDir=$3
 
+##  Define common variables
+source /home/int/intportalowner/integral/config/grid.setenv.sh
 
-##  Variables
-home="/home/int/intportalowner"
-INT_DIR="${home}/integral"
-BIN_DIR="${home}/bin"
-CALC=${BIN_DIR}/calc.pl
 CALCFORMAT=%.0f
-JAVA_HOME="${home}/jdk"
-JAVA="${JAVA_HOME}/bin/java -Xms256m -Xmx256m"
-
 
 ##  Check input file
 if [[ ! -s $coordsFile ]] ; then
   echo "$(warn) Input file is empty: $file"
   return 1
 fi
-cp -f $INT_DIR/osa_support/point.lis .
+cp -f $OSA_DIR/point.lis .
 
 
 ##  Create output directory

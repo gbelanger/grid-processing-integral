@@ -155,8 +155,8 @@ ${PIPELINE_DIR}/makeListOfScwIDsForThisRev.sh $rev ${OSA_DIR}/point.lis
 #  mv tmp scwIDs.dat
 ####  Testing END
 
-#  Step 2) Generate scw.lis from rev.lis (must specify Java heap size)
-$HOME/jdk/bin/java -Xms100m -Xmx100m -jar $HOME/integral/bin/MakeScwlisFromFile.jar scwIDs.dat
+#  Step 2) Generate scw.lis from rev.lis
+$JAVA -jar $INTBIN_DIR/MakeScwlisFromFile.jar scwIDs.dat
 cp scw.lis scw-all.lis
 echo "$(log) Copied scw.lis to scw-all.lis"
 
