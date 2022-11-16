@@ -15,6 +15,5 @@ ibis_science_analysis \
   IBIS_nregions_spe=1 \
   IBIS_nbins_spe="-4" \
   IBIS_energy_boundaries_spe="20 100" 
-  #rebinned_corrDol_spe="$HOME/integral/osa_support/rebinned_corr_spe_${emin}-${emax}.fits" \
-  #rebinned_backDol_spe="$HOME/integral/osa_support/rebinned_back_spe_${emin}-${emax}.fits" \
-  #rebinned_unifDol_spe="$HOME/integral/osa_support/rebinned_unif_spe_${emin}-${emax}.fits" 
+  #rebinned_corrDol_spe="$OSA_DIR/rebinned_corr_spe_${emin}-${emax}.fits" \
+  #rebinned_unifDol_spe="$OSA_DIR/rebinned_unif_spe_${emin}-${emax}.fits" 
