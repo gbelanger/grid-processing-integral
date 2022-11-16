@@ -1,14 +1,25 @@
 #!/bin/sh
 
-revs_back=100
+##  Default lookback is 120 revolutions
+revs_back=120
+
 if [[ $# -ne 0 ]] ; then
  revs_back=$1
 fi
 
 thisdir=$PWD
-cd $HOME/integral/radiation
-$HOME/anaconda3/bin/python compute_radiation_file.py -r $revs_back
-lastrev=$(head -2 radiation_600.txt  | tail -1 | awk '{print  $1}')
-date=$(date '+%d %b %Y')
-#mail -a radiation_600.txt -s "Info: radiation_600.txt computed up to rev $lastrev ($date) [EOM]" timothy.finn@esa.int,gbelanger@sciops.esa.int,lionel.metrailler@unige.ch < /dev/null
+
+##  Go to radiation directory
+cd /home/int/intportalowner/integral/radiation
+
+##  Run program
+threshold=3000
+$HOME/anaconda3/bin/python compute_radiation_file.py -r $revs_back -c $threshold
+
+##  Send email
+#lastrev=$(head -2 radiation_${threshold}.txt  | tail -1 | awk '{print  $1}')
+#date=$(date '+%d %b %Y')
+#mail -a radiation_${threshold}.txt -s "Info: radiation_${threshold}.txt computed up to rev $lastrev ($date) [EOM]" timothy.finn@esa.int,gbelanger@sciops.esa.int < /dev/null
+
+## Go back to where we started
 cd $thisdir
