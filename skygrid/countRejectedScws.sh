@@ -7,16 +7,16 @@ else
   logs=logs
 fi
 
-skygrid=$HOME/integral/skygrid/
+source /home/int/intportalowner/integral/config/grid.setenv.sh
+
 log="[INFO] countRejected.sh -"
 echo "$log Counting in $logs ..."
-#egrep non-NaN $skygrid/$logs/output/* | egrep rejected 
-egrep non-NaN $skygrid/$logs/output/* | egrep rejected | awk '{print $9, $11}' > rejSel
-rej=`~/bin/sum.sh rejSel 1`
-sel=`~/bin/sum.sh rejSel 2`
-tot=`calc.pl $rej+$sel`
-percentRej=`calc.pl 100*$rej/$tot`
-percentSel=`calc.pl 100*$sel/$tot`
+egrep non-NaN ${SKYGRID_DIR}/$logs/output/* | egrep rejected | awk '{print $9, $11}' > rejSel
+rej=`${BIN_DIR}/sum.sh rejSel 1`
+sel=`${BIN_DIR}/sum.sh rejSel 2`
+tot=`${CALC} $rej+$sel`
+percentRej=`${CALC} 100*$rej/$tot`
+percentSel=`${CALC} 100*$sel/$tot`
 echo "$log Total: $tot"
 echo "$log Selected: $sel ($percentSel %)"
 echo "$log Rejected: $rej ($percentRej %)"

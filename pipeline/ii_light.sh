@@ -25,6 +25,6 @@ ii_light \
     num_e=1 e_min="20" e_max="80" \
     onlydet=no \
     pifDOL="${REP_BASE_PROD}/obs/${dir}/scw/${scw}/isgri_model.fits" \
-    corrDol="${HOME}/integral/osa_support/rebinned_corr_ima_20-80.fits" \
-    backDol="${HOME}/integral/osa_support/rebinned_back_ima_20-80.fits" \
+#    corrDol="${OSA_DIR}/rebinned_corr_ima_20-80.fits" \
+#    backDol="${OSA_DIR}/rebinned_back_ima_20-80.fits" \
     cleanobt=no
