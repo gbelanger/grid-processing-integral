@@ -1,8 +1,10 @@
 #!/bin/bash
 
+LD_LIBRARY_PATH=/opt/sw/osa11.2-rhel8_test/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
 # OSA software
-OSA_INSTALL=/opt/sw/osa11.2-rhel6
-#OSA_INSTALL=/opt/sw/osa11.2-rhel8
+#OSA_INSTALL=/opt/sw/osa11.2-rhel6
+OSA_INSTALL=/opt/sw/osa11.2-rhel8_test
 export OSA_INSTALL
 
 # ISDC env
@@ -31,16 +33,13 @@ cd ../../
 ISDC_OMC_CAT=${DATA_PATH}/cat/omc/${file}\[1]
 export ISDC_OMC_CAT
 
-
 ##  Create links for SCW and AUX data files
 ln -sf ${DATA_PATH}/scw
 ln -sf ${DATA_PATH}/aux
 
-
 ##  Create links for IC and IDX files
 ln -sf ${DATA_PATH}/ic
 ln -sf ${DATA_PATH}/idx
-
 
 ### IMPORTANT
 
@@ -60,10 +59,8 @@ export ROOTSYS
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${OSA_INSTALL}/root/lib
 export LD_LIBRARY_PATH
 
-
 ### Other ISDC ENV
 . ${ISDC_ENV}/bin/isdc_init_env.sh
-
 
 COMMONLOGFILE=+osa.log
 export COMMONLOGFILE

@@ -230,7 +230,6 @@ cat scwIDs.dat | while read scwID ; do
 
             ##  Remove the copy of the general catalog and compress the files
             /bin/rm GNRL-*.fits
-            #gzip scw/*/*.fits
             ;;
 
           JMX1|JMX2)
@@ -273,10 +272,14 @@ done
 
 
 ##  Delete links and pfiles in working dir
-. ${BIN_DIR}/rmlinks
+. ${INTBIN_DIR}/rmlinks
+if [ -f tmp.lis ] ; then rm tmp.lis ; fi
 
+## Compress
+gzip -r obs/*
 
 ## Update the image count in nImages.txt
+n=0
 case ${instrument} in
   ISGRI)
     n=$(ls -1 obs/*/scw/*/isgri_sky_ima.fits* | cat -n | tail -1 | awk '{print $1}')
