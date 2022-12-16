@@ -108,6 +108,7 @@ fi
 
 
 ##  Check instrument
+inst_idx="$instrument"
 case $instrument in
   ISGRI | IBIS)
     inst_idx="IBIS";
@@ -115,7 +116,6 @@ case $instrument in
     ;;
   JMX1 | JMX2) 
     inst_dir="jmx";
-    inst_idx="$instrument";
     if [[ "$band" != "46-82" && "$band" != "83-153" && "$band" != "154-224" ]]
     then
       echo "$(error) ${instrument} band must be 46-82|83-153|154-224"
@@ -124,7 +124,6 @@ case $instrument in
     ;;
   SPI)
     inst_dir="spi";
-    inst_idx="$instrument"
     ;;
   *)
     echo "$(error) Unknown instrument : $instrument. Choices are IBIS|JMX1|JMX2|SPI.";
@@ -164,16 +163,15 @@ if [[ ! -d $LOG_DIR ]] ; then
   mkdir -p $LOG_DIR/error
   mkdir -p $LOG_DIR/output
 fi
-
-o="${LOG_DIR}/output/run_integ_analysis.${instrument,,}.${band}.${rev}.out"
-e="${LOG_DIR}/error/run_integ_analysis.${instrument,,}.${band}.${rev}.err"
+o="${LOG_DIR}/output/run_integ_analysis.${instrument,,}.${band}.rev${rev}.out"
+e="${LOG_DIR}/error/run_integ_analysis.${instrument,,}.${band}.rev${rev}.err"
 
 
 #  Define qsub command
-qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q int.q"
-#qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
+qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
 
-
+#  IMPORTANT: This does not work
+#
 #if [[ $USER = "dev01" ]] || [[ $USER = "dev02"]] ; then
 #  qsub="${qsub} -wd /data/int/isoc5/$USER/isocArchive"
 #fi
