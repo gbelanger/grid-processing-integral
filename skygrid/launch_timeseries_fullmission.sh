@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -o errexit  # exit when a command fails
-set -o nounset # exit when your script tries to use undeclared variables
+#set -o errexit  # exit when a command fails
+#set -o nounset # exit when your script tries to use undeclared variables
 #set -o xtrace # trace what gets executed (uncomment for debugging)
 
 #   Modification history:
@@ -93,7 +93,7 @@ TS_DIR="${ISOC5}/${inst_dir}/timeseries_${band}"
 
 ##  Define executable and qsub command
 executable="make_timeseries_fullmission.sh"
-qsub="qsub -p -1000 -cwd -l h_vmem=5G -S /bin/bash -q int.q"
+qsub="qsub -p -1000 -cwd -l h_vmem=10G -S /bin/bash -q all.q"
 
 
 ##  Loop through sources and launch
