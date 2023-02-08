@@ -168,7 +168,8 @@ e="${LOG_DIR}/error/run_integ_analysis.${instrument,,}.${band}.rev${rev}.err"
 
 
 #  Define qsub command
-qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
+#qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
+qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -l h_vmem=10G -S /bin/bash -q all.q"
 
 #  IMPORTANT: This does not work
 #
