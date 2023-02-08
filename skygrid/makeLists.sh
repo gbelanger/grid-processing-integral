@@ -3,7 +3,7 @@
 if [ $# -lt 2 ]
 then
   echo "Usage: ./makeLists.sh step radius"
-  exit 0
+  exit -1
 fi
 
 # This script:
@@ -36,17 +36,22 @@ echo $warn
 step=$1
 dist=$2
 
-# Define the points on the grid in Galactic coordinates
+# Define the points on the upper hemisphere in Galactic coordinates
 echo "`log` Defining grid points in Galactic coordinates"
 gridFile="grid-${step}deg-gal.txt"
-radius=$(~/bin/calc.pl $step/2 + 0.5)
+#radius=$(~/bin/calc.pl $step/2 + 0.5)
+radius=$step
 python get-grid-points.py $radius $gridFile
+
+# Define the points on the lower hemisphere
+cat $gridFile | while read l b ; do echo $l $b ; if [[ $l != 0.000000 ]] ; then echo -$l $b ; fi ; done > tmp
+mv tmp $gridFile
+
+# Count points
 nPts=`wc $gridFile | awk '{print $1}'`
 echo "`log` There are $nPts grid points"
 
 # Transform to fk5
-
-# Uncomment later
 echo "`log` Transforming to fk5 coordinates"
 java -jar ~/bin/Gal2fk5.jar $gridFile
 gridFile_fk5=`echo $gridFile | sed s/"gal"/"fk5"/g`

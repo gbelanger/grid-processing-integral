@@ -3,7 +3,7 @@
 
 if [[ $# -ne 3 ]] ; then
   echo "Usage: . coords2scwLists.sh fk5Coords.txt offAxisDist outputDir"
-  return 1
+  return -1
 fi
 coordsFile=$1
 dist=$2

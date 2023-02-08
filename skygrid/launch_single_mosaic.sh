@@ -78,7 +78,8 @@ done
 ## Run on grid 
 ## IMPORTANT: option -l h_vmem=10G is necessary to ensure enough memory
 
-qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
+qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -l h_vmem=10G -S /bin/bash -q all.q"
+#qsub="/opt/univa/ROOT/bin/lx-amd64/qsub -cwd -pe make 5 -l h_vmem=10G -S /bin/bash -q all.q"
 ${qsub} -e logs/error -o logs/output run_integ_mosa.sh $list $instrument $band
 
 

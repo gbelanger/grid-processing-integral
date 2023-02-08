@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #set -o errexit # exit when a command fails
-set -o nounset # exit when your script tries to use undeclared variables
+#set -o nounset # exit when your script tries to use undeclared variables
 #set -o xtrace # trace what gets executed (uncomment for debugging)
 
 
@@ -143,9 +143,11 @@ ${JAVA} -jar ${INTBIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
 
 
 ### FOR TESTING
-#  stamp=$(date +%N)
+  stamp=$(date +%N)
+# rev 1600 is Cyg X-1 with JMX1 + JMX2
 #  egrep "scw/1600/" $newlist > tmp-${stamp}
-#  sort -u tmp-${stamp} > $newlist
+  head -1000 $newlist > tmp-${stamp}
+  sort -u tmp-${stamp} > $newlist
 ####
 
 
@@ -166,4 +168,4 @@ case $instrument in
 esac
 
 ##  Clean up
-cleanup
+#cleanup
