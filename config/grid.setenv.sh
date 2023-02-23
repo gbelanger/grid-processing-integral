@@ -12,7 +12,8 @@ export JAVA_HOME="/home/int/intportalowner/jdk"
 export JAVA="${JAVA_HOME}/bin/java -Xms500m -Xmx500m"
 export CALC="${BIN_DIR}/calc.pl"
 
-export HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
+#export HEADAS="/opt/sw/heasoft6.25/x86_64-pc-linux-gnu-libc2.12"
+export HEADAS="/opt/sw/heasoft6.27/x86_64-pc-linux-gnu-libc2.28"
 . $HEADAS/headas-init.sh
 export FTOOLS="${HEADAS}/bin"
 export HEADASNOQUERY=
