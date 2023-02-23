@@ -164,7 +164,7 @@ if [[ -f list_swg_${inst_idx}.txt ]] ; then /bin/rm list_swg_${inst_idx}.txt ; f
 
 ## Make list of files to be included
 echo "$(log) Compiling list of time series files. This can take a while ..."
-filetype="${inst_idx}_src_iros_lc.fits"
+filetype="${inst_idx}_src_iros_lc.fits.gz"
 cp ${list} ./${inst_idx}.lis
 
 yes=0
