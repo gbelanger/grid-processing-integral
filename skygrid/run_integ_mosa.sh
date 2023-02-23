@@ -407,7 +407,7 @@ case $instrument in
       scwdir=$(echo $line | cut -d"/" -f3)
       scwid=$(echo $scwdir | cut -d"." -f1)
       for filetype in $filetypes ; do
-        file="${DATA_DIR}/${rev}/obs/${scwid}/${filetype}.fits"
+        file="${DATA_DIR}/${rev}/obs/${scwid}/${filetype}.fits.gz"
         if [[ -s $file  ]] ; then
           ls $file >> ${filetype}.lst
         fi
@@ -473,7 +473,7 @@ case $instrument in
 
     ##  Create scw idx file
     echo "$(log) Making swg_idx  based on final filtered list"
-    event_file="evts_det_spec.fits"
+    event_file="evts_det_spec.fits.gz"
     idxlist=list_swg_${inst_idx}.txt
     cat ${final_list} | while read line
     do
