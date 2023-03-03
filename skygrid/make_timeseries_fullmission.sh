@@ -155,16 +155,17 @@ ${JAVA} -jar ${INTBIN_DIR}/MakeScwList.jar $ra $dec $dist $dist $newlist
 echo "$(log) Calling instrument-specific time series maker script"
 
 case $instrument in
-
   ISGRI)
     ${SKYGRID_DIR}/ibis_timeseries.sh "$name" $band $PWD/$newlist
     ;;
 
-  JMX1|JMX2)
+  JMX1)
     ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band JMX1 $PWD/$newlist
-    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band JMX2 $PWD/$newlist
     ;;
 
+  JMX2)
+    ${SKYGRID_DIR}/jmx_timeseries.sh "$name" $band JMX2 $PWD/$newlist
+    ;;
 esac
 
 ##  Clean up
